@@ -1,0 +1,38 @@
+.section{
+    position: relative;
+    z-index: 0;
+}
+
+.command{
+    position: absolute;
+    top :35%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.btn{
+    background-color: black;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn:hover{
+    background-color: white;
+}
+.btn:first-child{
+    transform: rotate(180deg);
+}
+
+@media (min-width:768px){
+    .command{
+        top: 45%;
+    }
+}
+@media (min-width:1024px){
+    .command{
+        top: 50%;
+    }
+}

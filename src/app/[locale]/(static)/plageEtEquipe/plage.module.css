@@ -1,0 +1,19 @@
+
+.main{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #474747;
+    font-size: 1.275em;
+    text-align: center;
+    line-height: 35px;
+}
+
+.part{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.box{
+    margin: 10px 30px;
+}

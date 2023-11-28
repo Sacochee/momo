@@ -1,0 +1,48 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+.btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: space-between;
+  color: white;
+  background-color: black;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+.lang {
+  padding: 10px;
+}
+.div {
+  position: relative;
+}
+.span {
+  display: block;
+  content: "";
+  background-color: white;
+  width: 11px;
+  height: 2px;
+  border-radius: 5px;
+}
+.span:first-child {
+  transform: rotate(-45deg) translateY(-3px) translateX(1px);
+}
+.span:last-child {
+  transform: rotate(45deg) translateY(3px) translateX(1px);
+}
+.btn:hover {
+  
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+.btn:hover .span {
+  background-color: black;
+}
