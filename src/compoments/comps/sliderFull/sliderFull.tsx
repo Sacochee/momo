@@ -33,36 +33,26 @@ export default function SliderFull({ data, from }: obj) {
       setI(0);
     }
   };
-  const [droite, setDroite] = useState("White");
-  const [gauche, setGauche] = useState("White");
+  const [droite, setDroite] = useState("white");
+  const [gauche, setGauche] = useState("white");
   return (
     <section className={style.section}>
       <div className={style.command}>
         <div
           onClick={() => change(-1)}
-          onMouseEnter={() => setGauche("Black")}
-          onMouseLeave={() => setGauche("White")}
+          onMouseEnter={() => setGauche("black")}
+          onMouseLeave={() => setGauche("white")}
           className={style.btn}
         >
-          <Image
-            src={`/Icons/select${gauche}.png`}
-            width={20}
-            height={20}
-            alt="fleche qui pointe vers la gauche (arrière)"
-          />
+          <Arrow color={gauche}/>
         </div>
         <div
           onClick={() => change(+1)}
-          onMouseEnter={() => setDroite("Black")}
-          onMouseLeave={() => setDroite("White")}
+          onMouseEnter={() => setDroite("black")}
+          onMouseLeave={() => setDroite("white")}
           className={style.btn}
         >
-          <Image
-            src={`/Icons/select${droite}.png`}
-            width={20}
-            height={20}
-            alt="fleche qui pointe vers la droite (avant)"
-          />
+          <Arrow color={droite}/>
         </div>
       </div>
       <Image
@@ -71,6 +61,16 @@ export default function SliderFull({ data, from }: obj) {
         height={(screen.width * data[i].h) / data[i].w}
         alt={data[i].alt}
       />
+      
     </section>
   );
+}
+
+function Arrow({color} : {color  : string}){
+  return(
+    <div className={style.box_line}>
+      <span className={style.line} style={{backgroundColor:color}}></span>
+      <span className={style.line} style={{backgroundColor:color}}></span>
+    </div>
+  )
 }

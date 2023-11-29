@@ -26,6 +26,24 @@
     transform: rotate(180deg);
 }
 
+.box_line{
+    position: relative;
+}
+.line{
+    content: "";
+    display: block;
+    width: 14px;
+    height: 2px;
+
+    background-color: white;
+}
+.line:first-child{
+    transform: rotate(45deg)translateY(-5px);
+}
+.line:last-child{
+    transform: rotate(-45deg) translateY(5px);
+}
+
 @media (min-width:768px){
     .command{
         top: 45%;
