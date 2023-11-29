@@ -108,19 +108,19 @@ function Nav() {
         <ul className={style.subClass}>
           <li
             className={style.subItem}
-            onClick={() => router.push("/prensatation-des-cours")}
+            onClick={() => router.push("/presentationDesCours")}
           >
             {t("c1")}
           </li>
           <li
             className={style.subItem}
-            onClick={() => router.push("/tarifs-et-réservation")}
+            onClick={() => router.push("/tarifsEtReservations")}
           >
             {t("c2")}
           </li>
           <li
             className={style.subItem}
-            onClick={() => router.push("/l-equipe-et-la-plage")}
+            onClick={() => router.push("/plageEtEquipe")}
           >
             {t("c3")}
           </li>
@@ -148,19 +148,19 @@ function Nav() {
         <ul className={style.subClass}>
           <li
             className={style.subItem}
-            onClick={() => router.push("/carte-cadeau")}
+            onClick={() => router.push("/carteCadeaux")}
           >
             {t("p1")}
           </li>
           <li
             className={style.subItem}
-            onClick={() => router.push("/Surf-camp-bretagne")}
+            onClick={() => router.push("/bretagne")}
           >
             {t("p2")}
           </li>
           <li
             className={style.subItem}
-            onClick={() => router.push("/logements-et-partenaires")}
+            onClick={() => router.push("/logement")}
           >
             {t("p3")}
           </li>
@@ -199,19 +199,19 @@ function Laptop() {
             <ul className={style.subpart}>
               <li
                 className={style.li_l_sub}
-                onClick={() => router.push("/prensatation-des-cours")}
+                onClick={() => router.push("/presentationDesCours")}
               >
                 {t("c1")}
               </li>
               <li
                 className={style.li_l_sub}
-                onClick={() => router.push("/tarifs-et-réservation")}
+                onClick={() => router.push("/tarifsEtReservations")}
               >
                 {t("c2")}
               </li>
               <li
                 className={style.li_l_sub}
-                onClick={() => router.push("/l-equipe-et-la-plage")}
+                onClick={() => router.push("/plageEtEquipe")}
               >
                 {t("c3")}
               </li>
@@ -245,7 +245,7 @@ function Laptop() {
               </li>
               <li
                 className={style.li_l_sub}
-                onClick={() => router.push("/l-equipe-et-la-plage")}
+                onClick={() => router.push("/logement")}
               >
                 {t("p3")}
               </li>

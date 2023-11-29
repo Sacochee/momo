@@ -231,5 +231,80 @@
         "pp5" : "cette plage offre des vagues adaptées à chacun : petites à marée basse, plus puissantes à marée haute.",
         "pp6" : "Une fois votre combinaison enfilée, entre 7 et 20 minutes de marche (selon le spot) en compagnie de vos moniteurs et leur chariot de planches permettront de faire connaissance et de rejoindre la plage.",
         "pp7" : "Vous êtes arrivés et prêt à surfer !"
+    },
+    "tarifs" : {
+        "h1": "Réservez vos cours de surf dès maintant",
+        "h2" : "Dans un cours de Surf vous avez :",
+        "p1":"La bonne Humeur, l’encadrement par un moniteur Diplômé d’Etat, ainsi que l’ensemble du matériel sont inclus dans la prestation.",
+        "h22" : "Pour Réserver :",
+        "li1underline" : "Contacter l’école ",
+        "li1" : "afin de choisir au mieux les horaires de cours et de vérifier les disponibilités",
+        "l2underline" : "Puis Remplir le bulletin d’inscription",
+        "li2" : " en ligne, en cliquant ci-dessous",
+        "btn" : "Inscription",
+        "p2" : "Pour les autres moyens de paiement ou pour une réservation de dernière minute, en discuter avec l’équipe.",
+        "tabl1_h2" : "COURS COLLECTIFS :",
+        "tabl1_p" : "Surfer à plusieurs pour découvrir, partager et progresser",
+        "tabl_reduc" : "-10 % à partir de 3 inscrits",
+        "tabl_li1" : {
+            "name" : "Découverte",
+            "time" : "2h",
+            "when" : "Tous les jours"
+        },
+        "tabl_li2" : {
+            "name" : "Découverte 2 cours",
+            "time" : "4h",
+            "when" : "Tous les jours"
+        },
+        "tabl_li3" : {
+            "name" : "Mini stage 3 cours",
+            "time" : "6h",
+            "when" : "Tous les jours"
+        },
+        "tabl_li4" : {
+            "name" : "Stage semaine 4 cours",
+            "time" : "8h",
+            "when" : "Tous les jours"
+        },
+        "tabl_li5" : {
+            "name" : "Stage semaine 5 cours",
+            "time" : "10h",
+            "when" : "Tous les jours"
+        },
+        "tabl_li6" : {
+            "name" : "À la carte 10 cours",
+            "time" : "20h",
+            "when" : "Tous les jours"
+        },
+        "tabl_li7" : {
+            "name" : "Hors saison 10 cours",
+            "time" : "20h",
+            "when" : "Week-ends hors juillet et août"
+        },
+        "tabl_li8" : {
+            "name" : "Week-ends de mai à octobre",
+            "time" : "20h",
+            "when" : "Week-ends de mai à octobre"
+        },
+        "tabl_li9" : {
+            "name" : "Acompte",
+            "time" : "",
+            "when" : "Sur demande de l’école"
+        },
+        "tabl2_h2" : "COURS PARTICULIER :",
+        "tabl2_p" : "Augmenter rapidement son niveau de surf",
+        "tabl2_li1" : {
+            "name" : "1 personne",
+            "time" : "2h",
+            "when" : ""
+        },
+        "tabl2_li2" : {
+            "name" : "2 personne",
+            "time" : "2h",
+            "when" : ""
+        }
+
+
+
     }
 }

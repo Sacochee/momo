@@ -16,8 +16,16 @@ import {
     '/carteCadeaux' : '/carteCadeaux',
     '/bretagne' : '/bretagne',
     '/logement' : '/logement',
-    '/inscription': '/inscription'
-    
+    '/inscription': '/inscription',
+    '/tarifsEtReservations' : '/tarifsEtReservations',
+    '/tarifsEtReservation/form' : '/tarifsEtReservation/form',
+    "/plageEtEquipe" : "/plageEtEquipe",
+    "/presentationDesCours" : "/presentationDesCours",
+    '/location' : '/location'
+
+
+
+
    
   } satisfies Pathnames<typeof locales>;
    

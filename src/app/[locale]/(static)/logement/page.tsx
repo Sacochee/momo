@@ -13,7 +13,7 @@ export default function Page() {
     <>
     <Header/>
     <main className={style.main}>
-      <SliderFull data={data as any} />
+      <SliderFull data={data as any} from="bretagne"/>
       <Image
         src={"/Icons/palmierGif2.gif"}
         width={205}

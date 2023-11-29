@@ -1,0 +1,23 @@
+[
+    {
+        "name" : "img1.png",
+        "w" : "2000",
+        "h" : "745",
+        "alt" : "Image d un eleve sur ca planche de surf + logo cocosurf"
+    },{
+        "name" : "img2.png",
+        "w" : "2000",
+        "h" : "745",
+        "alt" : "Image d un eleve qui surf"
+    },{
+        "name" : "img3.png",
+        "w" : "2000",
+        "h" : "745",
+        "alt" : "Image d un eleve qui fait signe a la caméra sur ca planche de surf"
+    },{
+        "name" : "img4.png",
+        "w" : "2000",
+        "h" : "745",
+        "alt" : "Photo de groupe avec une ambiance fun et drole "
+    }
+]

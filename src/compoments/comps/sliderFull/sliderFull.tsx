@@ -10,9 +10,13 @@ export type obj = {
     h: number;
     alt: string;
   }[];
+  from : string
 };
 
-export default function SliderFull({ data }: obj) {
+export default function SliderFull({ data, from }: obj) {
+  console.log(data)
+  console.log(from)
+
   const max = data.length;
   const [i, setI] = useState(0);
   const [load, setLoad] = useState(false);
@@ -65,7 +69,7 @@ export default function SliderFull({ data }: obj) {
         </div>
       </div>
       <Image
-        src={`/bretagne/${data[i].name}`}
+        src={`/${from}/${data[i].name}`}
         width={screen.width}
         height={(screen.width * data[i].h) / data[i].w}
         alt={data[i].alt}

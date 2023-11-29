@@ -13,7 +13,7 @@ export default function page() {
     <Header/>
     
     <main className={style.main}>
-      <SliderFull data={data as any} />
+      <SliderFull data={data as any} from="bretagne"/>
       <div className={style.box}>
         <section className={style.part}>
           <h1 className={style.h1}>{t("h1")}</h1>
@@ -36,7 +36,7 @@ export default function page() {
           <p>{t("p7")}</p>
         </section>
         <div className={style.resize}>
-          <SliderFull data={data as any} />
+          <SliderFull data={data as any} from="bretagne"/>
         </div>
         <section className={style.part}>
           <h2 className={style.h2}>{t("h2")}</h2>

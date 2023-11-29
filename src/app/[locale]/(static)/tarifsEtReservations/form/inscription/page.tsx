@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
-import HeaderForm from "../../../compoments/inscription/header/header";
+import HeaderForm from "../../../../../../compoments/inscription/header/header";
 import Footer from "@/compoments/footer/footer";
 import AddBtn from "@/compoments/inscription/comps/addBtn";
 import Surfer from "@/compoments/inscription/comps/surfer";
@@ -20,11 +20,14 @@ export type Data = {
     | "1"
     | "2"
     | "3"
+    | "4"
     | "5"
     | "10carte"
     | "10HS"
     | "enfant"
     | "acompte"
+    | "part1"
+    | "part2"
     | string;
   info?: string;
 };

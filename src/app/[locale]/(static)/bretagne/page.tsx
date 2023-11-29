@@ -14,7 +14,7 @@ export default function page() {
     <>
       <Header />
       <main className={style.main}>
-        <SliderFull data={data as any} />
+        <SliderFull data={data as any} from="bretagne"/>
         <Image
           src={"/Icons/logobrt.png"}
           width={58}
@@ -78,7 +78,7 @@ export default function page() {
           style={{ marginBottom: "64px" }}
         />
         <div className={style.less}>
-          <SliderFull data={D as any} />
+          <SliderFull data={D as any} from="bretagne"/>
         </div>
         <section className={style.infos}>
           <h2 className={style.info_h2}>{t("sub")} </h2>
