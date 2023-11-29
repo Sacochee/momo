@@ -15,7 +15,7 @@ export default function Header() {
       <div className={style.lang}>
         <div onClick={() => change("fr")} className={style.drp}>
           <Image
-            src={"/icons/fr.png"}
+            src={"/Icons/fr.png"}
             width={16}
             height={11}
             alt="logo du drapeaux Francais (version francaise)"
@@ -24,7 +24,7 @@ export default function Header() {
         </div>
         <div onClick={() => change("en")} className={style.drp}>
           <Image
-            src={"/icons/en.png"}
+            src={"/Icons/en.png"}
             width={16}
             height={11}
             alt="logo du drapeaux Anglais (version anglaise)"
@@ -33,7 +33,7 @@ export default function Header() {
         </div>
         <div onClick={() => change("de")} className={style.drp}>
           <Image
-            src={"/icons/de.png"}
+            src={"/Icons/de.png"}
             width={16}
             height={11}
             alt="logo du drapeaux allemand (version allemande)"
