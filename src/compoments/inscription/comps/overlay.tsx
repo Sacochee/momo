@@ -12,7 +12,7 @@ export default function Overlay({ data,contexte, cb, close}: { data: Data ; cont
       [formule, setFormule] = useState(data?.formule),
       [info, setInfo] = useState(data?.info),
       [error, setError] = useState<string | false>();
-      const pr = useRef(null), no = useRef(null), ag = useRef(null), ta = useRef(null), po = useRef(null)
+      const pr = useRef<HTMLInputElement>(null), no = useRef<HTMLInputElement>(null), ag = useRef<HTMLInputElement>(null), ta = useRef<HTMLInputElement>(null), po = useRef<HTMLInputElement>(null)
       if(formule == undefined)
         setFormule(contexte)
 
