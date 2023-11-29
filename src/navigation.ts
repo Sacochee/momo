@@ -21,7 +21,8 @@ import {
     '/tarifsEtReservation/form' : '/tarifsEtReservation/form',
     "/plageEtEquipe" : "/plageEtEquipe",
     "/presentationDesCours" : "/presentationDesCours",
-    '/location' : '/location'
+    '/location' : '/location',
+    '/reservationObligatoireParTelephone' : '/reservationObligatoireParTelephone'
 
 
 
