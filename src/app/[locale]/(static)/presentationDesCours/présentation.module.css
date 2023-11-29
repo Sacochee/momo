@@ -38,7 +38,7 @@
 }
 .part{
 padding: 20px 10px;
-height: 490px;
+
 }
 .part:first-child{
     
@@ -85,5 +85,8 @@ height: 490px;
         align-items: center;
         justify-content: center;
         gap: 20px;
+    }
+    .part{
+        height: 490px;
     }
 }
