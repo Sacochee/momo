@@ -18,7 +18,7 @@ export function Li({ type, duree, when, price, params }: { type: string; duree: 
       <div className={style.tabl_element}>
         {price + "€"}
       </div>
-      <div className={style.tabl_element} onClick={() => router.push(`/tarifsEtReservations/form?days=${params}`)}>
+      <div className={style.tabl_element} onClick={() => router.push(`/tarifsEtReservations/form?days=${params}` as any)}>
         S'inscrire
       </div>
     </li>
