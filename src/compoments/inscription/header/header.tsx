@@ -16,7 +16,7 @@ export default function HeaderForm() {
         <div className={Style.box}>
           <Link locale="fr" href={"/inscription"} className={Style.lang}>
             <Image
-              src={"/icons/fr.png"}
+              src={"/Icons/fr.png"}
               width={16}
               height={11}
               alt="logo du drapeaux Francais (version francaise)"
@@ -25,7 +25,7 @@ export default function HeaderForm() {
           </Link>
           <Link locale="en" href={"/inscription"} className={Style.lang}>
             <Image
-              src={"/icons/en.png"}
+              src={"/Icons/en.png"}
               width={16}
               height={11}
               alt="logo du drapeaux Anglais (version anglaise)"
@@ -34,7 +34,7 @@ export default function HeaderForm() {
           </Link>
           <Link locale="de" href={"/inscription"} className={Style.lang}>
             <Image
-              src={"/icons/de.png"}
+              src={"/Icons/de.png"}
               width={16}
               height={11}
               alt="logo du drapeaux allemand (version allemande)"
