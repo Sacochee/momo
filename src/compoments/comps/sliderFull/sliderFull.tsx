@@ -14,9 +14,6 @@ export type obj = {
 };
 
 export default function SliderFull({ data, from }: obj) {
-  console.log(data)
-  console.log(from)
-
   const max = data.length;
   const [i, setI] = useState(0);
   const [load, setLoad] = useState(false);
