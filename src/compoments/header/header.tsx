@@ -59,6 +59,7 @@ function Mobile() {
           height={50}
           alt="logo de cocosurf l ecole de surf"
           onClick={() => router.push("/")}
+          style={{zIndex:1,backgroundColor:"white",borderRadius:"50%"}}
         />
       </div>
       {etat ? <Nav /> : undefined}
