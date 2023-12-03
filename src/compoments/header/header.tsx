@@ -4,14 +4,15 @@ import { MutableRefObject, Ref, useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "../hooks";
 import style from "./header.module.css";
 import { useTranslations } from "next-intl";
-import { useRouter, usePathname } from "@/navigation";
+import { useRouter, usePathname, Link } from "@/navigation";
+import Links from "../links";
 
 export default function Header() {
   const router = useRouter();
-  const path = usePathname()
-  const change = (route : string) =>router.replace(path, {locale : route})
+  const path = usePathname();
+  const change = (route: string) => router.replace(path, { locale: route });
   return (
-    <header style={{zIndex:"4"}}>
+    <header style={{ zIndex: "4" }}>
       <div className={style.lang}>
         <div onClick={() => change("fr")} className={style.drp}>
           <Image
@@ -59,7 +60,7 @@ function Mobile() {
           height={50}
           alt="logo de cocosurf l ecole de surf"
           onClick={() => router.push("/")}
-          style={{zIndex:1,backgroundColor:"white",borderRadius:"50%"}}
+          style={{ zIndex: 1, backgroundColor: "white", borderRadius: "50%" }}
         />
       </div>
       {etat ? <Nav /> : undefined}
@@ -67,8 +68,8 @@ function Mobile() {
   );
 }
 
-function Burger({ state, setState }:{state : boolean, setState : any}) {
-  const lines = useRef()as MutableRefObject<HTMLDivElement>;
+function Burger({ state, setState }: { state: boolean; setState: any }) {
+  const lines = useRef() as MutableRefObject<HTMLDivElement>;
   useEffect(() => {
     state ? change : change;
   });
@@ -92,8 +93,8 @@ function Nav() {
   const t = useTranslations("nav");
   return (
     <ul className={style.nav}>
-      <li className={style.item} onClick={() => router.push("/")}>
-        {t("home")}
+      <li className={style.item}>
+        <Links href={"/"}>{t("home")}</Links>
       </li>
       <li className={style.item} onClick={() => setCour(cour ? false : true)}>
         {t("cours")}
@@ -107,28 +108,19 @@ function Nav() {
       </li>
       {cour ? (
         <ul className={style.subClass}>
-          <li
-            className={style.subItem}
-            onClick={() => router.push("/presentationDesCours")}
-          >
-            {t("c1")}
+          <li className={style.subItem}>
+            <Links href={"/presentationDesCours"}>{t("c1")}</Links>
           </li>
-          <li
-            className={style.subItem}
-            onClick={() => router.push("/tarifsEtReservations")}
-          >
-            {t("c2")}
+          <li className={style.subItem}>
+            <Links href={"/tarifsEtReservations"}>{t("c2")}</Links>
           </li>
-          <li
-            className={style.subItem}
-            onClick={() => router.push("/plageEtEquipe")}
-          >
-            {t("c3")}
+          <li className={style.subItem}>
+            <Links href={"/plageEtEquipe"}>{t("c3")}</Links>
           </li>
         </ul>
       ) : undefined}
-      <li className={style.item} onClick={() => router.push("/location")}>
-        {t("loc")}
+      <li className={style.item}>
+        <Links href={"/location"}>{t("loc")}</Links>
       </li>
       <li
         className={style.item}
@@ -147,31 +139,22 @@ function Nav() {
       </li>
       {petit ? (
         <ul className={style.subClass}>
-          <li
-            className={style.subItem}
-            onClick={() => router.push("/carteCadeaux")}
-          >
-            {t("p1")}
+          <li className={style.subItem}>
+            <Links href={"/carteCadeaux"}>{t("p1")}</Links>
           </li>
-          <li
-            className={style.subItem}
-            onClick={() => router.push("/bretagne")}
-          >
-            {t("p2")}
+          <li className={style.subItem}>
+            <Links href={"/bretagne"}>{t("p2")}</Links>
           </li>
-          <li
-            className={style.subItem}
-            onClick={() => router.push("/logement")}
-          >
-            {t("p3")}
+          <li className={style.subItem}>
+            <Links href={"/logement"}>{t("p3")}</Links>
           </li>
         </ul>
       ) : undefined}
-      <li className={style.item} onClick={() => router.push("/photos")}>
-        {t("photo")}
+      <li className={style.item}>
+        <Links href={"/photos"}>{t("photo")}</Links>
       </li>
-      <li className={style.item} onClick={() => router.push("/contact")}>
-        {t("contact")}
+      <li className={style.item}>
+        <Links href={"/contact"}>{t("contact")}</Links>
       </li>
     </ul>
   );
@@ -183,11 +166,18 @@ function Laptop() {
   const router = useRouter();
   return (
     <ul className={style.nav_l}>
-      <li className={style.li_l} onClick={() => router.push("/")}>
-        <Image src={"/Icons/logo.png"} width={105} height={105} alt = "Logo de cocosurf"/>
+      <li className={style.li_l}>
+        <Links href={"/"}>
+          <Image
+            src={"/Icons/logo.png"}
+            width={105}
+            height={105}
+            alt="Logo de cocosurf"
+          />
+        </Links>
       </li>
-      <li className={style.li_l} onClick={() => router.push("/")}>
-        {t("home")}
+      <li className={style.li_l}>
+        <Links href={"/"}>{t("home")}</Links>
       </li>
       <li
         className={style.li_l}
@@ -198,30 +188,21 @@ function Laptop() {
         {cours ? (
           <div className={style.trans}>
             <ul className={style.subpart}>
-              <li
-                className={style.li_l_sub}
-                onClick={() => router.push("/presentationDesCours")}
-              >
-                {t("c1")}
+              <li className={style.li_l_sub}>
+                <Links href={"/presentationDesCours"}>{t("c1")}</Links>
               </li>
-              <li
-                className={style.li_l_sub}
-                onClick={() => router.push("/tarifsEtReservations")}
-              >
-                {t("c2")}
+              <li className={style.li_l_sub}>
+                <Links href={"/tarifsEtReservations"}>{t("c2")}</Links>
               </li>
-              <li
-                className={style.li_l_sub}
-                onClick={() => router.push("/plageEtEquipe")}
-              >
-                {t("c3")}
+              <li className={style.li_l_sub}>
+                <Links href={"/plageEtEquipe"}>{t("c3")}</Links>
               </li>
             </ul>
           </div>
         ) : undefined}
       </li>
-      <li className={style.li_l} onClick={() => router.push("/location")}>
-        {t("loc")}
+      <li className={style.li_l}>
+        <Links href={"/location"}>{t("loc")}</Links>
       </li>
       <li
         className={style.li_l}
@@ -232,33 +213,24 @@ function Laptop() {
         {petit ? (
           <div className={style.trans}>
             <ul className={style.subpart}>
-              <li
-                className={style.li_l_sub}
-                onClick={() => router.push("/carteCadeaux")}
-              >
-                {t("p1")}
+              <li className={style.li_l_sub}>
+                <Links href={"/carteCadeaux"}>{t("p1")}</Links>
               </li>
-              <li
-                className={style.li_l_sub}
-                onClick={() => router.push("/bretagne")}
-              >
-                {t("p2")}
+              <li className={style.li_l_sub}>
+                <Links href={"/bretagne"}>{t("p2")}</Links>
               </li>
-              <li
-                className={style.li_l_sub}
-                onClick={() => router.push("/logement")}
-              >
-                {t("p3")}
+              <li className={style.li_l_sub}>
+                <Links href={"/logement"}>{t("p3")}</Links>
               </li>
             </ul>
           </div>
         ) : undefined}
       </li>
-      <li className={style.li_l} onClick={() => router.push("/photos")}>
-        {t("photo")}
+      <li className={style.li_l}>
+        <Links href={"/photos"}>{t("photo")}</Links>
       </li>
-      <li className={style.li_l} onClick={() => router.push("/contact")}>
-        {t("contact")}
+      <li className={style.li_l}>
+        <Links href={"/contact"}>{t("contact")}</Links>
       </li>
     </ul>
   );

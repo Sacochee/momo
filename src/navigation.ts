@@ -22,7 +22,8 @@ import {
     "/plageEtEquipe" : "/plageEtEquipe",
     "/presentationDesCours" : "/presentationDesCours",
     '/location' : '/location',
-    '/reservationObligatoireParTelephone' : '/reservationObligatoireParTelephone'
+    '/reservationObligatoireParTelephone' : '/reservationObligatoireParTelephone',
+    '/tarifsEtReservations/form/inscription/autorisations' : '/tarifsEtReservations/form/inscription/autorisations'
 
 
 

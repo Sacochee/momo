@@ -8,6 +8,7 @@ import Surfer from "@/compoments/inscription/comps/surfer";
 import style from "./style.module.css";
 import { uuid } from "uuidv4";
 import Overlay from "@/compoments/inscription/comps/overlay";
+import { useRouter } from "@/navigation";
 
 export type Data = {
   id: string;
@@ -46,6 +47,7 @@ const surerfstest: Data[] = [
 
 export default function Page() {
   const params = useSearchParams().get("days");
+  const router = useRouter()
   const [count, setCount] = useState<number>(0);
   const [data, setData] = useState<Data[] | []>([]);
   const [popUp, setPopUp] = useState(false);
@@ -119,6 +121,16 @@ export default function Page() {
     else 
       return true
   }
+
+  const NextData = () =>{
+    const d = {
+      date : date,
+      time : horas,
+      surfers : data,
+    }
+    sessionStorage.setItem("Data", JSON.stringify(d))
+    router.push(`/tarifsEtReservations/form/inscription/autorisations`)
+  }
   return (
     <>
       <HeaderForm />
@@ -184,7 +196,7 @@ export default function Page() {
               <AddBtn />
             </div>
             <div className={style.center}>
-              <button onClick={() => undefined} className={`${style.btnValider} ${completed() ?  style.btnValiderOff : undefined }`} disabled={completed()}>
+              <button onClick={NextData} className={`${style.btnValider} ${completed() ?  style.btnValiderOff : undefined }`} disabled={completed()}>
                 Valider
               </button>
             </div>

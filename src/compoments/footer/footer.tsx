@@ -3,6 +3,7 @@ import { useRouter } from "next/navigation";
 import style from "./style.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import Links from "../links";
 
 export default function Footer() {
   const router = useRouter();
@@ -14,12 +15,16 @@ export default function Footer() {
           <a href="tel:+33628051411" className={style.item}>
             Tél : +33 (0)6 28 05 14 11
           </a>
-          <Link href={"/mentionsLegales"} className={style.item}>
-            Mentions légales
-          </Link>
-          <Link href={"/CGV"} className={style.item}>
-            CGV
-          </Link>
+          <div className={style.item}>
+            <Links href={"/mentionsLegales"}>
+              Mentions légales
+            </Links>
+          </div>
+          <div className={style.item}>
+            <Links href={"/CGV"}>
+              CGV
+            </Links>
+          </div>
           <div className={style.item}>2024 © Copyright Coco Surf</div>
 
           <a href="/" className={style.item}>
@@ -48,18 +53,23 @@ export default function Footer() {
         </div>
         <div
           onClick={() =>
-            router.push("https://www.instagram.com/cocosurf_ecoledesurf/")
+            router.push()
           }
           className={style.logo}
         >
-          <Image
+          <a href="https://www.instagram.com/cocosurf_ecoledesurf/">
+            <Image
             src={"/Icons/insta.png"}
             width={30}
             height={30}
             alt="logo du lien instagram de cocosurf"
             className={style.img}
           />
-          <div>Instagram</div>
+          </a>
+          <a href="https://www.instagram.com/cocosurf_ecoledesurf/"> 
+            <div>Instagram</div>
+          </a>
+          
         </div>
         <div
           onClick={() =>
