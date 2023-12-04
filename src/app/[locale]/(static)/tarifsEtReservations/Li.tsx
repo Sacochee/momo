@@ -1,4 +1,5 @@
 "use client";
+import Links from "@/compoments/links";
 import style from "./style.module.css";
 import { useRouter } from "@/navigation";
 
@@ -18,9 +19,9 @@ export function Li({ type, duree, when, price, params }: { type: string; duree: 
       <div className={style.tabl_element}>
         {price + "€"}
       </div>
-      <div className={style.tabl_element} onClick={() => router.push(`/tarifsEtReservations/form?days=${params}` as any)}>
+      <Links href={`/tarifsEtReservations/form?days=${params}`} className={style.tabl_element}>
         S'inscrire
-      </div>
+      </Links>
     </li>
   );
 }

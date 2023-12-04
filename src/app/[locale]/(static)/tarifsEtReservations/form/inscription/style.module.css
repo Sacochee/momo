@@ -1,19 +1,20 @@
-.main { position: relative; display: flex; flex-direction: column; align-items: center; font-family: Arial, Helvetica, sans-serif; }
-.box { width: 300px; }
-.ul { padding: 0; list-style: none; }
-.hover { z-index: 5; background-color: blue; position: absolute; }
-.overlay { position: absolute; z-index: 6; }
-.flou { filter: blur(2px); }
-.top { display: flex; flex-direction: column; align-items: center; }
-.topDate, .topHours { display: flex; flex-direction: column; align-items: center; gap: 5px; margin: 5px; }
-.topCount { text-decoration: underline; font-weight: bold; }
-.topSpan { font-family: .9em; }
-.topPart { margin: 10px 0; }
-.topInput { border: none; background-color: #ededed; padding: 5px 10px; border-radius: 10px; }
-.topError { color: red; font-size: .8em; animation: popError .1s; }
-.center { display: flex; justify-content: center; align-items: center; margin: 20px 0; }
-.btnValider { background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%); border: none; color: white; padding: 10px 0; width: 300px; border-radius: 10px; }
-.btnValiderOff { opacity: .7; filter: blur(1px); }
+.main { position: relative; display: flex; flex-direction: column; align-items: center; font-family: Arial, Helvetica, sans-serif }
+.box { width: 300px }
+.ul { padding: 0; list-style: none }
+.hover { z-index: 5; background-color: blue; position: absolute }
+.overlay { position: absolute; z-index: 6 }
+.flou { filter: blur(2px) }
+.top { display: flex; flex-direction: column; align-items: center }
+.topDate, .topHours { display: flex; flex-direction: column; align-items: center; gap: 5px; margin: 5px }
+.topCount { font-weight: bold }
+.topSpan { font-family: .9em }
+.topPart { margin: 10px 0 }
+.topInput { border: none; background-color: #ededed; padding: 5px 10px; border-radius: 10px }
+.topError { color: red; font-size: .8em; animation: popError .1s }
+.center { display: flex; justify-content: center; align-items: center; margin: 20px 0 }
+.btnValider { background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%); border: none; color: white; padding: 10px 0; width: 300px; border-radius: 10px }
+.btnValiderOff { opacity: .7; filter: blur(1px) }
+.center { display: flex; flex-direction: column; align-items: center; }
 @keyframes popError {
 0% { transform: scale(.5) }
 25% { transform: scale(.8) }
@@ -21,3 +22,7 @@
 75% { transform: scale(1.2) }
 100% { transform: scale(1) }
 }
+@media (min-width:1024px) { .boxx { display: flex; align-items: flex-start; justify-content: space-between; column-gap: 50px }
+.top { border: 1px solid black; border-radius: 10px; padding: 10px 30px; margin-top: 20px; }
+.box { margin-top: 5px }
+; }

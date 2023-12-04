@@ -58,7 +58,7 @@ export default function Overlay({ data,contexte, cb, close}: { data: Data ; cont
         <h2>Fiche Participant</h2>
         <div className={form.part}>
           <div className={form.name}>
-            <span className={form.abrit}>Prémon du Participant :</span>
+            <span className={form.abrit}>Prémon du Participant</span>
             <input
               type="text"
               value={prenom}
@@ -69,7 +69,7 @@ export default function Overlay({ data,contexte, cb, close}: { data: Data ; cont
             />
           </div>
           <div className={form.name}>
-            <span>Nom du Participant :</span>
+            <span className={form.abrit}>Nom du Participant</span>
             <input
               type="text"
               value={nom}
@@ -97,7 +97,7 @@ export default function Overlay({ data,contexte, cb, close}: { data: Data ; cont
           &nbsp;ans
           </span>
           </div>
-          <div>
+          <div className={form.case}>
             <span>
               taille : 
             </span><input
@@ -112,7 +112,7 @@ export default function Overlay({ data,contexte, cb, close}: { data: Data ; cont
           &nbsp; cm
           </span>
           </div>
-          <div>
+          <div className={form.case}>
             <span>
               poids : 
             </span>

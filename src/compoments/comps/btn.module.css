@@ -73,12 +73,7 @@
     50%{
         transform: translateX(13px) rotate(-40deg) translateY(4px);
     }
-    75%{
-        transform: rotate(40deg) translateY(4px);
-    }
-    100%{
-        transform: rotate(-40deg) translateY(4px) ;
-    }
+    
 }
 @keyframes animBot{
     0%{
@@ -99,33 +94,34 @@
     50%{
         transform: translateX(13px) rotate(40deg) translateY(-4px);
     }
-    75%{
-        transform: rotate(-40deg) translateY(-4px);
-    }
-    100%{
-        transform: rotate(40deg) translateY(-4px) ;
-    }
 }
 @keyframes mid {
     0%{
         width: 11px;
     }
     10%{
-        width: 13px;
+        width: 14px;
     }
     20%{
-        width: 16px;
+        width: 17px;
     }
     30%{
-        width: 18px;
+        width: 19px;
     }
     40%{
-        width: 20px;
+        width: 21px;
     }
     50%{
-        width: 22px;
+        width: 23px;
     }
     100%{
         width: 10px;
+    }
+}
+
+
+@media (min-width : 450px){
+    .btn{
+        width: 250px;
     }
 }

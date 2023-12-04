@@ -9,6 +9,7 @@ import style from "./style.module.css";
 import { uuid } from "uuidv4";
 import Overlay from "@/compoments/inscription/comps/overlay";
 import { useRouter } from "@/navigation";
+import Links from "@/compoments/links";
 
 export type Data = {
   id: string;
@@ -47,7 +48,7 @@ const surerfstest: Data[] = [
 
 export default function Page() {
   const params = useSearchParams().get("days");
-  const router = useRouter()
+  const router = useRouter();
   const [count, setCount] = useState<number>(0);
   const [data, setData] = useState<Data[] | []>([]);
   const [popUp, setPopUp] = useState(false);
@@ -112,28 +113,32 @@ export default function Page() {
       setErrorDate(false);
       setPopUp(true);
       setCurrenteData(undefined);
-    } else setErrorDate(true);
+    } else {
+      setErrorDate(true);
+      window.scrollTo(0, 0);
+    }
   };
 
-  const completed = () =>{
-    if(data.length > 0 && date != undefined && horas != undefined)
-      return false
-    else 
-      return true
-  }
+  const completed = () => {
+    if (data.length > 0 && date != undefined && horas != undefined)
+      return false;
+    else return true;
+  };
 
-  const NextData = () =>{
+  const NextData = () => {
     const d = {
-      date : date,
-      time : horas,
-      surfers : data,
-    }
-    sessionStorage.setItem("Data", JSON.stringify(d))
-    router.push(`/tarifsEtReservations/form/inscription/autorisations`)
-  }
+      date: date,
+      time: horas,
+      surfers: data,
+    };
+    sessionStorage.setItem("Data", JSON.stringify(d));
+  };
   return (
     <>
-      <HeaderForm />
+      <div className={`${popUp ? style.flou : undefined}`}>
+        <HeaderForm />
+      </div>
+
       <main className={style.main}>
         {popUp ? (
           <div className={style.overlay}>
@@ -145,65 +150,81 @@ export default function Page() {
             />
           </div>
         ) : undefined}
-        <div className={`${popUp ? style.flou : undefined}`}>
-          <section className={style.top}>
-            <div className={style.topPart}>
-              <span className={style.topSpan}>Nombres de Particitants :</span>
-              <span className={style.topCount}>{count}</span>
-            </div>
-            <div className={style.topPart}>
-              {errorDate ? (
-                <div className={style.topError}>
-                  La Date n est pas correctement complété
-                </div>
-              ) : undefined}
-              <div className={style.topDate}>
-                <span>Date de votre Premier cours :</span>
-                <input
-                  type="date"
-                  onChange={(e) => setDate(e.target.value)}
-                  className={style.topInput}
-                />
-              </div>
-              <div className={style.topHours}>
-                <span>Heure de votre premier cours :</span>
-                <input
-                  type="time"
-                  onChange={(e) => setHoras(e.target.value)}
-                  className={style.topInput}
-                />
-              </div>
-            </div>
-          </section>
-          <section className={style.box}>
-            {true ? (
-              <ul className={style.ul}>
-                {data.map((item) => (
-                  <Surfer
-                    data={item}
-                    edit={(data) => {
-                      editUser(data);
-                    }}
-                    rm={(data) => {
-                      deleteUser(data);
-                    }}
+        <div className={`${popUp ? style.flou : undefined} ${style.center}`}>
+          <div className={style.topPart}>
+            <span className={style.topSpan}>Nombres de Particitants :</span>
+            <span className={style.topCount}>{" " + count}</span>
+          </div>
+          <div className={style.boxx}>
+            <section className={style.top}>
+              <div className={style.topPart}>
+                {errorDate ? (
+                  <div className={style.topError}>
+                    La Date n est pas correctement complété
+                  </div>
+                ) : undefined}
+                <div className={style.topDate}>
+                  <span>Date de votre Premier cours :</span>
+                  <input
+                    type="date"
+                    onChange={(e) => setDate(e.target.value)}
+                    className={style.topInput}
                   />
-                ))}
-              </ul>
-            ) : undefined}
+                </div>
+                <div className={style.topHours}>
+                  <span>Heure de votre premier cours :</span>
+                  <input
+                    type="time"
+                    onChange={(e) => setHoras(e.target.value)}
+                    className={style.topInput}
+                  />
+                </div>
+              </div>
+            </section>
 
-            <div onClick={newSurfer}>
-              <AddBtn />
-            </div>
-            <div className={style.center}>
-              <button onClick={NextData} className={`${style.btnValider} ${completed() ?  style.btnValiderOff : undefined }`} disabled={completed()}>
+            <section className={style.box}>
+              {true ? (
+                <ul className={style.ul}>
+                  {data.map((item) => (
+                    <Surfer
+                      data={item}
+                      edit={(data) => {
+                        editUser(data);
+                      }}
+                      rm={(data) => {
+                        deleteUser(data);
+                      }}
+                    />
+                  ))}
+                </ul>
+              ) : undefined}
+
+              <div onClick={newSurfer}>
+                <AddBtn />
+              </div>
+            </section>
+          </div>
+          <div className={style.center}>
+            <button
+              onClick={NextData}
+              disabled={completed()}
+              style={{ background: "none", border: "none" }}
+            >
+              <Links
+                href={"/tarifsEtReservations/form/inscription/autorisations"}
+                className={`${style.btnValider} ${
+                  completed() ? style.btnValiderOff : undefined
+                }`}
+              >
                 Valider
-              </button>
-            </div>
-          </section>
+              </Links>
+            </button>
+          </div>
         </div>
       </main>
-      <Footer />
+      <div className={`${popUp ? style.flou : undefined}`}>
+        <Footer />
+      </div>
     </>
   );
 }

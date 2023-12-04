@@ -1,4 +1,4 @@
-import { Link } from "@/navigation"
+import Links from "../links"
 import styles from "./btn.module.css"
 
 type Btn = {
@@ -18,10 +18,10 @@ export default function Btn({to, txt, outside} : Btn) {
     )
   }else{
     return (
-    <Link href={to as any} className={styles.btn}>
+    <Links href={to as any} className={styles.btn}>
         <div style={{ margin: "0 10px" }}>{txt}</div>
         <Fleche />
-    </Link>
+    </Links>
   )
   }
   

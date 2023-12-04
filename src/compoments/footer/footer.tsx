@@ -2,13 +2,14 @@
 import { useRouter } from "next/navigation";
 import style from "./style.module.css";
 import Image from "next/image";
-import Link from "next/link";
 import Links from "../links";
+import ScrollTop from "../comps/scrol/scroll";
 
 export default function Footer() {
   const router = useRouter();
   return (
     <footer className={style.footer}>
+      <ScrollTop /> 
       <div className={style.part}>
         <div className={style.title}>Infos</div>
         <div className={style.subpart}>
@@ -35,29 +36,26 @@ export default function Footer() {
       <div className={style.part}>
         <div className={style.title}>Réseaux sociaux</div>
         <div
-          onClick={() =>
-            router.push(
-              "https://www.facebook.com/COCO-SURF-%C3%A9cole-de-surf-en-Charente-Maritime-828817494122745/"
-            )
-          }
           className={style.logo}
         >
-          <Image
+          <a href="https://www.facebook.com/COCO-SURF-%C3%A9cole-de-surf-en-Charente-Maritime-828817494122745/" target="_blank" className={style.a}>
+           <Image
             src={"/Icons/face.png"}
             width={30}
             height={30}
             alt="logo du lien facebook de cocosurf"
             className={style.img}
-          />
-          <div>Facebook</div>
+            /> 
+          </a>
+          <a href="https://www.facebook.com/COCO-SURF-%C3%A9cole-de-surf-en-Charente-Maritime-828817494122745/" target="_blank" className={style.a}>
+            <div>Facebook</div>
+          </a>
+          
         </div>
         <div
-          onClick={() =>
-            router.push()
-          }
           className={style.logo}
         >
-          <a href="https://www.instagram.com/cocosurf_ecoledesurf/">
+          <a href="https://www.instagram.com/cocosurf_ecoledesurf/" className={style.a}>
             <Image
             src={"/Icons/insta.png"}
             width={30}
@@ -66,27 +64,28 @@ export default function Footer() {
             className={style.img}
           />
           </a>
-          <a href="https://www.instagram.com/cocosurf_ecoledesurf/"> 
+          <a href="https://www.instagram.com/cocosurf_ecoledesurf/" className={style.a}> 
             <div>Instagram</div>
           </a>
           
         </div>
         <div
-          onClick={() =>
-            router.push(
-              "https://www.youtube.com/channel/UCpHW4IR4nAFnul7Ux1q1yOA"
-            )
-          }
           className={style.logo}
         >
-          <Image
+          <a href="https://www.youtube.com/channel/UCpHW4IR4nAFnul7Ux1q1yOA" target="_blank" className={style.a}>
+            <Image
             src={"/Icons/yt.png"}
             width={35}
             height={35}
             alt="logo du lien Youtube de cocosurf"
             className={style.img}
           />
-          <div>Youtube &nbsp;&nbsp;</div>
+          </a>
+          <a href="https://www.youtube.com/channel/UCpHW4IR4nAFnul7Ux1q1yOA" target="_blank" className={style.a}>
+            <div>Youtube &nbsp;&nbsp;</div>
+          </a>
+          
+          
         </div>
       </div>
       <div className={style.part}>

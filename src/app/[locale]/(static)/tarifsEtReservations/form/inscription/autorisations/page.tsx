@@ -1,9 +1,10 @@
 "use client";
 import Footer from "@/compoments/footer/footer";
 import HeaderForm from "@/compoments/inscription/header/header";
-import { use, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
+import style from "./style.module.css"
 
 export default function page() {
   const [d, setD] = useState(sessionStorage.getItem("Data"));
@@ -17,7 +18,8 @@ export default function page() {
       [errorNom, setErrorNom] = useState(false),
       [errorPrenom, setErrorPrenom] = useState(false),
       [errorTel, setErrorTel] = useState(false),
-      [errorPay, setErrorPay] = useState(false);
+      [errorPay, setErrorPay] = useState(false),
+      [payMethode, setPayMethode] = useState(false)
     const cgv = useRef<HTMLInputElement>(null),
       anul = useRef<HTMLInputElement>(null),
       maj = useRef<HTMLInputElement>(null),
@@ -26,6 +28,13 @@ export default function page() {
       nom = useRef<HTMLInputElement>(null),
       prenom = useRef<HTMLInputElement>(null),
       tel = useRef<HTMLInputElement>(null);
+
+    const changePay = () =>{
+      if(pay.current?.value == "others")
+        setPayMethode(true)
+      else  
+        setPayMethode(false)
+    }
 
     const majeur = () => {
       let bool = false;
@@ -76,19 +85,20 @@ export default function page() {
         setErrorPay(true);
         err = true;
       }
-      if (nom.current?.value == undefined) {
+      if (nom.current?.value == "") {
         console.log(nom.current?.value);
         setErrorNom(true);
         err = true;
       }
-      if (prenom.current?.value == undefined) {
+      if (prenom.current?.value == "") {
         setErrorPrenom(true);
         err = true;
       }
-      if (tel.current?.value == undefined) {
+      if (tel.current?.value == "") {
         setErrorTel(true);
         err = true;
       }
+      console.log(prenom.current?.value)
       if (err == false) {
         console.log(pay.current?.value);
         if (pay.current?.value == "cb") {
@@ -106,6 +116,7 @@ export default function page() {
             },
           };
           createSess(json);
+          
         } else {
         }
       } else {
@@ -115,37 +126,53 @@ export default function page() {
     return (
       <>
         <HeaderForm />
-        <main>
+        <main className={style.main}>
           <h1>Vous y etes Presque !</h1>
-          <section>
-            <h2>Fiche accident</h2>
-            <p>Personne a contacter en cas d accident</p>
-            <div>
-              {errorNom ? (
-                <div>Attention ce champs est obligatoire</div>
-              ) : undefined}
-              <input type="text" placeholder="nom de la personne" ref={nom} />
-              {errorPrenom ? (
-                <div>Attention ce champs est obligatoire</div>
-              ) : undefined}
+          <section className={style.accident}>
+            <h2 className={style.accident_h2}>Fiche accident</h2>
+            <p className={style.accident_p}>Personne a contacter en cas d accident</p>
+            <div className={style.accident_input}>
+              
+              <p className={style.label_input}>
+                Nom
+              </p>
+           
+              
+              <input type="text" placeholder="Ex : LePompier" ref={nom} className={style.input}/>
+              <div style={errorNom ? undefined : {visibility:"hidden"}} className={style.errorName}>Attention ce champs est obligatoire</div>
+
+              <p className={style.label_input}>
+              Prenom
+              </p>
               <input
                 type="text"
-                placeholder="prenom de la personne"
+                placeholder="Ex : Sam"
                 ref={prenom}
+                className={style.input}
               />
-              {errorTel ? (
-                <div>Attention ce champs est obligatoire</div>
-              ) : undefined}
-              <input type="text" placeholder="ex : 06 20 71 98 64" ref={tel} />
+              <div style={errorPrenom ? undefined : {visibility:"hidden"}} className={style.errorName}>Attention ce champs est obligatoire</div>
+
+              <p className={style.label_input}>
+                Numéro de téléphone
+              </p>
+            
+              <input type="text" placeholder="ex : 06 20 71 98 64" ref={tel}  className={style.input}/>
+              <div style={errorTel ?  undefined :{visibility:"hidden"}} className={style.errorName}>Attention ce champs est obligatoire</div>
+
             </div>
           </section>
-          <section>
-            <h2>moyen de Paiment</h2>
+          <section className={style.pay}>
+            <h2 className={style.pay_h2}>Moyen de Paiment</h2>
 
-            <select ref={pay}>
+            <select ref={pay} className={style.pay_select} onChange={changePay}>
               <option value={"cb"}>Carte bancaires</option>
-              <option value="others">autres</option>
+              <option value="others">Autres</option>
             </select>
+            {payMethode ? (
+              <div>
+                <input type="text" />
+              </div>
+            ) : undefined}
           </section>
           <section>
             <h2>Autorisations</h2>

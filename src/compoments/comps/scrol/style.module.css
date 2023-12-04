@@ -1,0 +1,26 @@
+.box{
+    bottom: 60px;
+    right: 30px;
+    position: fixed;
+    background-color: black;
+    height: 30PX;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.span{
+    height: 2px;
+    width: 10px;
+    content: "";
+    background-color:white;
+}
+.span:first-child{
+    rotate: -45deg;
+    transform: translateX(3px);
+}
+.span:last-child{
+    rotate: 45deg;
+    transform: translateX(-3px);
+}

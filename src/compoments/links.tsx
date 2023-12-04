@@ -18,7 +18,7 @@ export default function Links({href, children, className} : {href : any, childre
     }
   }
   return (
-    <div onClick={click} className={className}>
+    <div onClick={click} className={className} style={{cursor:"pointer"}}>
       {load ? <div className={style.div}>
         <div className={style.box}>
           <Image 

@@ -1,3 +1,4 @@
+import Links from "@/compoments/links";
 import { Link } from "@/navigation";
 import Style from "./header.module.css";
 import Image from "next/image";
@@ -6,13 +7,13 @@ export default function HeaderForm() {
   return (
     <header className={Style.header}>
       <nav className={Style.nav}>
-        <Link href={"/"} className={Style.btn}>
+        <Links href={"/"} className={Style.btn}>
           <Fleche />
           <span>
             Revenir au site
           </span>
           
-        </Link>
+        </Links>
         <div className={Style.box}>
           <Link locale="fr" href={"/inscription"} className={Style.lang}>
             <Image

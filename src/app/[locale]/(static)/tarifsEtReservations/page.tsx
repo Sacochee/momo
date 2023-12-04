@@ -35,7 +35,10 @@ export default function Page() {
               {t("li2")}
             </li>
           </ol>
-          <Btn txt="Inscription" to="/tarifsEtReservations/form" />
+          <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
+            <Btn txt="Inscription" to="/tarifsEtReservations/form" />
+          </div>
+          
           <p>
           {t("p2")}
           </p>
@@ -62,7 +65,8 @@ export default function Page() {
           
         </div>
         <div style={{margin:"10px 20px"}}>
-          <div className={style.tabl_top}>
+          <div>
+            <div className={style.tabl_top}>
             <h2 className={style.tabl_top_h2}>{t("tabl1_h2")}</h2>
             <div className={style.tabl_top_line}>{/*line */}</div>
             <p className={style.tabl_top_p}>{t("tabl1_p")} </p>
@@ -79,7 +83,9 @@ export default function Page() {
             <Li type={t("tabl_li8.name")} duree={t("tabl_li8.time")} when={t("tabl_li8.when")} price={200} params="enfant"/>
             <Li type={t("tabl_li9.name")} duree={t("tabl_li9.time")} when={t("tabl_li9.when")} price={30} params="acompte"/>
           </ul>
-          <div className={style.tabl_top}>
+          </div>
+          <div>
+            <div className={style.tabl_top}>
             <h2 className={style.tabl_top_h2}>{t("tabl2_h2")}</h2>
             <div className={style.tabl_top_line}>{/*line */}</div>
             <p className={style.tabl_top_pp}>{t("tabl2_p")} </p>
@@ -88,6 +94,8 @@ export default function Page() {
           <Li type={t("tabl2_li1.name")} duree={t("tabl2_li1.time")} when={t("tabl2_li1.when")} price={100} params="part1"/>
           <Li type={t("tabl2_li2.name")} duree={t("tabl2_li2.time")} when={t("tabl2_li2.when")} price={160} params="part2"/>
           </ul>
+          </div>
+          
         </div>
       </main>
       <Footer />

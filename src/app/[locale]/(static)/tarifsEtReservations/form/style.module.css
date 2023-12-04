@@ -25,3 +25,12 @@
     padding: 10px 40px;
     color: white;
 }
+.tel{
+    
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 30px;
+    text-decoration: none ;
+}
