@@ -1,6 +1,6 @@
 import Footer from '@/compoments/footer/footer'
 import Header from '@/compoments/header/header'
-import Links from '@/compoments/links'
+import Links from '@/compoments/utilities/links/links'
 import React from 'react'
 
 export default function Page() {

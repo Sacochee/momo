@@ -1,26 +1,17 @@
-"use client";
 import Footer from "@/compoments/footer/footer";
 import HeaderForm from "@/compoments/inscription/header/header";
 import style from "./style.module.css";
-import { useSearchParams } from "next/navigation";
-import Links from "@/compoments/links";
+import Links from "@/compoments/utilities/links/links";
 import Image from "next/image";
 
 export default function page() {
-  const params = useSearchParams();
-  let redirect: string;
-  if (params.get("days"))
-    redirect = `/tarifsEtReservations/form/inscription?days=${params.get(
-      "days"
-    )}`;
-  else redirect = "/tarifsEtReservations/form/inscription";
   return (
     <>
       <HeaderForm />
       <main className={style.main}>
         <h1 className={style.h1}>Avez-vous appelé l'école au préalable ?</h1>
         <div className={style.btns}>
-          <Links href={redirect} className={style.btn}>
+          <Links href={"/tarifsEtReservations/form/inscription"} className={style.btn}>
             Oui
           </Links>
           <Links

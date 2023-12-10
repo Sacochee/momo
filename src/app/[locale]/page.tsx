@@ -1,8 +1,8 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { useTranslations } from "next-intl";
-import Video from "@/compoments/videos/video";
-import Btn from "@/compoments/comps/btn";
+import Video from "@/compoments/utilities/videos/video";
+import Btn from "@/compoments/utilities/button/btn";
 import Footer from "@/compoments/footer/footer";
 import Header from "@/compoments/header/header";
 

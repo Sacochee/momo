@@ -1,6 +1,6 @@
 "use client"
 import { Image } from "next/dist/client/image-component";
-import { useMediaQuery } from "../hooks";
+import { useMediaQuery } from "../../hooks";
 
 type objImage = {
     src : string,

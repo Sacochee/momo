@@ -4,8 +4,8 @@ import { MutableRefObject, Ref, useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "../hooks";
 import style from "./header.module.css";
 import { useTranslations } from "next-intl";
-import { useRouter, usePathname, Link } from "@/navigation";
-import Links from "../links";
+import { useRouter, usePathname} from "@/navigation";
+import Links from "../utilities/links/links";
 
 export default function Header() {
   const router = useRouter();

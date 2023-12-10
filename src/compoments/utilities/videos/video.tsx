@@ -1,5 +1,5 @@
 "use client"
-import { useMediaQuery } from "../hooks"
+import { useMediaQuery } from "../../hooks"
 
 type props ={
   breakpoint : number, 

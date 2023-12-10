@@ -1,8 +1,8 @@
-import SliderFull from "@/compoments/comps/sliderFull/sliderFull";
+import SliderFull from "@/compoments/utilities/sliderFull/sliderFull";
 import data from "../../../../../public/bretagne/image.json";
 import Image from "next/image";
 import style from "./brt.module.css";
-import Btn from "@/compoments/comps/btn";
+import Btn from "@/compoments/utilities/button/btn";
 import D from "../../../../../public/bretagne/imageBis.json";
 import { useTranslations } from "next-intl";
 import Footer from "@/compoments/footer/footer";

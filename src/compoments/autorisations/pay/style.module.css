@@ -1,0 +1,39 @@
+.pay, .skull{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.pay_h2{
+    font-size: 1.5em;
+}
+.pay_select{
+    padding: 10px;
+    border: none;
+}
+
+.skull{
+    justify-content: space-between;
+    height: 50px;
+
+}
+.skull_case {
+    height: 20px;
+    width: 40px;
+    background-color: gray;
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+
+	70% {
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}

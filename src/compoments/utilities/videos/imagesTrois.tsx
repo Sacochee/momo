@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image"
-import { useMediaQuery } from "../hooks"
+import { useMediaQuery } from "../../hooks"
 
 type brp = {
     src : string,

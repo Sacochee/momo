@@ -1,6 +1,6 @@
-import SliderCss from "@/compoments/comps/sliderCss";
+import SliderCss from "@/compoments/utilities/slider/sliderCss";
 import style from "./présentation.module.css";
-import Btn from "@/compoments/comps/btn";
+import Btn from "@/compoments/utilities/button/btn";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import Footer from "@/compoments/footer/footer";

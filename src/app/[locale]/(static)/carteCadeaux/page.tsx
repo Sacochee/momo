@@ -1,7 +1,7 @@
-import Img from "@/compoments/videos/images";
+import Img from "@/compoments/utilities/videos/images";
 import Image from "next/image";
 import style from "./cadeau.module.css"
-import Btn from "@/compoments/comps/btn";
+import Btn from "@/compoments/utilities/button/btn";
 import { useTranslations } from "next-intl";
 import Header from "@/compoments/header/header";
 import Footer from "@/compoments/footer/footer";

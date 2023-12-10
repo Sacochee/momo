@@ -2,8 +2,8 @@
 import { useRouter } from "next/navigation";
 import style from "./style.module.css";
 import Image from "next/image";
-import Links from "../links";
-import ScrollTop from "../comps/scrol/scroll";
+import Links from "../utilities/links/links";
+import ScrollTop from "../utilities/scroll/scroll";
 
 export default function Footer() {
   const router = useRouter();

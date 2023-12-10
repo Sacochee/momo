@@ -4,11 +4,14 @@ import style from "./links.module.css"
 import Image from "next/image"
 import { useRouter, usePathname } from "@/navigation"
 
-export default function Links({href, children, className} : {href : any, children : ReactNode, className?:any}) {
+export default function Links({href, children, className, onClick} : {href : any, children : ReactNode, className?:any, onClick?:any}) {
   const [load, setLoad] = useState(false)
   const router = useRouter()
   const path = usePathname()
   const click = ()=>{
+    if(onClick){
+      onClick()
+    }
     if(href == path){
 
     }else{

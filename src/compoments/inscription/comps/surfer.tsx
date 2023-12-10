@@ -1,9 +1,8 @@
 "use client";
 import style from "./surfer.module.css";
-import { Data } from "@/app/[locale]/(static)/tarifsEtReservations/form/inscription/page";
+import { Data } from "@/app/[locale]/(compl)/tarifsEtReservations/form/inscription/page";
 import Image from "next/image";
-import { useState } from "react";
-import {v4 as uuidv4 } from "uuid";
+import {v4 as uuidv4} from "uuid"
 
 export default function Surfer({
   data,
@@ -14,9 +13,8 @@ export default function Surfer({
   edit: (arg: string) => void;
   rm : (arg : string) => void
 }) {
-  const [isHover, setIshover] = useState(false);
   return (
-    <li className={style.li}>
+    <li className={style.li} key={uuidv4()}>
       <div className={style.container}>
         <div className={style.primaire}>
           <div className={style.name}>
@@ -28,18 +26,18 @@ export default function Surfer({
             </div>
           </div>
           <ul className={style.caracteristiques}>
-            <li>
+            <li key={uuidv4()}>
               <span className={style.info}>{data.age}</span>
 
               {" ans"}
             </li>
-            <li>
+            <li key={uuidv4()}>
               <span className={style.case}>
                 <span className={style.info}>{data.taille}</span>
                 {" cm"}
               </span>
               <span className={style.case}>
-                <span className={style.info}>{data.poid}</span>
+                <span className={style.info}>{data.poids}</span>
                 {" kg"}
               </span>
             </li>

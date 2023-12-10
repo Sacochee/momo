@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { meta } from "../../layout";
 import style from "./style.module.css";
 import Link from "next/link";
-import Img from "@/compoments/videos/images";
+import Img from "@/compoments/utilities/videos/images";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import Header from "@/compoments/header/header";

@@ -1,4 +1,4 @@
-import Links from "@/compoments/links";
+import Links from "@/compoments/utilities/links/links";
 import { Link } from "@/navigation";
 import Style from "./header.module.css";
 import Image from "next/image";

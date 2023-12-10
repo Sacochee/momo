@@ -1,11 +1,17 @@
-import SliderFull from "@/compoments/comps/sliderFull/sliderFull";
 import data from "../../../../../public/bretagne/loge.json";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import style from "./logement.module.css";
-import Btn from "@/compoments/comps/btn";
+import Btn from "@/compoments/utilities/button/btn";
 import Footer from "@/compoments/footer/footer";
 import Header from "@/compoments/header/header";
+import dynamic from "next/dynamic";
+import Loading from "@/compoments/loading/props";
+
+const Siler = dynamic(()=> import("@/compoments/utilities/sliderFull/sliderFull"), {
+  loading : ()=><div style={{height:"50px", width:"100%"}}>Hello</div>,
+  ssr : false
+})
 
 export default function Page() {
   const t = useTranslations("logement");
@@ -13,7 +19,7 @@ export default function Page() {
     <>
     <Header/>
     <main className={style.main}>
-      <SliderFull data={data as any} from="bretagne"/>
+      <Siler data={data as any} from="bretagne"/>
       <Image
         src={"/Icons/palmierGif2.gif"}
         width={205}

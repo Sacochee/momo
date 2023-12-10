@@ -1,12 +1,12 @@
 import { getTranslations } from "next-intl/server";
 import { meta } from "../../layout";
-import ImageThreeBrP from "@/compoments/videos/imagesTrois";
+import ImageThreeBrP from "@/compoments/utilities/videos/imagesTrois";
 import style from "./style.module.css";
-import Swap from "@/compoments/videos/swap";
+import Swap from "@/compoments/utilities/videos/swap";
 import data from "../../../../../public/images/images.json";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import Video from "@/compoments/videos/video";
+import Video from "@/compoments/utilities/videos/video";
 import Footer from "@/compoments/footer/footer";
 import Header from "@/compoments/header/header";
 

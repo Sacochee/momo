@@ -1,4 +1,4 @@
-import Links from "../links"
+import Links from "../links/links"
 import styles from "./btn.module.css"
 
 type Btn = {
