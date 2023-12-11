@@ -1,27 +1,28 @@
-import SkulAcident from "./skulAcident";
+"use client"
+import { useAtom } from "jotai";
 import style from "./style.module.css";
+import { _accidentError, _accidentFiche } from "@/app/[locale]/(compl)/states";
 
-export default function Accident({
-  nom,
-  setNom,
-  errorNom,
-  prenom,
-  setPrenom,
-  errorPrenom,
-  tel,
-  setTel,
-  errorTel,
-}: {
-    nom : string | undefined,
-    setNom : Function,
-    errorNom : boolean,
-    prenom : string | undefined,
-    setPrenom : Function,
-    errorPrenom : boolean,
-    tel : string | undefined,
-    setTel : Function,
-    errorTel : boolean
-}) {
+export default function Accident() {
+  const [fiche, setFiche] = useAtom(_accidentFiche)
+  const [err] = useAtom(_accidentError)
+
+  const assignNom = (arg : string) =>{
+    const obj = fiche
+    Object.assign(obj, {nom : arg})
+    setFiche(obj)
+  }
+  const assignPrenom = (arg : string) =>{
+    const obj = fiche
+    Object.assign(obj, {prenom : arg})
+    setFiche(obj)
+  }
+  const assignTel = (arg : string) =>{
+    const obj = fiche
+    Object.assign(obj, {tel : arg})
+    setFiche(obj)
+  }
+
   return (
     <section className={style.accident}>
       <h2 className={style.accident_h2}>Fiche accident</h2>
@@ -32,12 +33,12 @@ export default function Accident({
         <input
           type="text"
           placeholder="Ex : LePompier"
-          onChange={(e) => setNom(e.target.value)}
-          value={nom ? nom : ""}
+          onChange={(e) => assignNom(e.target.value)}
+          value={fiche.nom ? fiche.nom : ""}
           className={style.input}
         />
         <div
-          style={errorNom ? undefined : { visibility: "hidden" }}
+          style={err.errorNom ? undefined : { visibility: "hidden" }}
           className={style.errorName}
         >
           Attention ce champs est obligatoire
@@ -47,12 +48,12 @@ export default function Accident({
         <input
           type="text"
           placeholder="Ex : Sam"
-          value={prenom ? prenom : ""}
-          onChange={(e) => setPrenom(e.target.value)}
+          value={fiche.prenom ? fiche.prenom : ""}
+          onChange={(e) => assignPrenom(e.target.value)}
           className={style.input}
         />
         <div
-          style={errorPrenom ? undefined : { visibility: "hidden" }}
+          style={err.errorPremon ? undefined : { visibility: "hidden" }}
           className={style.errorName}
         >
           Attention ce champs est obligatoire
@@ -64,11 +65,11 @@ export default function Accident({
           type="text"
           placeholder="ex : 06 20 71 98 64"
           className={style.input}
-          value={tel}
-          onChange={(e) => setTel(e.target.value)}
+          value={fiche.tel ? fiche.tel : ""}
+          onChange={(e) => assignTel(e.target.value)}
         />
         <div
-          style={errorTel ? undefined : { visibility: "hidden" }}
+          style={err.errorTel ? undefined : { visibility: "hidden" }}
           className={style.errorName}
         >
           Attention ce champs est obligatoire

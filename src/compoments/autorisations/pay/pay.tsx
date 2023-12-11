@@ -1,31 +1,23 @@
 "use client"
+import { useAtom } from "jotai";
 import style from "./style.module.css"
+import { _payMethode, _txtPay,_errorPay, paid } from "@/app/[locale]/(compl)/states";
 
-export default function Pay({
-    payMethode,
-    setPayMethode,
-    errorPay,
-    txtPay,
-    setTxtPay,
-}:
-{
-    payMethode : string| undefined,
-    setPayMethode : Function;
-    errorPay : boolean,
-    txtPay : string | undefined;
-    setTxtPay: Function
-}
-) {
+
+export default function Pay() {
+  const [payMethode, setPayMethode]= useAtom(_payMethode)
+  const [txtPay , setTxtPay] = useAtom(_txtPay)
+  const [errorPay] = useAtom(_errorPay)
   return (
     <section className={style.pay}>
             <h2 className={style.pay_h2}>Moyen de Paiment</h2>
 
             <select
               className={style.pay_select}
-              onChange={(e) => setPayMethode(e.target.value)}
+              onChange={(e) => setPayMethode(e.target.value as paid)}
             >
-              <option value={""}>--</option>
-              <option value={"cb"}>Carte bancaires</option>
+              <option value={undefined}>--</option>
+              <option value="cb">Carte bancaires</option>
               <option value="others">Autres</option>
             </select>
             {errorPay ? (
