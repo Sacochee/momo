@@ -10,7 +10,7 @@
     background-color: #ededed;
     width: 300px;
     padding-top: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 }
 .accident_input{
     align-items: start;
@@ -38,6 +38,9 @@
 .accident_p{
     text-align: center;
     margin: 0;
+}
+.inputError{
+    border: 1px solid red;
 }
 
 
@@ -79,7 +82,5 @@
 
 
 @media (min-width:320px) {
-    .accident{
-        padding: 10px 20px;
-    }
+    
 }

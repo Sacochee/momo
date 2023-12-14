@@ -1,27 +1,11 @@
 "use client"
 import { useAtom } from "jotai";
 import style from "./style.module.css";
-import { _accidentError, _accidentFiche } from "@/app/[locale]/(compl)/states";
+import { _accidentError, _accidentFiche} from "@/app/[locale]/(compl)/states";
 
 export default function Accident() {
   const [fiche, setFiche] = useAtom(_accidentFiche)
   const [err] = useAtom(_accidentError)
-
-  const assignNom = (arg : string) =>{
-    const obj = fiche
-    Object.assign(obj, {nom : arg})
-    setFiche(obj)
-  }
-  const assignPrenom = (arg : string) =>{
-    const obj = fiche
-    Object.assign(obj, {prenom : arg})
-    setFiche(obj)
-  }
-  const assignTel = (arg : string) =>{
-    const obj = fiche
-    Object.assign(obj, {tel : arg})
-    setFiche(obj)
-  }
 
   return (
     <section className={style.accident}>
@@ -33,47 +17,48 @@ export default function Accident() {
         <input
           type="text"
           placeholder="Ex : LePompier"
-          onChange={(e) => assignNom(e.target.value)}
+          onChange={(e) => setFiche({
+            ...fiche,
+            nom : e.target.value ? e.target.value : undefined
+          }
+          )}
           value={fiche.nom ? fiche.nom : ""}
-          className={style.input}
+          className={`${style.input} ${err.errorNom ? style.inputError : undefined}`}
         />
-        <div
-          style={err.errorNom ? undefined : { visibility: "hidden" }}
-          className={style.errorName}
-        >
+        {err.errorNom ? (<div className={style.errorName} id="erreur">
           Attention ce champs est obligatoire
-        </div>
+        </div>) : undefined}
 
         <p className={style.label_input}>Prenom</p>
         <input
           type="text"
           placeholder="Ex : Sam"
           value={fiche.prenom ? fiche.prenom : ""}
-          onChange={(e) => assignPrenom(e.target.value)}
-          className={style.input}
+          onChange={(e) => setFiche({
+            ...fiche,
+            prenom : e.target.value ? e.target.value : undefined
+          })}
+          className={`${style.input} ${err.errorPremon ? style.inputError : undefined}`}
         />
-        <div
-          style={err.errorPremon ? undefined : { visibility: "hidden" }}
-          className={style.errorName}
-        >
+        {err.errorPremon ? (<div className={style.errorName} id="erreur">
           Attention ce champs est obligatoire
-        </div>
+        </div>) : undefined}
 
         <p className={style.label_input}>Numéro de téléphone</p>
 
         <input
           type="text"
           placeholder="ex : 06 20 71 98 64"
-          className={style.input}
+          className={`${style.input} ${err.errorTel ? style.inputError : undefined}`}
           value={fiche.tel ? fiche.tel : ""}
-          onChange={(e) => assignTel(e.target.value)}
+          onChange={(e) => setFiche({
+            ...fiche,
+            tel : e.target.value ? e.target.value : undefined
+          })}
         />
-        <div
-          style={err.errorTel ? undefined : { visibility: "hidden" }}
-          className={style.errorName}
-        >
+        {err.errorTel ? (<div className={style.errorName} id="erreur">
           Attention ce champs est obligatoire
-        </div>
+        </div>) : undefined}
       </div>
     </section>
   );

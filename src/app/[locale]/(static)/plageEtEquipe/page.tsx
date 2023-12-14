@@ -1,4 +1,4 @@
-import SliderFull from "@/compoments/comps/sliderFull/sliderFull";
+import SliderFull from "@/compoments/utilities/sliderFull/sliderFull";
 import data from "../../../../../public/bretagne/plage.json";
 import { useTranslations } from "next-intl";
 import style from "./plage.module.css";

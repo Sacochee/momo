@@ -4,72 +4,28 @@ import {
   _NameNoPhoto,
   _conditions,
   _errorCondtions,
-  majeur,
-  mineur,
+  _surfers,
 } from "@/app/[locale]/(compl)/states";
 import { useState } from "react";
-import { useRouter } from "@/navigation";
+import { tree } from "next/dist/build/templates/app-page";
 
-export default function Auth() {
-  const router = useRouter();
-  const [err] = useAtom(_errorCondtions);
-  const [conditons, setConditions] = useAtom(_conditions);
+export default function Auth({
+  majeur,
+  mineur,
+}: {
+  majeur: Function;
+  mineur: Function;
+}) {
+  const [err, setErr] = useAtom(_errorCondtions);
+  const [conditions, setConditions] = useAtom(_conditions);
   const [name, setName] = useAtom(_NameNoPhoto);
   const [image, setImage] = useState<boolean | null>(null);
   const [an, setAn] = useState(false);
 
-  const setCgv = (arg: boolean) => {
-    setConditions({
-      cgv: arg,
-      anul: conditons.anul,
-      min: conditons?.min,
-      maj: conditons?.maj,
-      photo: conditons.photo,
-    });
-  };
-
-  const setAnul = (arg: boolean) => {
-    setConditions({
-      cgv: conditons.cgv,
-      anul: arg,
-      min: conditons?.min,
-      maj: conditons?.maj,
-      photo: conditons.photo,
-    });
-  };
-
-  const setMin = (arg: boolean) => {
-    setConditions({
-      cgv: conditons.cgv,
-      anul: conditons.anul,
-      min: arg,
-      maj: conditons?.maj,
-      photo: conditons.photo,
-    });
-  };
-
-  const setMaj = (arg: boolean) => {
-    setConditions({
-      cgv: conditons.cgv,
-      anul: conditons.anul,
-      min: conditons?.min,
-      maj: arg,
-      photo: conditons.photo,
-    });
-  };
-
-  const setPhoto = (arg: boolean) => {
-    setConditions({
-      cgv: conditons.cgv,
-      anul: conditons.anul,
-      min: conditons?.min,
-      maj: conditons?.maj,
-      photo: arg,
-    });
-  };
   return (
     <section className={style.section}>
-      <h2>Autorisations</h2>
+      <h2 className={style.h2}>Autorisations</h2>
+      <div className={style.underline}></div>
       <ul className={style.ul}>
         <li className={style.li}>
           <h3>CGV</h3>
@@ -78,25 +34,35 @@ export default function Auth() {
               Je déclare avoir pris connaisance{" "}
               <a href="/">Des conditions générals de ventes</a>
             </p>
-            {err.cgv ? <div>Attention ceci est obligatoire</div> : undefined}
-            <div className={style.lineBox}>
+            {err.cgv ? (
+              <div id="erreur" className={style.erreur}>
+                Attention ceci est obligatoire
+              </div>
+            ) : undefined}
+            <div className={`${style.checkContainer} ${err.cgv ? style.inputError : undefined}`}>
               <input
                 type="checkbox"
-                checked={conditons.cgv ? true : false}
+                checked={conditions.cgv ? true : false}
                 onChange={(e) => {
-                  setCgv(e.target.checked ? true : false);
+                  setConditions({
+                    ...conditions,
+                    cgv: e.target.checked,
+                  });
+                  if(e.target.checked = true)
+                    setErr({...err, cgv : false})
                 }}
-                style={{ position: "relative", top: "7px" }}
+                className={style.checkbox}
               />
-              <span>J'accepte les conditions de ventes générals</span>
+              <span>J'accepte les CGV</span>
             </div>
           </div>
         </li>
-        <li className={style.li}>
+        <li className={style.li}style={{position:"relative"}}>
           <h3>Annulation</h3>
-          <div>
+          
+          <div className={`${an ? style.absolute : undefined}`}>
             {an ? (
-              <div>
+              <div >
                 <p>
                   Conditions d'annulation En cas d’annulation suite à de
                   mauvaises conditions météorologiques (absence de vagues,
@@ -119,11 +85,9 @@ export default function Auth() {
                     }}
                     className={style.btnLire}
                   >
-                    <div style={{paddingRight:"10px"}}>
-                      Lire Moins 
-                    </div>
-                    
-                    <Fleche css={{transform:"translateY(-4px)"}}/>
+                    <div style={{ paddingRight: "10px" }}>Lire Moins</div>
+
+                    <Fleche css={{ transform: "translateY(-4px)" }} />
                   </button>
                 </div>
               </div>
@@ -141,22 +105,36 @@ export default function Auth() {
                     onClick={() => setAn(an ? false : true)}
                     className={style.btnLire}
                   >
-                    <div style={{paddingRight:"10px"}}>
-                      Lire Tout
-                    </div>
-                    <Fleche css={{transform : "rotate(90deg)"}}/>
+                    <div style={{ paddingRight: "10px" }}>Lire Tout</div>
+                    <Fleche css={{ transform: "rotate(90deg)" }} />
                   </button>
                 </div>
               </div>
             )}
 
-            {err.anul ? <div>Attention ceci est obligatoire</div> : undefined}
-            <input
+            {err.anul ? (
+              <div id="erreur" className={style.erreur}>
+                Attention ceci est obligatoire
+              </div>
+            ) : undefined}
+            <div  className={`${err.anul ? style.inputError : undefined} ${style.checkContainer}`}>
+              <input
               type="checkbox"
-              checked={conditons.anul ? true : false}
-              onChange={(e) => setAnul(e.target.checked ? true : false)}
+              checked={conditions.anul ? true : false}
+              onChange={(e) =>{
+                setConditions({
+                  ...conditions,
+                  anul: e.target.checked,
+                })
+                if(e.target.checked == true)
+                  setErr({...err, anul : false})
+              }
+              }
+              className={style.checkbox}
             />
-            <span>J'accepte les condition d anulations</span>
+            <span>J'accepte les C.A.</span>
+            </div>
+            
           </div>
         </li>
         <li className={style.li}>
@@ -168,33 +146,54 @@ export default function Auth() {
               de votre image réalisés pendant votre stage, pour la production de
               tout document publicitaire et ce sans contre partie financière.
             </p>
-            {err.photo ? <div>eoror</div> : undefined}
-            <div>
+            {err.photo ? (
+              <div id="erreur" className={style.erreur}>
+                Attention ceci est obligatoire
+              </div>
+            ) : undefined}
+            <div className={style.checkContainer}>
               <input
                 type="checkbox"
                 checked={image ? true : image == null ? false : false}
-                onChange={(e) => {
-                  setPhoto(true);
+                onChange={() => {
+                  setConditions({
+                    ...conditions,
+                    photo: true,
+                  });
                   setImage(true);
+                  setName(undefined)
+                  setErr({...err, photo : false})
                 }}
+                className={style.checkbox}
               />
               <span>J'accpète le droit à l'image</span>
             </div>
-            <div>
+            <div className={style.checkContainer}>
               <input
                 type="checkbox"
                 checked={image ? false : image == null ? false : true}
                 onChange={(e) => {
-                  setPhoto(false);
+                  setConditions({
+                    ...conditions,
+                    photo: false,
+                  });
                   setImage(false);
                 }}
+                className={style.checkbox}
               />
               <span>Je refuse le droit à l'image </span>
             </div>
 
             {image == false ? (
-              <div>
-                <input type="text" />
+              <div className={style.photoInput}>
+                <div>Nom des personnes concernées</div>
+                <input
+                  type="text"
+                  placeholder="nom1 / nom2 / etc ..."
+                  onChange={(e) =>{ setName(e.target.value); if(e.target.value)setErr({...err, photo: false})}}
+                  value={name ? name : ""}
+                  className={`${err.photo ? style.inputError : undefined}`}
+                />
               </div>
             ) : undefined}
           </div>
@@ -213,13 +212,24 @@ export default function Auth() {
                 suite de son inaptitude médicale ou non respect des consignes du
                 moniteur.
               </p>
-              {err.min ? <div>Attention ceci est obligatoire</div> : undefined}
-              <input
+              {err.min ? (
+                <div id="erreur" className={style.erreur}>
+                  Attention ceci est obligatoire
+                </div>
+              ) : undefined}
+              <div className={`${err.min ? style.inputError : undefined} ${style.checkContainer}`}>
+                <input
                 type="checkbox"
-                checked={conditons.min ? true : false}
-                onChange={(e) => setMin(e.target.checked ? true : false)}
+                checked={conditions.min ? true : false}
+                onChange={(e) =>{
+                  setConditions({ ...conditions, min: e.target.checked })
+                  if(e.target.checked == true)setErr({...err, min : false})}
+                }
+                className={style.checkbox}
               />
               <span>J autorise mon enfant a participé a ce cours</span>
+              </div>
+              
             </div>
           </li>
         ) : undefined}
@@ -235,13 +245,35 @@ export default function Auth() {
                 inaptitude physique ou médicale ou non respect des consignes du
                 moniteur.{" "}
               </p>
-              {err.maj ? <div>Attention ceci est obligatoire</div> : undefined}
-              <input
-                type="checkbox"
-                checked={conditons.maj ? true : undefined}
-                onChange={(e) => setMaj(e.target.checked ? true : false)}
-              />
-              <span>Jaccepte la décharge +18</span>
+              {err.maj ? (
+                <div id="erreur" className={style.erreur}>
+                  Attention ceci est obligatoire
+                </div>
+              ) : undefined}
+              <div
+                className={`${err.maj ? style.inputError : undefined} ${
+                  style.checkContainer
+                }`}
+              >
+                <input
+                  type="checkbox"
+                  checked={conditions.maj ? true : false}
+                  onChange={(e) => {
+                    setConditions({
+                      ...conditions,
+                      maj: e.target.checked,
+                    });
+                    if (e.target.checked == true)
+                      setErr({
+                        ...err,
+                        maj: false,
+                      });
+                  }}
+                  className={style.checkbox}
+                  //mettre un trucs in checbox
+                />
+                <span>J'accepte la décharge +18</span>
+              </div>
             </div>
           </li>
         ) : undefined}

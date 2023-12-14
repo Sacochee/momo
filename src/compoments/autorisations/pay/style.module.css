@@ -4,15 +4,45 @@
     align-items: center;
     justify-content: start;
 }
-
+/* main */
 .pay_h2{
     font-size: 1.5em;
+}
+.pay{
+    margin-bottom: 20px;
 }
 .pay_select{
     padding: 10px;
     border: none;
+    background-color: #ededed;
+    border-radius: 5px;
 }
-
+.pay_select:focus{
+    border:  none;
+}
+.option{
+    background-color: #ededed;
+    margin: 10px;
+    padding: 10px;
+}
+.txt{
+    font-size: .8em;
+}
+.inputTxt{
+    width: 200px;
+    border: none;
+    background-color: #ededed;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+.inputError{
+    border: 1px solid red;
+}
+.error{
+    font-size: .8em;
+    color: red;
+}
+/* skull */
 .skull{
     justify-content: space-between;
     height: 50px;
