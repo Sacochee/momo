@@ -58,25 +58,22 @@ export default function Auth({
           </div>
         </li>
         <li className={style.li}style={{position:"relative"}}>
-          <h3>Annulation</h3>
+          <h3>Conditions d'annulation</h3>
           
           <div className={`${an ? style.absolute : undefined}`}>
             {an ? (
               <div >
                 <p>
-                  Conditions d'annulation En cas d’annulation suite à de
-                  mauvaises conditions météorologiques (absence de vagues,
-                  drapeau rouge), les cours qui ne pourront pas être effectués
-                  seront, en accord avec les stagiaires : remplacés par une
-                  activité de substitution (technique surf, bodyboard, jeux
-                  aquatiques, etc) OU reportés à une date ultérieure OU annulés
-                  et feront l’objet d’un avoir ou remboursement En cas
-                  d'annulation ou absence du fait du client : plus de 10 jours
-                  avant le début du stage : remboursement complet // entre 10 et
-                  5 jours précédant la date de début de stage : encaissement des
-                  arrhes éventuels // 5 jours avant le début du stage ou durant
-                  celui-ci : l’intégralité de la prestation sera facturée, pas
-                  de remboursement (sauf présentation d’un certificat médical) 1
+                Conditions d'annulation En cas d’annulation suite à de mauvaises conditions météorologiques $
+                (absence de vagues, drapeau rouge), les cours qui ne pourront pas être effectués seront, en 
+                accord avec les stagiaires : remplacés par une activité de substitution (technique surf, bodyboard, 
+                jeux aquatiques, etc) OU reportés à une date ultérieure OU annulés et feront l’objet d’un avoir ou 
+                remboursement
+                <br/>
+                En cas d'annulation ou absence du fait du client : plus de 10 jours avant le début du stage : 
+                remboursement complet // entre 10 et 5 jours précédent la date de début de stage : encaissement 
+                des arrhes éventuels // 5 jours avant le début du stage ou durant celui-ci : l’intégralité de la 
+                prestation sera facturée, pas de remboursement (sauf présentation d’un certificat médical)
                 </p>
                 <div style={{ display: "flex", justifyContent: "center" }}>
                   <button
@@ -183,19 +180,6 @@ export default function Auth({
               />
               <span>Je refuse le droit à l'image </span>
             </div>
-
-            {image == false ? (
-              <div className={style.photoInput}>
-                <div>Nom des personnes concernées</div>
-                <input
-                  type="text"
-                  placeholder="nom1 / nom2 / etc ..."
-                  onChange={(e) =>{ setName(e.target.value); if(e.target.value)setErr({...err, photo: false})}}
-                  value={name ? name : ""}
-                  className={`${err.photo ? style.inputError : undefined}`}
-                />
-              </div>
-            ) : undefined}
           </div>
         </li>
 

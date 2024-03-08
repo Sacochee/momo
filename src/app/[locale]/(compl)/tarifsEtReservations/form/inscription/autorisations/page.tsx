@@ -12,6 +12,7 @@ import SkulAcident from "@/compoments/autorisations/acc/skulAcident";
 import SkullPay from "@/compoments/autorisations/pay/skull";
 import SkullAuth from "@/compoments/autorisations/auth/skull";
 import ButtonValiderFormCours from "@/compoments/autorisations/valider/btnValider";
+import Bar from "@/compoments/utilities/barProgress/bar";
 
 const Accident = dynamic(
   () => import("@/compoments/autorisations/acc/accident"),
@@ -41,8 +42,13 @@ export default function page() {
       <>
         <HeaderForm />
         <main className={style.main}>
-          <h1 className={style.h1}>Vous y etes Presque !</h1>
-          <div className={style.line}></div>
+          <div>
+            Bulletin d'inscription
+          </div>
+          <div>
+          Étape 2/3
+          </div>
+          <Bar tape={2}/>
           <div className={style.container}>
             <Accident/>
             <Pay/>

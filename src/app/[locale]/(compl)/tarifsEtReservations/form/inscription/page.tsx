@@ -10,6 +10,7 @@ import Links from "@/compoments/utilities/links/links";
 import { _context, _date, _surfers, _time, formule } from "../../../states";
 import { useAtom } from "jotai";
 import {v4 as uuidv4} from "uuid"
+import Bar from "@/compoments/utilities/barProgress/bar";
 
 export type Data = {
   id: string;
@@ -38,8 +39,10 @@ export default function Page() {
       surfers.forEach((item) => {
         if (item.id != currenteData.id) {
           newArrayData.push(item);
+          setCount(count+1)
         } else {
           newArrayData.push(arg);
+          setCount(count+1)
         }
       });
       setSurfers(newArrayData);
@@ -104,6 +107,18 @@ export default function Page() {
           </div>
         ) : undefined}
         <div className={`${popUp ? style.flou : undefined} ${style.center}`}>
+          <div style={{textAlign:"center", marginBottom:"15px"}}>
+            <div>
+              Bulletin d'inscription
+            </div>
+            <div>
+              Étape 1/3
+            </div>
+          </div>
+          <div style={{marginBottom:"10px"}}>
+            <Bar tape={1}/>
+          </div>
+          
           <div className={style.topPart}>
             <span className={style.topSpan}>Nombres de Particitants :</span>
             <span className={style.topCount}>{" " + count}</span>

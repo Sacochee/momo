@@ -40,20 +40,24 @@ export default function Overlay({
         <span className={form.line}></span>
         <span className={form.line}></span>
       </div>
+
       <h2>Fiche Participant</h2>
-      <div className={form.part}>
+    <div className={form.ext}> 
+      <div >
+        <div className={form.part}>
         <div className={form.name}>
-          <span className={form.abrit}>Prémon du Participant</span>
+          <span className={form.abrit}>Prémon</span>
           <input
             type="text"
             value={prenom ? prenom : ""}
             onChange={(e) => setPrenom(regexName(e.target.value, prenom!))}
             placeholder="ex : Morgan"
             className={form.input}
+            required
           />
         </div>
         <div className={form.name}>
-          <span className={form.abrit}>Nom du Participant</span>
+          <span className={form.abrit}>Nom</span>
           <input
             type="text"
             value={nom ? nom : ""}
@@ -64,52 +68,50 @@ export default function Overlay({
           />
         </div>
       </div>
-      <div className={form.prop}>
-        <div className={form.case}>
-          <span>Age :</span>
-          <input
-            type="number"
-            value={age ? age  : ""}
-            onChange={(e) =>
-              setAge(+(e.target.value))
-            }
-            className={form.sizeInput}
-            min={7}
-            required={true}
-          />
-          <span>&nbsp;ans</span>
-        </div>
-        <div className={form.case}>
-          <span>taille :</span>
-          <input
-            type="number"
-            value={taille ? taille : ""}
-            onChange={(e) =>
-              setTaille(+(e.target.value))
-            }
-            className={form.sizeInput}
-            min={0}
-            required={true}
-          />
-          <span>&nbsp; cm</span>
-        </div>
-        <div className={form.case}>
-          <span>poids :</span>
-          <input
-            type="number"
-            value={poid ? poid : ""}
-            onChange={(e) =>
-              setPoid(+(e.target.value))
-            }
-            className={form.sizeInput}
-            min={0}
-            required={true}
-          />
-          <span>&nbsp;kg&nbsp;</span>
+        <div className={form.prop}>
+          <div className={form.case}>
+            <span>Age </span>
+            <input
+              type="number"
+              value={age ? age : ""}
+              onChange={(e) => setAge(+e.target.value)}
+              placeholder="Ex 27"
+              className={form.sizeInput}
+              min={7}
+              required={true}
+            />
+            <span>&nbsp;ans</span>
+          </div>
+          <div className={form.case}>
+            <span>taille </span>
+            <input
+              type="number"
+              value={taille ? taille : ""}
+              onChange={(e) => setTaille(+e.target.value)}
+              placeholder="Ex 176"
+              className={form.sizeInput}
+              min={0}
+              required={true}
+            />
+            <span>&nbsp; cm</span>
+          </div>
+          <div className={form.case}>
+            <span>poids </span>
+            <input
+              type="number"
+              value={poid ? poid : ""}
+              onChange={(e) => setPoid(+e.target.value)}
+              placeholder="Ex 70"
+              className={form.sizeInput}
+              min={0}
+              required={true}
+            />
+            <span>&nbsp;kg&nbsp;</span>
+          </div>
         </div>
       </div>
-
-      <div className={form.formule}>
+      <div>
+        <div className={form.formule}>
         <span>Formules choisie :</span>
         <select
           value={formule}
@@ -117,6 +119,7 @@ export default function Overlay({
           className={form.select}
           required={true}
         >
+          <option value=""> - </option>
           <option value={"1"}>1 Cours</option>
           <option value={"2"}>2 Cours</option>
           <option value={"3"}>3 Cours</option>
@@ -127,21 +130,30 @@ export default function Overlay({
           <option value={"accompte"}>Accompte</option>
         </select>
       </div>
+
       <div className={form.textarea}>
+        Notes a l'équipe
         <textarea
           value={info ? info : ""}
-          cols={30}
-          placeholder="Informations complémentaires (facultatifs)"
+          cols={25}
+          rows={3}
+          placeholder="Blésures eventuelle (facultatifs)"
           onChange={(e) => setInfo(e.target.value)}
           className={form.textarea_obj}
         />
       </div>
-      <button className={form.btn}>Valider</button>
+      </div>
+    </div>
+      
+      
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <button className={form.btn}>Valider</button>
+      </div>
     </form>
   );
 }
 
-function regexName(arg: string, currentState: string ) {
+function regexName(arg: string, currentState: string) {
   const regex = /[^a-zA-Z]/;
   if (arg.search(regex) != -1) return currentState;
   else if (arg == " ") return currentState;

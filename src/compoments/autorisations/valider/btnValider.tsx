@@ -15,6 +15,7 @@ import {
 import { useAtom } from "jotai";
 import { useState } from "react";
 import style from "./style.module.css";
+import { useRouter } from "@/navigation";
 
 export default function ButtonValiderFormCours({
   acidentIsOK,
@@ -25,6 +26,7 @@ export default function ButtonValiderFormCours({
   payIsOK: Function;
   AuthIsOK: Function;
 }) {
+  const router = useRouter()
   const [loading, setLoading] = useState(false);
   const [surfer] = useAtom(_surfers);
   const [date] = useAtom(_date);
@@ -51,6 +53,7 @@ export default function ButtonValiderFormCours({
         console.log(obj);
       } else {
         // no Cb
+        
         const obj = {
           date: date,
           time: time,
@@ -59,6 +62,7 @@ export default function ButtonValiderFormCours({
           payMethode: txt,
           nameNoPhoto: name,
         };
+        router.push("/tarifsEtReservations/form/inscription/autorisations/contact");
         console.log("send with no photo && with no stripe");
         console.log(obj);
       }
@@ -74,3 +78,4 @@ export default function ButtonValiderFormCours({
     </button>
   );
 }
+

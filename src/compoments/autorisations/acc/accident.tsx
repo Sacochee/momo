@@ -2,6 +2,7 @@
 import { useAtom } from "jotai";
 import style from "./style.module.css";
 import { _accidentError, _accidentFiche} from "@/app/[locale]/(compl)/states";
+import PhoneNumberInput from "@/compoments/utilities/phone/phone";
 
 export default function Accident() {
   const [fiche, setFiche] = useAtom(_accidentFiche)
@@ -9,7 +10,6 @@ export default function Accident() {
 
   return (
     <section className={style.accident}>
-      <h2 className={style.accident_h2}>Fiche accident</h2>
       <p className={style.accident_p}>Personne a contacter en cas d accident</p>
       <div className={style.accident_input}>
         <p className={style.label_input}>Nom</p>
@@ -46,16 +46,7 @@ export default function Accident() {
 
         <p className={style.label_input}>Numéro de téléphone</p>
 
-        <input
-          type="text"
-          placeholder="ex : 06 20 71 98 64"
-          className={`${style.input} ${err.errorTel ? style.inputError : undefined}`}
-          value={fiche.tel ? fiche.tel : ""}
-          onChange={(e) => setFiche({
-            ...fiche,
-            tel : e.target.value ? e.target.value : undefined
-          })}
-        />
+        <PhoneNumberInput set={setFiche} fiche={fiche}/>
         {err.errorTel ? (<div className={style.errorName} id="erreur">
           Attention ce champs est obligatoire
         </div>) : undefined}

@@ -1,0 +1,24 @@
+.tel{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    column-gap: 30px;
+    text-decoration: none ;
+}
+.skull{
+    content: "";
+    width: 350px;
+    height: 150px;
+    background-color: #ededed;
+}
+@keyframes ligthing {
+
+}
+
+@media (min-width:768px) {
+    .tel{
+        flex-direction: row;
+    }
+}

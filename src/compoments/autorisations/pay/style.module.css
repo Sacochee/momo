@@ -12,10 +12,9 @@
     margin-bottom: 20px;
 }
 .pay_select{
-    padding: 10px;
-    border: none;
-    background-color: #ededed;
-    border-radius: 5px;
+    padding: 7px 10px;
+    border: 1px solid rgb(10, 10, 10, 0.4);
+    border-radius: 10px;
 }
 .pay_select:focus{
     border:  none;
@@ -30,10 +29,8 @@
 }
 .inputTxt{
     width: 200px;
-    border: none;
-    background-color: #ededed;
+    border: 1px solid rgb(10, 10, 10, 0.4);
     padding: 5px 20px;
-    border-radius: 5px;
 }
 .inputError{
     border: 1px solid red;

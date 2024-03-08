@@ -23,7 +23,8 @@ import {
     "/presentationDesCours" : "/presentationDesCours",
     '/location' : '/location',
     '/reservationObligatoireParTelephone' : '/reservationObligatoireParTelephone',
-    '/tarifsEtReservations/form/inscription/autorisations' : '/tarifsEtReservations/form/inscription/autorisations'
+    '/tarifsEtReservations/form/inscription/autorisations' : '/tarifsEtReservations/form/inscription/autorisations',
+    '/tarifsEtReservations/form/inscription/autorisations/contact' : '/tarifsEtReservations/form/inscription/autorisations/contact'
 
 
 

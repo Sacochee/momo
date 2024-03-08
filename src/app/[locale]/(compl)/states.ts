@@ -15,7 +15,7 @@ export type formule =
   | "acompte"
   | "part1"
   | "part2";
-type surfers = {
+type surfers = { 
   id: string;
   nom: string;
   prenom: string;
@@ -26,11 +26,10 @@ type surfers = {
   info?: string;
 };
 export type paid = "cb" | "others" |"null";
-type accient = {
+export type accient = {
   nom: string | undefined;
   prenom: string | undefined;
   tel: string | undefined;
-  pb?: string;
 };
 
 // cours //

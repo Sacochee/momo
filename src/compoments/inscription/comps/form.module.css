@@ -1,11 +1,10 @@
 .container{
     padding: 20px 10px;
-    background-color: #ededed;
+    background-color: white;
     border-radius: 15px;
     width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding-left: 20px;
+    font-family: inter;
 }
 .name{
     display: flex;
@@ -22,10 +21,9 @@
 }
 
 .sizeInput{
-    width: 40px;
+    width: 50px;
     overflow: hidden;
-    border: none;
-    border-radius: 5px;
+    border: 1px solid rgb(10, 10, 10, 0.4);
 }
 .prop{
     display: flex;
@@ -67,20 +65,24 @@
     margin: 10px 0;
 }
 .input{
-    border: none;
+    border: 1px solid rgb(10, 10, 10, 0.4);
     padding: 5px;
     width: 150px;
-    border-radius: 5px;
 }
 .input:focus{
     border: none;
 }
 .textarea{
     margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:20px 0 ;
 
 }
 .select{
-    border: none;
+    border: 1px solid rgb(10, 10, 10, 0.4);
+    border-radius: 5px;
     padding: 5px 10px;
 }
 .dateInput{
@@ -102,7 +104,9 @@
   -moz-appearance: textfield;
 }
 .textarea_obj{
+    margin-top: 5px;
     border: none;
+    border: 1px solid rgb(10, 10, 10, 0.4); 
 }
 .btn{
     border : 1px solid black;     
@@ -126,7 +130,7 @@
     position: absolute;
     top: 30px;
     right: 20px;
-
+    cursor: pointer;
     width: 20px;
     height: 20px;
 }
@@ -161,13 +165,14 @@
 
 @media (min-width: 768px){
     .container{
-        width: 600px;
+        width: 500px;
     }
     .part{
-        flex-direction: row;
+        
         column-gap: 50px;
     }
-    .prop{
-        flex-direction: row;
+    .ext{
+        justify-content: space-between;
+        display: flex;
     }
 }

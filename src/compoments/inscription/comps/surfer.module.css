@@ -2,7 +2,7 @@
     position: relative;
     height: 60px;
     margin: 20px 5px;
-    border: 1px solid #ededed;
+    border: 1px solid rgb(10,10,10,0.4);
     padding: 10px 20px;
     border-radius: 15px;
     color: #8d8d8d;
@@ -50,10 +50,6 @@
     display: flex;
     align-content: center;
     justify-content: center;
-}
-.li:hover {
-    background-color: #ededed;
-    cursor:default;
 }
 .btn{
     display: flex;

@@ -1,0 +1,142 @@
+.main{
+    font-family: inter;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    --noir : rgb(10,10,10);
+    --gris : rgb(10,10,10,0.4);
+
+}
+
+.head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.input{
+    border: 1px solid var(--gris);
+    border-radius: 5px;
+    padding: 2px 10px;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qui{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.inputNb{
+    width: 80px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    border: 1px solid rgb(10,10,10,0.4);
+    border-radius: 5px;
+}
+
+.btn{
+    cursor: pointer;
+    background: linear-gradient(90deg, rgba(131,58,180,0.5) 0%, rgba(253,29,29,0.5) 50%, rgba(252,176,69,0.5) 100%);
+    padding: 7px 30px;
+    border-radius: 10px;
+    border:none;
+    color: var(--noir);
+}
+.btn:disabled{
+    opacity: 0.3;
+}
+.btn:disabled{
+    cursor:unset;
+    background: none;
+    background-color: white;
+    color: var(--gris);
+}
+
+.chose{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.txt{
+    margin: 0 20px;
+}
+.desc{
+    margin-top:30px;
+    
+}
+.imageContainer{
+    width: 40px;
+    height: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bouton{
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(90deg, rgba(131,58,180,0.5) 0%, rgba(253,29,29,0.5) 50%, rgba(252,176,69,0.5) 100%);
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+
+.croix{
+    position: relative;
+    bottom: 12px;
+    right: 1px;
+}
+
+.line{
+    position: absolute;
+    width: 4px;
+    height: 24px;
+    background-color: white;
+    content: "";
+}
+.line:first-child{
+    rotate: 90deg;
+}
+
+.wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section{
+    
+    display: none;
+    
+    
+}
+
+@media (hover: hover) {
+    .bouton:hover{
+        background: none;
+        background-color: var(--noir);
+    }
+    .btn:enabled:hover{
+        background: none;
+        background-color: rgb(10,10,10);
+        color: white;
+    }
+}
+    
+    

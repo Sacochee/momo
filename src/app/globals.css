@@ -3,6 +3,11 @@
     src: url("../../public/font/allura-regular.ttf");
   }
 
+  @font-face {
+    font-family: inter;
+    src: url("../../public/font/Inter.ttf");
+  }
+
 :root {
   --gris : #b5b5b5;
   --d8 : #8d8d8d;

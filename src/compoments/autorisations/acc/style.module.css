@@ -7,7 +7,7 @@
     line-height: 35px;
 }
 .accident{
-    background-color: #ededed;
+    margin-top: 30px;
     width: 300px;
     padding-top: 10px;
     padding-bottom: 40px;
@@ -17,14 +17,14 @@
 }
 .label_input{
     margin: 0;
+    padding-bottom: 0;
     font-weight: 300;   
 }
 .input{
     width: 150px;
-    border : none;
+    border : 1px solid rgb(10,10,10,0.4);
     padding: 5px 20px;
     background-color: white;
-    border-radius: 5px;
 }
 .errorName{
     line-height: normal;
