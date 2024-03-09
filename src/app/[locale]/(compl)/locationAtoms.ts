@@ -26,3 +26,10 @@ export type mat = {
 }
 
 export const Mat = atom<arr>({planche: undefined, wet : undefined , body : undefined})
+
+type paieMethode = {
+    type : string,
+    autre?: string
+}
+
+export const PaieMethode = atom<paieMethode | undefined>(undefined)

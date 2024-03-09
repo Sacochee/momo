@@ -4,16 +4,19 @@ import HeaderForm from '@/compoments/inscription/header/header'
 import Bar from '@/compoments/utilities/barProgress/bar'
 import Image from 'next/image'
 import style from "./style.module.css"
-import { Dispatch, ReactNode, useEffect, useRef, useState } from 'react'
+import {useEffect, useRef, useState } from 'react'
 import Participant from '@/compoments/location/popup/participants/participant'
-import { SetStateAction, useAtom } from 'jotai'
+import { useAtom } from 'jotai'
 import { Date, Mat, participants } from '../../locationAtoms'
 import Planche from '@/compoments/location/popup/planche/planche'
 import Wet from '@/compoments/location/popup/wetswuit/Wet'
 import Body from '@/compoments/location/popup/body/body'
 import Recap from '@/compoments/location/recap/recap'
+import Paie from '@/compoments/location/paie/Paie'
+import { useRouter } from '@/navigation'
 
 export default function page() {
+    const router  = useRouter()
     //qaund ?
     const [date ,setDate] = useAtom(Date)
     //qui ?
@@ -26,6 +29,8 @@ export default function page() {
     const [planche, setPlanche] = useState(false)
     const [wet, setWet] = useState(false)
     const [body, setBody] = useState(false)
+    const [mat] = useAtom(Mat)
+    const pay = useRef(null)
 
     useEffect(()=>{
         if(a == false)
@@ -34,10 +39,20 @@ export default function page() {
             verif()
     },[a, date])
 
+    useEffect(()=>{
+        if(mat.body != undefined || mat.planche != undefined || mat.wet != undefined){
+            const div = pay.current! as HTMLDivElement;
+            div.style.display = "flex"
+        }else {
+            const div = pay.current! as HTMLDivElement;
+            div.style.display = "none"
+        }
+    },[mat])
+
     function verif() : void{
         if(date.date != undefined && date.heure != undefined && partici != undefined) {
             const element = section.current! as HTMLDivElement
-            element.style.display="initial"
+            element.style.display="flex"
         }
     }
 
@@ -51,6 +66,12 @@ export default function page() {
     const desactivePopUp = () => {
         const el = main.current! as HTMLDivElement;
         el.style.display = "initial"
+    }
+
+    const valider = () =>{
+        if(partici != undefined && (mat.body != undefined ||mat.planche != undefined || mat.wet != undefined)){
+            router.push("/location/inscription/autorisation")
+        }
     }
 
   return (
@@ -90,16 +111,21 @@ export default function page() {
                 <button disabled={(nb == undefined ||nb == 0 || Number.isNaN(nb) || a == true) ? true : false} className={style.btn} onClick={()=>{setPart(true);activePopUp()}}>Ajouter des participants</button>
             </div>
         </div>
-        <section className={`${style.center} ${style.section}`} ref={section}>
-            <h2>Quoi ?</h2>
-            <Matos setPlanche={()=>{setPlanche(true);activePopUp()}} setWet={()=>{setWet(true);activePopUp()}} setBody={()=>{setBody(true);activePopUp()}}/>
-            <div>
-                <Recap />
-            </div>
-            <button className={style.btn}>
-                Continuer
-            </button>
-        </section>
+        
+            <section className={`${style.center} ${style.section}`} ref={section}>
+                <h2>Quoi ?</h2>
+                <Matos setPlanche={()=>{setPlanche(true);activePopUp()}} setWet={()=>{setWet(true);activePopUp()}} setBody={()=>{setBody(true);activePopUp()}}/>
+                <div ref={pay} className={style.pay}>
+                    <Recap />
+                    <Paie/>
+                    <button className={style.btn} onClick={valider}>
+                        Valider
+                    </button>  
+                </div>
+                
+            </section>
+       
+        
         
     </main>
     <Footer/>

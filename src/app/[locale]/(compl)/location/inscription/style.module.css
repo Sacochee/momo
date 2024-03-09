@@ -121,12 +121,13 @@
     align-items: center;
 }
 .section{
-    
     display: none;
-    
-    
 }
-
+.pay{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
 @media (hover: hover) {
     .bouton:hover{
         background: none;

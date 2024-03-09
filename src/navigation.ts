@@ -21,11 +21,15 @@ import {
     '/tarifsEtReservation/form' : '/tarifsEtReservation/form',
     "/plageEtEquipe" : "/plageEtEquipe",
     "/presentationDesCours" : "/presentationDesCours",
+    '/app/success' : '/app/success',
+    '/app/success?pay=false' : '/app/success?pay=false',
     '/location' : '/location',
+    '/location/inscription' : "/location/inscription",
+    '/location/inscription/autorisation' : "/location/inscription/autorisation",
     '/reservationObligatoireParTelephone' : '/reservationObligatoireParTelephone',
     '/tarifsEtReservations/form/inscription/autorisations' : '/tarifsEtReservations/form/inscription/autorisations',
     '/tarifsEtReservations/form/inscription/autorisations/contact' : '/tarifsEtReservations/form/inscription/autorisations/contact'
-
+    
 
 
 

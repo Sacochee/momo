@@ -70,7 +70,9 @@ export default function Body({off} : {off : () => void}) {
             </div>
         </div>
         <div>
-            <Content s={state1.a} c={state1.b}/>
+            <Layout rmcount={()=>{off(); setMat({...mat, body : undefined})}}>
+                <Content s={state1.a} c={state1.b}/>
+            </Layout>
             {supp.case && 
             <Layout rmcount={()=>setSupp({...supp, case : false})}>
                 <Content s={state2.a} c={state2.b}/>
