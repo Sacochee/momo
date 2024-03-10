@@ -1,13 +1,13 @@
 "use client";
 import { useState, useEffect } from "react";
-import HeaderForm from "../../../../../../compoments/inscription/header/header";
+import HeaderForm from "../../../../../compoments/inscription/header/header";
 import Footer from "@/compoments/footer/footer";
 import AddBtn from "@/compoments/inscription/comps/addBtn";
 import Surfer from "@/compoments/inscription/comps/surfer";
 import style from "./style.module.css";
 import Overlay from "@/compoments/inscription/comps/overlay";
 import Links from "@/compoments/utilities/links/links";
-import { _context, _date, _surfers, _time, formule } from "../../../states";
+import { _context, _date, _surfers, _time, formule } from "../../states";
 import { useAtom } from "jotai";
 import {v4 as uuidv4} from "uuid"
 import Bar from "@/compoments/utilities/barProgress/bar";
@@ -139,7 +139,7 @@ export default function Page() {
               style={{ background: "none", border: "none" }}
             >
               <Links
-                href={"/tarifsEtReservations/form/inscription/autorisations"}
+                href={"/tarifsEtReservations/inscription/autorisations"}
                 className={`${style.btnValider} ${
                   completed() ? style.btnValiderOff : undefined
                 }`}

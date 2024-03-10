@@ -1,0 +1,23 @@
+{
+    "w" : 2000,
+    "h" : 571,
+    "directory" : "loc/slider",
+    "img" : [
+        {
+            "name" : "p4.png",
+            "alt" : "Planche de surf Softech en mousse"
+        },
+        {
+            "name" : "p2.png",
+            "alt" : "Combinaison quiksliver shroty et intégrale"
+        },
+        {
+            "name" : "p1.png",
+            "alt" : "Bodyboard hydro et sniper"
+        },
+        {
+            "name" : "p3.png",
+            "alt" : "Planche de surf Softech en mousse"
+        }
+    ]
+}

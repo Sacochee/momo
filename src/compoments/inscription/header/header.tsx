@@ -1,9 +1,13 @@
+"use client"
 import Links from "@/compoments/utilities/links/links";
-import { Link } from "@/navigation";
+import { Link, usePathname, useRouter } from "@/navigation";
 import Style from "./header.module.css";
 import Image from "next/image";
 
 export default function HeaderForm() {
+  const router = useRouter();
+  const path = usePathname();
+  const change = (route: string) => router.replace(path, { locale: route });
   return (
     <header className={Style.header}>
       <nav className={Style.nav}>
@@ -15,7 +19,7 @@ export default function HeaderForm() {
           
         </Links>
         <div className={Style.box}>
-          <Link locale="fr" href={"/inscription"} className={Style.lang}>
+          <div onClick={()=>change('fr')} className={Style.lang}>
             <Image
               src={"/Icons/fr.png"}
               width={16}
@@ -23,8 +27,8 @@ export default function HeaderForm() {
               alt="logo du drapeaux Francais (version francaise)"
               priority={true}
             />
-          </Link>
-          <Link locale="en" href={"/inscription"} className={Style.lang}>
+          </div>
+          <div onClick={()=>change('en')} className={Style.lang}>
             <Image
               src={"/Icons/en.png"}
               width={16}
@@ -32,8 +36,8 @@ export default function HeaderForm() {
               alt="logo du drapeaux Anglais (version anglaise)"
               priority={true}
             />
-          </Link>
-          <Link locale="de" href={"/inscription"} className={Style.lang}>
+          </div>
+          <div onClick={()=>change('de')} className={Style.lang}>
             <Image
               src={"/Icons/de.png"}
               width={16}
@@ -41,7 +45,7 @@ export default function HeaderForm() {
               alt="logo du drapeaux allemand (version allemande)"
               priority={true}
             />
-          </Link>
+          </div>
         </div>
       </nav>
     </header>

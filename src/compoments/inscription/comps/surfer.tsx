@@ -1,6 +1,6 @@
 "use client";
 import style from "./surfer.module.css";
-import { Data } from "@/app/[locale]/(compl)/tarifsEtReservations/form/inscription/page";
+import { Data } from "@/app/[locale]/(compl)/tarifsEtReservations/inscription/page";
 import Image from "next/image";
 import {v4 as uuidv4} from "uuid"
 

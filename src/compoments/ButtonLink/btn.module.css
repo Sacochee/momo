@@ -1,0 +1,36 @@
+.btn{
+
+    padding: 5px 30px;
+    font-size: 1em;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    cursor: pointer;
+    
+    background-color: rgb(10,10,10);
+    border:1px solid rgb(10,10,10);
+    border-radius: 5px;
+
+    width: 200px;
+    max-height: 70px;
+    min-height: 50px;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+@media (hover : hover) {
+    .btn:hover{
+        background-color: white;
+        color: rgb(10,10,10);
+    }
+}
+
+@media (min-width:750px) {
+    .btn{
+        width: 300px;
+        max-height: 60px;
+        min-height: 30px;
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "w":2000,
+    "h" : 745,
+    "directory" : "cours/siderTarif",
+    "img" : [
+        {
+            "name" : "p1.png",
+            "alt" : ""
+        },
+        {
+            "name" : "p2.png",
+            "alt" : ""
+        },
+        {
+            "name" : "p3.png",
+            "alt" : ""
+        },
+        {
+            "name" : "p4.png",
+            "alt" : ""
+        }
+    ]
+}

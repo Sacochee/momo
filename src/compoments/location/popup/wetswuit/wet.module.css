@@ -122,4 +122,14 @@
     .box{
         margin: 0 10px;
     }
+    .wrapper{
+        margin:0 10px;
+    }
+}
+
+@media (min-width: 475px) {
+    .wrapper{
+        width: 475px;
+        align-items: center;
+    }
 }

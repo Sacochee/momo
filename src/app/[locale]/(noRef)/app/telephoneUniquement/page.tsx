@@ -1,24 +1,50 @@
-import dynamic from "next/dynamic"
-import SkullTel from "@/compoments/utilities/telephone/skull"
-import style from "./style.module.css"
+"use client";
+import dynamic from "next/dynamic";
+import style from "./style.module.css";
+import Image from "next/image";
+import ButtonLink from "@/compoments/ButtonLink/ButtonLink";
+import { useSearchParams } from "next/navigation";
+import png from "@/../public/contact/tel.png";
 
-
-const Contact = dynamic(()=>import("@/compoments/utilities/telephone/tel"),{
-    loading : ()=><SkullTel/>
-})
-
-
+// const Img = dynamic(() =>);
 
 export default function page() {
+  const params = useSearchParams();
+  const value = params.get("type");
   return (
     <main className={style.main}>
-        <h2 className={style.h2}>
-            Attention CocoSurf n accepte uniquement les Réservation par Téléphone 
-        </h2>
-        <p className={style.p}>
-            Merci de nous appellé avant de remplir ce formulaire
-        </p>
-        <Contact />
+      <h1>La réservation par téléphone est obligatoire</h1>
+      <section>
+        <div className={style.part}> 
+          <a href="tel:+3362851411">
+            <Image
+              src={png}
+              alt="Image d un téléphone"
+              width={100}
+              height={100}
+              loading="lazy"
+            />
+            <span>Tel : +33 (0)6 28 05 14 11</span>
+          </a>
+          <a href="tel:+3362851411"><button>Appelez maintenant</button></a>
+          
+        </div>
+        <div className={style.part}>
+          <h3>Pourquoi appeler l'école au préalable?</h3>
+          <ul>
+            <li>Vérifier les disponibilités de l'école</li>
+            <li>
+              Obtenir toutes les informations nécessaires pour le bon
+              déroulement d'un cours de surf
+            </li>
+            <li>Bénéficier de réductions dans certains cas</li>
+          </ul>
+          <ButtonLink
+            txt={value == "loc" ? "Location" : "Tarifs et Réservations"}
+            to={value == "loc" ? "/location" : "/tarifEtReservation"}
+          />
+        </div>
+      </section>
     </main>
-  )
+  );
 }

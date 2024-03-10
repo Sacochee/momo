@@ -1,24 +1,110 @@
-.box{
-    max-width: auto;
-    display: flex;
-    overflow: hidden;
+.img{
+    z-index: 1;
+    height: auto;
     
 }
-.img{
-    flex-shrink: 0;
-    animation: slide 20s infinite ;
+.btns{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
 }
-@keyframes slide {
-    0%,25%{
-        transform: translateX(0);
+.slider{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-color: rgb(10, 10, 10);
+    cursor: pointer;
+    z-index: 5;
+}
+
+.load   {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px ;
+    background-color: pink;
+}
+.center{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn span{
+    left:  3px;
+    position: absolute;
+    width: 10px;
+    height: 1px;
+    background-color: white;
+}
+
+.btn:last-child{
+    transform: rotate(180deg) ;
+   
+}
+.btn span:first-child{
+    transform: rotate(-45deg) translateX(5px);
+}
+
+.btn span:last-child{
+    transform: rotate(45deg) translateX(5px);
+}
+
+.btn:last-child span:first-child{
+    transform: rotate(45deg) translateX(5px);
+}
+.btn:last-child span:last-child{
+    transform: rotate(-45deg) translateX(5px);
+}
+
+@media (hover : hover) {
+    .btn:hover{
+        background-color: white;
     }
-    50%{
-        transform: translateX(-100%);
+    .btn:hover span{
+        background-color: rgb(10, 10, 10);
     }
-    75%{
-        transform: translateX(-200%);
+}
+
+@media (min-width:750px) {
+    .btn{
+        width: 35px;
+        height: 35px;
     }
-    100%{
-        transform: translateX(-300%);
+    .btn span{
+        left:  6px;
+        width: 15px;
+        height: 2px;
+    }
+
+    .btn span:first-child{
+        transform: rotate(-45deg) translateX(5px) translateY(-2px);
+    }
+    
+    .btn span:last-child{
+        transform: rotate(45deg) translateX(5px) translateY(2px);
+    }
+
+    .btn:last-child span:first-child{
+        transform: rotate(45deg) translateX(5px) translateY(2px);
+    }
+    .btn:last-child span:last-child{
+        transform: rotate(-45deg) translateX(5px) translateY(-2px);
     }
 }

@@ -14,10 +14,7 @@ export default function page() {
     <main className={style.main}>
       <h1 style={{textAlign : "center"}}>Merci votre inscription a bien été validée</h1>
       {
-        isPay == false && <MessageInfo/>
-      }
-      {
-        isPay == false ? null : <p>Nous avons hâte de vous accueillir !</p>
+        isPay == false ? <MessageInfo/> : <p>Nous avons hâte de vous accueillir !</p>
       }
       <ul className={style.box}>
         <li className={style.li}>

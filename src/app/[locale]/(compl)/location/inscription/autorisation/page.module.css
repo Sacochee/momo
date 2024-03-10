@@ -1,0 +1,91 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+    color: rgb(10,10,10);
+    font-family: inter;
+}
+
+.article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.box{
+    display: flex;
+    align-items: start;
+    margin: 10px 0;
+}
+.box input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+
+    min-width: 20px;
+    height: 20px;
+    border: 1px solid rgb(10,10,10,0.4);
+    margin: 5px 10px;
+    margin-top: 0;
+    margin-left: 0;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.box input:checked{
+    background-color: rgb(10,10,10);
+    position: relative;
+   
+    
+}
+.box input:checked::before{
+    position: absolute;
+    font-size: 20px;
+    content: "✓";
+    color: white;
+    top: -5px;
+    left: 3px;
+}
+
+.main button{
+    background: linear-gradient(
+        90deg,
+        rgba(131, 58, 180, 0.5) 0%,
+        rgba(253, 29, 29, 0.5) 50%,
+        rgba(252, 176, 69, 0.5) 100%
+      );
+      border: 1px solid white;
+      border-radius: 5px;
+      padding: 5px 30px;
+      margin: 40px 0;
+      cursor: pointer;
+}
+@media (hover : hover) {
+    .main button:hover{
+        background: none;
+        background-color: rgb(10,10,10);
+        color: white;
+        border: 1px solid rgb(10,10,10);
+    }
+}
+
+@media (min-width:750px) {
+    .main{
+        margin: 0 70px;
+    }
+    .main button{
+        padding: 7px 50px;
+    }
+}
+
+@media (min-width:1024px) {
+    .main{
+        margin: 0 ;
+    }
+    .main section{
+        width: 800px;
+    }
+    .main button{
+        padding: 7px 75px;
+    }
+}

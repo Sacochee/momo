@@ -17,6 +17,10 @@
   border-radius: 5px;
   border: 1px solid transparent;
 }
+.box{
+  display: flex;
+  align-items: center;
+}
 .lang {
   padding: 10px;
 }

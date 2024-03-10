@@ -16,6 +16,7 @@ import { useAtom } from "jotai";
 import { useState } from "react";
 import style from "./style.module.css";
 import { useRouter } from "@/navigation";
+import LoadingScreen from "@/compoments/utilities/links/LoadingScreen";
 
 export default function ButtonValiderFormCours({
   acidentIsOK,
@@ -38,7 +39,6 @@ export default function ButtonValiderFormCours({
 
   const formSend = () => {
     if (acidentIsOK() == true && payIsOK() == true && AuthIsOK() == true) {
-      console.log("here");
       setLoading(true);
       if (payMethode == "cb") {
         // cb
@@ -51,6 +51,7 @@ export default function ButtonValiderFormCours({
         };
         console.log("send cb pohot ok");
         console.log(obj);
+        router.push({pathname : "/app/sucess"})
       } else {
         // no Cb
         
@@ -62,9 +63,9 @@ export default function ButtonValiderFormCours({
           payMethode: txt,
           nameNoPhoto: name,
         };
-        router.push("/tarifsEtReservations/form/inscription/autorisations/contact");
         console.log("send with no photo && with no stripe");
         console.log(obj);
+        router.push({pathname : "/app/contact", query: {type : "cour"}});
       }
     } else {
       const e = document.getElementById("erreur");
@@ -74,7 +75,7 @@ export default function ButtonValiderFormCours({
 
   return (
     <button onClick={formSend} className={style.btn}>
-      {loading ? "Chargement ..." : "Valider"}
+      {loading ? <LoadingScreen/> : "Valider"}
     </button>
   );
 }

@@ -12,6 +12,7 @@
 }
 .txt{
     text-align: center;
+    max-width: 500px;
 }
 .main{
     display: flex;

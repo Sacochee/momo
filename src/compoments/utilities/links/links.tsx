@@ -1,8 +1,7 @@
 "use client"
 import { ReactNode, useState } from "react"
-import style from "./links.module.css"
-import Image from "next/image"
 import { useRouter, usePathname } from "@/navigation"
+import LoadingScreen from "./LoadingScreen"
 
 export default function Links({href, children, className, onClick} : {href : any, children : ReactNode, className?:any, onClick?:any}) {
   const [load, setLoad] = useState(false)
@@ -22,23 +21,7 @@ export default function Links({href, children, className, onClick} : {href : any
   }
   return (
     <div onClick={click} className={className} style={{cursor:"pointer"}}>
-      {load ? <div className={style.div}>
-        <div className={style.box}>
-          <Image 
-          src={"/Icons/logoNice.png"}
-          width={100}
-          height={100}
-          alt="logo"
-          priority={true}
-          />
-        </div>
-        <p>
-            Chargement de la page &nbsp;
-            <span className={style.s}>.</span>
-            <span className={style.s}>.</span>
-            <span className={style.s}>.</span>
-        </p>
-      </div> : undefined}
+      {load && <LoadingScreen/> }
         {children}
     </div>
   )

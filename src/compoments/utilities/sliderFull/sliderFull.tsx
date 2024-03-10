@@ -56,27 +56,18 @@ export default function SliderFull({ data, from }: obj) {
             <Arrow color={droite} />
           </div>
         </div>
-        <Image 
-            src={`/${from}/${data[i].name}`}
-            fill
-            sizes="100vw"
-            // width={screen.width}
-            // height={(screen.width * data[i].h) / data[i].w}
-            alt={data[i].alt}
-          />
+        <Image
+          src={`/${from}/${data[i].name}`}
+          fill
+          sizes="100vw"
+          // width={screen.width}
+          // height={(screen.width * data[i].h) / data[i].w}
+          alt={data[i].alt}
+        />
       </section>
     );
   } else {
-    <div>
-      loading ...
-      asda
-      adsasd
-      adsasd
-      asdasd 
-      asdasda 
-      asdasd a 
-      asd 
-    </div>
+    <div>loading ... asda adsasd adsasd asdasd asdasda asdasd a asd</div>;
   }
 }
 

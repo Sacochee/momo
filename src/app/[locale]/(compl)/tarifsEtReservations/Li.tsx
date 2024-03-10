@@ -23,9 +23,7 @@ export function Li({ type, duree, when, price, params }: { type: string; duree: 
       <div className={style.tabl_element}>
         {price + "€"}
       </div>
-      <Links href={`/tarifsEtReservations/form`} className={style.tabl_element} onClick={()=>setContext(params)}>
-        S'inscrire
-      </Links>
+      
     </li>
   );
 }

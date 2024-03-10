@@ -33,3 +33,4 @@ type paieMethode = {
 }
 
 export const PaieMethode = atom<paieMethode | undefined>(undefined)
+

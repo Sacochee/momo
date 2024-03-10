@@ -1,4 +1,4 @@
-import SliderCss from "@/compoments/utilities/slider/sliderCss";
+import SliderCss from "@/compoments/utilities/slider/SliderImage";
 import style from "./présentation.module.css";
 import Btn from "@/compoments/utilities/button/btn";
 import Image from "next/image";
@@ -13,7 +13,6 @@ export default function Page() {
     
     <Header/>
     <main className={style.main}>
-      <SliderCss />
       <div className={style.box}>
         <section className={style.alin}>
           <h1 className={style.h1}>{t("h1")}</h1>

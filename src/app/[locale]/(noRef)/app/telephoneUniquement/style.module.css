@@ -7,10 +7,54 @@
     margin: 20px 30px;
     margin-bottom: 80px;
 }
-
-.h2{
-    font-size: 1em;
+.main a{
+    color: rgb(10,10,10);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
-.p{
-    font-size: .9em;
+
+.main ul{
+    padding: 0;
+    text-align: start;
+    padding-left: 40px;
+}
+.main li{
+    margin: 10px 0;
+}
+
+.main button{
+    background-color: rgb(10,10,10);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 1px solid rgb(10,10,10);
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.part{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.part:last-child{
+    max-width: 400px;
+}
+
+@media (hover : hover) {
+    .main button:hover{
+        background-color: white;
+        color: rgb(10,10,10);
+    }
+}
+
+@media (min-width:1024px) {
+    .main section{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 80px;
+    }
 }

@@ -143,8 +143,8 @@
 .trans{
     z-index: 5!important;
     position: absolute;
-    top: 0;
+    top: 35px;
     left: 0;
     background-color: transparent;
-    padding-top: 70px;;
+    padding-top: 35px;;
 }

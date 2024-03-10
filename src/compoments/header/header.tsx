@@ -4,8 +4,9 @@ import { MutableRefObject, Ref, useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "../hooks";
 import style from "./header.module.css";
 import { useTranslations } from "next-intl";
-import { useRouter, usePathname} from "@/navigation";
+import { useRouter, usePathname } from "@/navigation";
 import Links from "../utilities/links/links";
+import LiLinks from "../utilities/links/LiLink";
 
 export default function Header() {
   const router = useRouter();
@@ -93,9 +94,9 @@ function Nav() {
   const t = useTranslations("nav");
   return (
     <ul className={style.nav}>
-      <li className={style.item}>
-        <Links href={"/"}>{t("home")}</Links>
-      </li>
+      <LiLinks className={style.item} href={"/"}>
+        {t("home")}
+      </LiLinks>
       <li className={style.item} onClick={() => setCour(cour ? false : true)}>
         {t("cours")}
         <Image
@@ -108,20 +109,20 @@ function Nav() {
       </li>
       {cour ? (
         <ul className={style.subClass}>
-          <li className={style.subItem}>
-            <Links href={"/presentationDesCours"}>{t("c1")}</Links>
-          </li>
-          <li className={style.subItem}>
-            <Links href={"/tarifsEtReservations"}>{t("c2")}</Links>
-          </li>
-          <li className={style.subItem}>
-            <Links href={"/plageEtEquipe"}>{t("c3")}</Links>
-          </li>
+          <LiLinks className={style.subItem} href={"/presentationDesCours"}>
+            {t("c1")}
+          </LiLinks>
+          <LiLinks className={style.subItem} href={"/tarifsEtReservations"}>
+            {t("c2")}
+          </LiLinks>
+          <LiLinks className={style.subItem} href={"/plageEtEquipe"}>
+            {t("c3")}
+          </LiLinks>
         </ul>
       ) : undefined}
-      <li className={style.item}>
-        <Links href={"/location"}>{t("loc")}</Links>
-      </li>
+      <LiLinks className={style.item} href={"/location"}>
+        {t("loc")}
+      </LiLinks>
       <li
         className={style.item}
         onClick={() => {
@@ -139,23 +140,23 @@ function Nav() {
       </li>
       {petit ? (
         <ul className={style.subClass}>
-          <li className={style.subItem}>
-            <Links href={"/carteCadeaux"}>{t("p1")}</Links>
-          </li>
-          <li className={style.subItem}>
-            <Links href={"/bretagne"}>{t("p2")}</Links>
-          </li>
-          <li className={style.subItem}>
-            <Links href={"/logement"}>{t("p3")}</Links>
-          </li>
+          <LiLinks className={style.subItem} href={"/carteCadeaux"}>
+            {t("p1")}
+          </LiLinks>
+          <LiLinks className={style.subItem} href={"/bretagne"}>
+            {t("p2")}
+          </LiLinks>
+          <LiLinks className={style.subItem} href={"/logement"}>
+            {t("p3")}
+          </LiLinks>
         </ul>
       ) : undefined}
-      <li className={style.item}>
-        <Links href={"/photos"}>{t("photo")}</Links>
-      </li>
-      <li className={style.item}>
-        <Links href={"/contact"}>{t("contact")}</Links>
-      </li>
+      <LiLinks className={style.item} href={"/photos"}>
+        {t("photo")}
+      </LiLinks>
+      <LiLinks className={style.item} href={"/contact"}>
+        {t("contact")}
+      </LiLinks>
     </ul>
   );
 }
@@ -166,72 +167,72 @@ function Laptop() {
   const router = useRouter();
   return (
     <ul className={style.nav_l}>
-      <li className={style.li_l}>
-        <Links href={"/"}>
-          <Image
-            src={"/Icons/logo.png"}
-            width={105}
-            height={105}
-            alt="Logo de cocosurf"
-          />
-        </Links>
-      </li>
-      <li className={style.li_l}>
-        <Links href={"/"}>{t("home")}</Links>
-      </li>
+      <LiLinks className={style.li_l} href={"/"}>
+        <Image
+          src={"/Icons/logo.png"}
+          width={105}
+          height={105}
+          alt="Logo de cocosurf"
+        />
+      </LiLinks>
+      <LiLinks className={style.li_l} href={"/"}>
+        {t("home")}
+      </LiLinks>
       <li
         className={style.li_l}
         onMouseEnter={() => setCours(true)}
         onMouseLeave={() => setCours(false)}
+        
       >
         {t("cours")}
         {cours ? (
-          <div className={style.trans}>
+          <div className={style.trans} >
             <ul className={style.subpart}>
-              <li className={style.li_l_sub}>
-                <Links href={"/presentationDesCours"}>{t("c1")}</Links>
-              </li>
-              <li className={style.li_l_sub}>
-                <Links href={"/tarifsEtReservations"}>{t("c2")}</Links>
-              </li>
-              <li className={style.li_l_sub}>
-                <Links href={"/plageEtEquipe"}>{t("c3")}</Links>
-              </li>
+              <LiLinks className={style.li_l_sub} href={"/presentationDesCours"}>
+                {t("c1")}
+              </LiLinks>
+              <LiLinks className={style.li_l_sub} href={"/tarifsEtReservations"}>
+                {t("c2")}
+              </LiLinks>
+              <LiLinks className={style.li_l_sub} href={"/plageEtEquipe"}>
+                {t("c3")}
+              </LiLinks>
             </ul>
           </div>
         ) : undefined}
       </li>
-      <li className={style.li_l}>
-        <Links href={"/location"}>{t("loc")}</Links>
-      </li>
+      <LiLinks className={style.li_l} href={"/location"}>
+        {t("loc")}
+      </LiLinks>
       <li
         className={style.li_l}
         onMouseEnter={() => setPetit(true)}
         onMouseLeave={() => setPetit(false)}
+        
       >
         {t("petit")}
         {petit ? (
-          <div className={style.trans}>
+          <div className={style.trans} >
             <ul className={style.subpart}>
-              <li className={style.li_l_sub}>
-                <Links href={"/carteCadeaux"}>{t("p1")}</Links>
-              </li>
-              <li className={style.li_l_sub}>
-                <Links href={"/bretagne"}>{t("p2")}</Links>
-              </li>
-              <li className={style.li_l_sub}>
-                <Links href={"/logement"}>{t("p3")}</Links>
-              </li>
+              <LiLinks className={style.li_l_sub} href={"/carteCadeaux"}> 
+                {t("p1")}
+              </LiLinks>
+              <LiLinks className={style.li_l_sub} href={"/bretagne"}>
+                {t("p2")}
+              </LiLinks>
+              <LiLinks className={style.li_l_sub} href={"/logement"}>
+                {t("p3")}
+              </LiLinks>
             </ul>
           </div>
         ) : undefined}
       </li>
-      <li className={style.li_l}>
-        <Links href={"/photos"}>{t("photo")}</Links>
-      </li>
-      <li className={style.li_l}>
-        <Links href={"/contact"}>{t("contact")}</Links>
-      </li>
+      <LiLinks className={style.li_l} href={"/photos"} >
+        {t("photo")}
+      </LiLinks>
+      <LiLinks className={style.li_l} href={"/contact"}>
+        {t("contact")}
+      </LiLinks>
     </ul>
   );
 }

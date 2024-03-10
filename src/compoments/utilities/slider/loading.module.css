@@ -1,0 +1,36 @@
+.div {
+  position: absolute;
+  z-index: 6;
+  background-color: white;
+  padding: 5px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(10,10,10) rgb(10,10,10) transparent;
+  border-image: initial;
+  display: inline-block;
+  animation: 0.75s linear 0s infinite normal both running identifier;
+}
+
+
+@keyframes identifier {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(180deg) scale(0.8);
+  }
+
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}

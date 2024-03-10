@@ -1,22 +1,27 @@
+"use client"
 import Btn from "@/compoments/utilities/button/btn";
 import Footer from "@/compoments/footer/footer";
 import Header from "@/compoments/header/header";
-import SliderFull from "@/compoments/utilities/sliderFull/sliderFull";
-import data from "../../../../../public/presentationCours/image.json";
 import style from "./style.module.css";
 import Image from "next/image";
 import { Li } from "./Li";
 import { useTranslations } from "next-intl";
+import dynamic from "next/dynamic";
+import data from "@/../public/cours/siderTarif/data.json"
+
+const Slider = dynamic(()=>import('@/compoments/utilities/slider/SliderImage'))
 
 export default function Page() {
   const t = useTranslations("tarifs")
   return (
     <>
       <Header />
-
-      <main className={style.main}>
+      <main className={style.main} style={{margin:"0 20px"}}>
+        
+          <Slider data={data}/>
+        
+        
         <h1>{t("h1")}</h1>
-        <SliderFull data={data as any} from={"presentationCours"} />
         <div className={style.container}>
           <h2>{t("h2")}</h2>
           <p className={style.container_desc}>
@@ -36,7 +41,7 @@ export default function Page() {
             </li>
           </ol>
           <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
-            <Btn txt="Inscription" to="/tarifsEtReservations/form" />
+            <Btn txt="Inscription" to="/app/form?type=true" />
           </div>
           
           <p>

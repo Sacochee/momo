@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Data } from "@/app/[locale]/(compl)/tarifsEtReservations/form/inscription/page";
+import { Data } from "@/app/[locale]/(compl)/tarifsEtReservations/inscription/page";
 import form from "./form.module.css";
 import { v4 as uuidv4 } from "uuid";
 
