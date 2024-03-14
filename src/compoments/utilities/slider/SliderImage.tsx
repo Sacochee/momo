@@ -1,7 +1,6 @@
 "use client";
 import style from "./css.module.css";
 import Image from "next/image";
-import data from "@/../public/bretagne/image.json";
 import { useEffect, useState } from "react";
 import { Suspense } from "react";
 import LoadingScreen from "../links/LoadingScreen";

@@ -1,12 +1,13 @@
-import SliderFull from "@/compoments/utilities/sliderFull/sliderFull";
-import data from "../../../../../public/bretagne/image.json";
 import Image from "next/image";
 import style from "./brt.module.css";
 import Btn from "@/compoments/utilities/button/btn";
-import D from "../../../../../public/bretagne/imageBis.json";
 import { useTranslations } from "next-intl";
 import Footer from "@/compoments/footer/footer";
 import Header from "@/compoments/header/header";
+import dynamic from "next/dynamic";
+import data from "@/../public/bretagne/data.json"
+
+const Slider  = dynamic(()=> import("@/compoments/utilities/slider/SliderImage"),{ssr:false})
 
 export default function page() {
   const t = useTranslations("bretagne");
@@ -14,7 +15,7 @@ export default function page() {
     <>
       <Header />
       <main className={style.main}>
-        <SliderFull data={data as any} from="bretagne"/>
+      <Slider data={data}/>
         <Image
           src={"/Icons/logobrt.png"}
           width={58}
@@ -78,7 +79,7 @@ export default function page() {
           style={{ marginBottom: "64px" }}
         />
         <div className={style.less}>
-          <SliderFull data={D as any} from="bretagne"/>
+          {/* <SliderFull data={D as any} from="bretagne"/> */}
         </div>
         <section className={style.infos}>
           <h2 className={style.info_h2}>{t("sub")} </h2>

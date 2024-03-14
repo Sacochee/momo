@@ -1,0 +1,19 @@
+{
+    "w": 2000,
+    "h": 750,
+    "directory" : "logement",
+    "img" :  [
+        {
+            "name": "loge1.png",
+            "alt" : "Image de Morgan en train de surfer une vague avec le logo Cocosurf"
+        },
+        {
+            "name": "loge2.png",
+            "alt" : "Image de Louise en train de surfer"
+        },
+        {
+            "name": "loge3.png",
+            "alt" : "Image de Morgan en train de surfer une vague"
+        }
+    ]
+}

@@ -6,12 +6,12 @@ import { useTranslations } from "next-intl";
 import Header from "@/compoments/header/header";
 import Footer from "@/compoments/footer/footer";
 
+
 export default function Page() {
   const t = useTranslations("cadeau")
   return (
     <>
     <Header/>
-    
     
     <main className={style.main}>
       <Img
@@ -57,7 +57,7 @@ export default function Page() {
         {t("s3")}
         </li>
         <li className={style.li}>
-          <Btn to="tarifReservation" txt={t("call")}/>
+          <Btn to="tarifsEtReservations" txt={t("call")}/>
         </li>
       </ol>
     </main>

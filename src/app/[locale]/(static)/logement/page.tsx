@@ -1,4 +1,4 @@
-import data from "../../../../../public/bretagne/loge.json";
+
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import style from "./logement.module.css";
@@ -6,12 +6,9 @@ import Btn from "@/compoments/utilities/button/btn";
 import Footer from "@/compoments/footer/footer";
 import Header from "@/compoments/header/header";
 import dynamic from "next/dynamic";
-import Loading from "@/compoments/loading/props";
+import data from "@/../public/logement/data.json"
 
-const Siler = dynamic(()=> import("@/compoments/utilities/sliderFull/sliderFull"), {
-  loading : ()=><div style={{height:"50px", width:"100%"}}>Hello</div>,
-  ssr : false
-})
+const Slider = dynamic(()=>import("@/compoments/utilities/slider/SliderImage"),{ssr:false})
 
 export default function Page() {
   const t = useTranslations("logement");
@@ -19,7 +16,7 @@ export default function Page() {
     <>
     <Header/>
     <main className={style.main}>
-      <Siler data={data as any} from="bretagne"/>
+      <Slider data={data}/>
       <Image
         src={"/Icons/palmierGif2.gif"}
         width={205}

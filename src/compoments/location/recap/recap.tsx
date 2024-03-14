@@ -10,8 +10,8 @@ export default function Recap() {
     const [mat] = useAtom(Mat)
     const[prix, setPrix] = useState(0)
     const pricePLanche = price("planche")
-    const priceWet = price("body")
-    const priceBOdy = price("wet")
+    const priceWet = price("wet")
+    const priceBOdy = price("body")
 
     useEffect(()=>{
         let price : number = 0

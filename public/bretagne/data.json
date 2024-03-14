@@ -1,0 +1,27 @@
+{
+    "w": 2000,
+    "h": 750,
+    "directory" : "bretagne",
+    "img" :  [
+        {
+            "name": "b1.png",
+            "alt" : "Image de Morgan en train de surfer une vague avec le logo Cocosurf"
+        },
+        {
+            "name": "b2.png",
+            "alt" : "Image de Louise en train de surfer"
+        },
+        {
+            "name": "b3.png",
+            "alt" : "Image de Morgan en train de surfer une vague"
+        },
+        {
+            "name": "b4.png",
+            "alt" : "Image de Morgan & Louise en train de sortir de l'eau"
+        },
+        {
+            "name": "b5.png",
+            "alt" : "Image de Louise en train de surfer une vague"
+        }
+    ]
+}

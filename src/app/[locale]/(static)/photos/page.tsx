@@ -2,13 +2,13 @@ import { getTranslations } from "next-intl/server";
 import { meta } from "../../layout";
 import ImageThreeBrP from "@/compoments/utilities/videos/imagesTrois";
 import style from "./style.module.css";
-import Swap from "@/compoments/utilities/videos/swap";
-import data from "../../../../../public/images/images.json";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import Video from "@/compoments/utilities/videos/video";
 import Footer from "@/compoments/footer/footer";
 import Header from "@/compoments/header/header";
+import dynamic from "next/dynamic";
+import data from "@/../public/photo/data.json"
 
 export async function generateMetadata({ params: { locale } }: meta) {
   const t = await getTranslations({ locale, namespace: "metadata" });
@@ -17,6 +17,8 @@ export async function generateMetadata({ params: { locale } }: meta) {
     description: t("photosDesc"),
   };
 }
+
+const Slider = dynamic(()=>import("@/compoments/utilities/slider/SliderImage"),{ssr:false})
 
 export default function Page() {
   const t = useTranslations("photos");
@@ -35,7 +37,7 @@ export default function Page() {
           size={{ w: 100, h: 100, ww: 146, hh: 146, www: 182, hhh: 182 }}
         />
       </h1>
-      <Swap data={data as any} />
+      <Slider data={data} />
       <a
         target="_blank"
         href="https://www.facebook.com/COCOSURF.ecoledesurf/"

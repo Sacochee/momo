@@ -1,0 +1,15 @@
+{
+    "w": 2560,
+    "h": 1707,
+    "directory" : "photo",
+    "img" :  [
+        {
+            "name": "photo1.png",
+            "alt" : "Image de groupe d un cours de surf "
+        },
+        {
+            "name": "photo2.png",
+            "alt" : "Image d un cours de surf"
+        }
+    ]
+}

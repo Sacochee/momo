@@ -1,10 +1,14 @@
-import SliderFull from "@/compoments/utilities/sliderFull/sliderFull";
-import data from "../../../../../public/bretagne/plage.json";
+import dataHead from "@/../public/plage/data.json" 
 import { useTranslations } from "next-intl";
 import style from "./plage.module.css";
 import { Palmier } from "../presentationDesCours/page";
 import Footer from "@/compoments/footer/footer";
 import Header from "@/compoments/header/header";
+import dynamic from "next/dynamic";
+
+const Slide = dynamic(
+  () => import("@/compoments/utilities/slider/SliderImage"),{ssr : false}
+);
 
 export default function page() {
   const t = useTranslations("plage");
@@ -13,7 +17,7 @@ export default function page() {
     <Header/>
     
     <main className={style.main}>
-      <SliderFull data={data as any} from="bretagne"/>
+      <Slide data={dataHead} />
       <div className={style.box}>
         <section className={style.part}>
           <h1 className={style.h1}>{t("h1")}</h1>
@@ -36,7 +40,7 @@ export default function page() {
           <p>{t("p7")}</p>
         </section>
         <div className={style.resize}>
-          <SliderFull data={data as any} from="bretagne"/>
+          
         </div>
         <section className={style.part}>
           <h2 className={style.h2}>{t("h2")}</h2>

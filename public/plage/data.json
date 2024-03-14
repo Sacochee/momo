@@ -1,0 +1,27 @@
+{
+    "w": 2000,
+    "h": 750,
+    "directory" : "plage",
+    "img" :  [
+        {
+            "name": "plage1.png",
+            "alt" : "Image de Morgan en train de surfer une vague avec le logo Cocosurf"
+        },
+        {
+            "name": "plage2.png",
+            "alt" : "Image de Louise en train de surfer"
+        },
+        {
+            "name": "plage3.png",
+            "alt" : "Image de Morgan en train de surfer une vague"
+        },
+        {
+            "name": "plage4.png",
+            "alt" : "Image de Morgan & Louise en train de sortir de l'eau"
+        },
+        {
+            "name": "plage5.png",
+            "alt" : "Image de Louise en train de surfer une vague"
+        }
+    ]
+}

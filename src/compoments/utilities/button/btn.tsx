@@ -33,7 +33,6 @@ function Fleche() {
       <div className={styles.fleche}>
         <span className={styles.span}></span>
         <span className={styles.span}></span>
-        <span className={styles.span}></span>
       </div>
     );
   }

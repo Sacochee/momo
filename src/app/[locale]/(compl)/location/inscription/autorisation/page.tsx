@@ -71,6 +71,14 @@ export default function Page() {
       sd({date : undefined, heure : undefined})
     }
 
+    const setCheck = (e : HTMLDivElement)=>{
+      const box = e.querySelector("input") as HTMLInputElement;
+      if(box.checked)
+        box.checked = false
+      else
+        box.checked = true  
+    }
+
     return (
       <div>
         <HeaderForm />
@@ -92,7 +100,7 @@ export default function Page() {
                   www.cocosurf-charentemaritime.com
                 </p>
               </div>
-              <div className={style.box}>
+              <div className={style.box} onClick={(e)=>setCheck(e.currentTarget)}>
                 <input type="checkbox" />
                 <span>
                   Je certifie que les adultes du groupe ont pris connaissance et
@@ -115,7 +123,7 @@ export default function Page() {
                   sur le site web : www.cocosurf-charentemaritime.com
                 </p>
               </div>
-              <div className={style.box}>
+              <div className={style.box} onClick={(e)=>setCheck(e.currentTarget)}>
                 <input type="checkbox" />
                 <span>
                   Si des enfants sont compris dans le bulletin j'autorise mon
@@ -137,27 +145,27 @@ export default function Page() {
                 </p>
               </div>
               <div>
-                <div className={style.box}>
+                <div className={style.box} onClick={(e)=>setCheck(e.currentTarget)}>
                   <input type="checkbox" />
                   <span>
                     Trainer les planches sur le sable ou dans le chemin (porter
                     à deux ou se servir de la poigée)
                   </span>
                 </div>
-                <div className={style.box}>
+                <div className={style.box} onClick={(e)=>setCheck(e.currentTarget)}>
                   <input type="checkbox" />
                   <span>
                     Laisser une planche chauffer au soleil (merci de la
                     retourner ailerons vers le haut)
                   </span>
                 </div>
-                <div className={style.box}>
+                <div className={style.box} onClick={(e)=>setCheck(e.currentTarget)}>
                   <input type="checkbox" />
                   <span>
                     Surfer proche des autres (5 mètres d'écart minimum)
                   </span>
                 </div>
-                <div className={style.box}>
+                <div className={style.box} onClick={(e)=>setCheck(e.currentTarget)}>
                   <input type="checkbox" />
                   <span>Surfer une vague de bord très creuse (shorebreak)</span>
                 </div>
@@ -168,7 +176,7 @@ export default function Page() {
                 <h3>Les conseils :</h3>
               </div>
               <div>
-                <div className={style.box}>
+                <div className={style.box} onClick={(e)=>setCheck(e.currentTarget)}>
                   <input type="checkbox" />
                   <span>
                     N'hésitez pas à venir voir les moniteurs pour demander
@@ -176,14 +184,14 @@ export default function Page() {
                   </span>
                 </div>
               </div>
-              <div className={style.box}>
+              <div className={style.box} onClick={(e)=>setCheck(e.currentTarget)}>
                 <input type="checkbox" />
                 <span>
                   Restez surfer dans les mousses si vous êtes débutants ou si
                   les vagues sont trop fortes au large
                 </span>
               </div>
-              <div className={style.box}>
+              <div className={style.box} onClick={(e)=>setCheck(e.currentTarget)}>
                 <input type="checkbox" />
                 <span>
                   Gardez de l'eau à la taille maximum si les vagues dépassent 80

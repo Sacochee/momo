@@ -59,13 +59,14 @@
 .case{
     border: 1px solid rgb(10,10,10, 0.4);
     /* border-radius: 5px; */
-    padding: 3px 10px;
+    padding: 10px 10px;
     width: 110px;
 }
 .case select{
     padding-left: 0;
     padding-right: 5px;
 }
+
 
 .input{
     width: 100px;
@@ -86,7 +87,7 @@
     background-color: rgb(10,10,10);
     color: white;
     border-radius: 5px;
-    padding: 5px 30px;
+    padding: 10px 30px;
     border: 1px solid rgb(10,10,10);
     cursor: pointer;
 }
