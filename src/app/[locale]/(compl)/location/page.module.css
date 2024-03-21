@@ -25,17 +25,18 @@
 .center{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .bulletin button{
     border: 1px solid rgb(10, 10, 10);
     background-color: rgb(10, 10, 10);
     color: white;
-    padding: 5px 20px;
+    padding: 10px 20px;
     border-radius: 5px;
     margin: 0 50px;
     margin-top: 10px;
-    
+    font-size: 1.1em;
     cursor: pointer;
 }
 .pay{
@@ -58,11 +59,17 @@
 .ul li{
     background-color: rgb(10, 10, 10,0.05);
     margin: 5px 0;
-    padding: 10px 0;
-
+    padding: 10px 10px;
+    display: grid;
+    gap: 5px;
+    padding-right: 5px;
+    grid-template-columns: 1fr 20fr;
+}
+.li{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 10px;
 }
 .str{
@@ -79,22 +86,31 @@
     .main{
         margin: 0 30px;
     }
-    .ul li{
+    .ul .li{
         display: grid;
         grid-template-columns: 3fr 2fr 1fr;
         padding: 20px;
     }
-    .ul li div:first-child{
+    .ul .li div:first-child{
         display: initial;
     }
-    .ul li div{
+    .ul .li div{
         display: flex;
         justify-content: center;
+    }
+    .pay{
+        gap: 60px;
     }
 }
 
 @media (min-width : 1024px) {
     .main{
         margin: 0 60px;
+    }
+    .pay{
+        gap: 100px;
+    }
+    .main p {
+        margin: 25px 0;
     }
 }

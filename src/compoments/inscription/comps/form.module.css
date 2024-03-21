@@ -10,7 +10,11 @@
     display: flex;
     flex-direction: column;
 }
-
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .part{
     display: flex;
     align-items: flex-start;
@@ -127,28 +131,28 @@
 }
 
 .close{
-    position: absolute;
-    top: 30px;
-    right: 20px;
+    position: relative;
     cursor: pointer;
     width: 20px;
     height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .line{
+    position: absolute;
     width: 15px;
     height: 2px;
     display: block;
-    z-index: 7;
-
     content: " ";
     background-color: black;
 }
 .line:first-child{
-    transform: rotate(45deg) translateX(1px);
+    transform: rotate(45deg)  ;
 }
 .line:last-child{
-    transform: rotate(-45deg) translateX(1px);
+    transform: rotate(-45deg)  ;
 }
 
 

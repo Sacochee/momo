@@ -19,7 +19,7 @@ export default function Page() {
     pay == undefined ||
     (date.date == undefined && date.heure == undefined)
   ) {
-    //redirect({ pathname: "/app/error", query: { type: "NoPay", from : "loc" } });
+    redirect({ pathname: "/app/error", query: { type: "NoPay", from : "loc" } });
   } else {
     const main = useRef<HTMLDivElement>(null);
     const [error, setError] = useState(false);
@@ -71,8 +71,14 @@ export default function Page() {
       sd({date : undefined, heure : undefined})
     }
 
-    const setCheck = (e : HTMLDivElement)=>{
-      const box = e.querySelector("input") as HTMLInputElement;
+    const setCheck = (e : HTMLDivElement | HTMLInputElement)=>{
+      let box : HTMLInputElement;
+      if(  e instanceof HTMLInputElement){
+         box = e
+      }else{
+        box = e.querySelector("input") as HTMLInputElement;
+      }
+      
       if(box.checked)
         box.checked = false
       else
@@ -101,7 +107,7 @@ export default function Page() {
                 </p>
               </div>
               <div className={style.box} onClick={(e)=>setCheck(e.currentTarget)}>
-                <input type="checkbox" />
+                <input type="checkbox" onClick={(e)=>setCheck(e.currentTarget)}/>
                 <span>
                   Je certifie que les adultes du groupe ont pris connaissance et
                   valident ces informations
@@ -124,7 +130,7 @@ export default function Page() {
                 </p>
               </div>
               <div className={style.box} onClick={(e)=>setCheck(e.currentTarget)}>
-                <input type="checkbox" />
+                <input type="checkbox" onClick={(e)=>setCheck(e.currentTarget)}/>
                 <span>
                   Si des enfants sont compris dans le bulletin j'autorise mon
                   enfant / mes enfants à louer du matériel
@@ -146,27 +152,27 @@ export default function Page() {
               </div>
               <div>
                 <div className={style.box} onClick={(e)=>setCheck(e.currentTarget)}>
-                  <input type="checkbox" />
+                  <input type="checkbox" onClick={(e)=>setCheck(e.currentTarget)}/>
                   <span>
                     Trainer les planches sur le sable ou dans le chemin (porter
                     à deux ou se servir de la poigée)
                   </span>
                 </div>
                 <div className={style.box} onClick={(e)=>setCheck(e.currentTarget)}>
-                  <input type="checkbox" />
+                  <input type="checkbox" onClick={(e)=>setCheck(e.currentTarget)}/>
                   <span>
                     Laisser une planche chauffer au soleil (merci de la
                     retourner ailerons vers le haut)
                   </span>
                 </div>
                 <div className={style.box} onClick={(e)=>setCheck(e.currentTarget)}>
-                  <input type="checkbox" />
+                  <input type="checkbox" onClick={(e)=>setCheck(e.currentTarget)}/>
                   <span>
                     Surfer proche des autres (5 mètres d'écart minimum)
                   </span>
                 </div>
                 <div className={style.box} onClick={(e)=>setCheck(e.currentTarget)}>
-                  <input type="checkbox" />
+                  <input type="checkbox" onClick={(e)=>setCheck(e.currentTarget)}/>
                   <span>Surfer une vague de bord très creuse (shorebreak)</span>
                 </div>
               </div>
@@ -177,7 +183,7 @@ export default function Page() {
               </div>
               <div>
                 <div className={style.box} onClick={(e)=>setCheck(e.currentTarget)}>
-                  <input type="checkbox" />
+                  <input type="checkbox" onClick={(e)=>setCheck(e.currentTarget)}/>
                   <span>
                     N'hésitez pas à venir voir les moniteurs pour demander
                     conseil sur le choix de la zone de surf
@@ -185,14 +191,14 @@ export default function Page() {
                 </div>
               </div>
               <div className={style.box} onClick={(e)=>setCheck(e.currentTarget)}>
-                <input type="checkbox" />
+                <input type="checkbox" onClick={(e)=>setCheck(e.currentTarget)}/>
                 <span>
                   Restez surfer dans les mousses si vous êtes débutants ou si
                   les vagues sont trop fortes au large
                 </span>
               </div>
               <div className={style.box} onClick={(e)=>setCheck(e.currentTarget)}>
-                <input type="checkbox" />
+                <input type="checkbox" onClick={(e)=>setCheck(e.currentTarget)}/>
                 <span>
                   Gardez de l'eau à la taille maximum si les vagues dépassent 80
                   cm

@@ -19,7 +19,7 @@ export default function page() {
   const type = params.get("type");
 
   const named = (n: string) => {
-    const regex = /[^a-zA-Z]/;
+    const regex = /[^a-zA-Z ]/;
     if (n.search(regex) != -1) return name;
     else if (n == " ") return name;
     else return n;
@@ -77,7 +77,7 @@ export default function page() {
           }}
         >
           <div className={style.case}>
-            Nom et Prénom de la réservation
+          Nom et prénom de la personne effectuant la réservation
             <input
               type="text"
               className={style.input}
@@ -93,14 +93,7 @@ export default function page() {
               <input
                 type="text"
                 required
-                className={style.ind}
-                value={ind}
-                onChange={(e) => setInd(indset(e.target.value))}
-              />
-              <input
-                type="text"
-                required
-                className={style.tel}
+                className={style.input}
                 placeholder="Ex :06 20 36 20 36"
                 value={tel ? tel : ""}
                 onChange={(e) => setTel(settel(e.target.value))}
@@ -113,6 +106,7 @@ export default function page() {
               type="email"
               className={style.input}
               placeholder="Ex : MorganMoniteur@cocosurf.com"
+              required
             />
           </div>
 

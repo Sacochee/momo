@@ -19,8 +19,8 @@ export default function Pay() {
               onChange={(e) => setPayMethode(e.target.value as paid)}
             >
               <option value={"null"} className={style.option}>--</option>
-              <option value="cb" className={style.option}>Carte bancaires</option>
-              <option value="others" className={style.option}>Autres</option>
+              <option value="cb" className={style.option}>Carte bancaire</option>
+              <option value="others" className={style.option}>Autre</option>
             </select>
             {errorPay ? (
               <div  id="erreur" className={style.error}>Attention ce champs est obligatoire</div>
@@ -28,7 +28,7 @@ export default function Pay() {
             {payMethode == "others" ? (
               <div>
                 <div className={style.txt}>
-                  Moyen de payment prevu avec l'équipe
+                  Moyen de paiement convenu  avec l'équipe
                 </div>
                 <input
                   type="text"

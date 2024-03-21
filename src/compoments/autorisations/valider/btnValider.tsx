@@ -1,11 +1,8 @@
 "use client";
 import {
-  _NameNoPhoto,
   _accidentError,
   _accidentFiche,
-  _conditions,
   _date,
-  _errorCondtions,
   _errorPay,
   _payMethode,
   _surfers,
@@ -35,7 +32,6 @@ export default function ButtonValiderFormCours({
   const [payMethode] = useAtom(_payMethode);
   const [txt] = useAtom(_txtPay);
   const [accident] = useAtom(_accidentFiche);
-  const [name] = useAtom(_NameNoPhoto);
 
   const formSend = () => {
     if (acidentIsOK() == true && payIsOK() == true && AuthIsOK() == true) {

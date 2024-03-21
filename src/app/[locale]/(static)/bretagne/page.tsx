@@ -23,7 +23,7 @@ export default function page() {
           alt="logo breton stylisé Coco Surf"
         />
         <section className={style.section}>
-          <h1 className={style.h1}>{t("h1")} </h1>
+          <h1 className={style.h1} style={{marginBottom:"35px"}}>{t("h1")}</h1>
           <h2 className={style.h2}>{t("h2")}</h2>
           <div className={style.color}></div>
           <ul className={style.ul}>

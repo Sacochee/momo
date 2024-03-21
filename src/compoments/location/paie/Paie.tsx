@@ -3,7 +3,7 @@ import style from "./paie.module.css"
 import { PaieMethode } from "@/app/[locale]/(compl)/locationAtoms"
 import { ChangeEvent, useEffect, useRef } from "react"
 
-export default function Paie() {
+export default function Paie({err} : {err : boolean}) {
     const input = useRef<HTMLInputElement>(null)
     const [paie, setPaie] = useAtom(PaieMethode)
     const valideSelect = (e : ChangeEvent<HTMLSelectElement>)=>{
@@ -36,12 +36,12 @@ export default function Paie() {
             <select onChange={(e)=>valideSelect(e)}>
                 <option value=""> - </option>
                 <option value="CB">Carte Bancaire</option>
-                <option value="autre">Autre</option>
+                <option value="autre" >Autre (vu avec l’équipe)</option>
             </select>
         </div>
-        <div ref={input} style={{display:'none'}} className={style.part}>
+        <div ref={input} style={{display:'none'}} className={`${style.part} ${err && style.err}`}>
             Précisez ici
-            <input type="text" onChange={(e)=>valideInput(e)}/>
+            <input type="text" onChange={(e)=>valideInput(e)} />
         </div>
     </div>
   )

@@ -25,3 +25,11 @@
     margin: 5px 0;
     padding: 5px 10px;
 }
+
+.err{
+   color: red;
+}
+
+.err input{
+    border: 1px solid red;
+}

@@ -2,6 +2,7 @@
 import Auth from './auth'
 import { useAtom } from 'jotai';
 import { _surfers } from '@/app/[locale]/(compl)/states';
+import { MutableRefObject } from 'react';
 
 export default function AuthProvided() {
   const [data] = useAtom(_surfers)

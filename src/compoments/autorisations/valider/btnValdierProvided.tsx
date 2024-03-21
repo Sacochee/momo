@@ -1,17 +1,15 @@
-"use client"
+"use client";
 import { useAtom } from "jotai";
 import {
   _surfers,
   _accidentFiche,
-  _errorCondtions,
-  _conditions,
-  _NameNoPhoto,
   _payMethode,
   _txtPay,
   _errorPay,
   _accidentError,
 } from "@/app/[locale]/(compl)/states";
 import ButtonValiderFormCours from "./btnValider";
+import ClassNameOf from "@/compoments/autorisations/auth/style.module.css";
 
 export default function BtnValiderProvider() {
   const [data] = useAtom(_surfers);
@@ -20,9 +18,6 @@ export default function BtnValiderProvider() {
   const [pay] = useAtom(_payMethode);
   const [txt] = useAtom(_txtPay);
   const [, setErr] = useAtom(_errorPay);
-  const [conditons] = useAtom(_conditions);
-  const [err, setError] = useAtom(_errorCondtions);
-  const [name] = useAtom(_NameNoPhoto);
 
   const mineur = () => {
     let bool = false;
@@ -45,12 +40,12 @@ export default function BtnValiderProvider() {
   };
 
   function acidentIsOK() {
-    
+    console.log(accidentFiche.tel == undefined)
     setErrorB({
-      errorNom : accidentFiche.nom == undefined ,
+      errorNom: accidentFiche.nom == undefined,
       errorPremon: accidentFiche.prenom == undefined,
-      errorTel : accidentFiche.tel == undefined
-    })
+      errorTel: accidentFiche.tel == undefined,
+    });
     if (
       error.errorNom == false &&
       error.errorPremon == false &&
@@ -63,7 +58,6 @@ export default function BtnValiderProvider() {
   }
 
   function payIsOK() {
-    
     if (pay == "null") {
       setErr(true);
       return false;
@@ -82,26 +76,71 @@ export default function BtnValiderProvider() {
   }
 
   function AuthIsOK() {
-    setError({
-      cgv : conditons.cgv ? false : true, 
-      anul : conditons.anul ? false : true, 
-      min : (conditons.min == mineur()) ? false : true,
-      maj: (conditons.maj == majeur()) ? false : true,
-      photo : verifPhoto()
-    })
-    if(conditons.cgv == true && conditons.anul == true && conditons.min == mineur() && conditons.maj == majeur() && verifPhoto() == false)
-      return true
-    else
-      return false
-    
+    let err = false;
+    let inputs: HTMLInputElement[] = [];
+    let photo: HTMLInputElement[] = [];
+    const div = document.getElementById("conditions") as HTMLDivElement;
+    div.querySelectorAll("input").forEach((item) => {
+      if (item.name == "image") photo = [...photo, item];
+      else inputs = [...inputs, item];
+    });
+
+    inputs.forEach((item) => {
+      if (item.checked == true) {
+        const i = item.parentElement?.parentElement?.getElementsByClassName(
+          ClassNameOf.erreur
+        )[0] as HTMLDivElement | undefined;
+        if (i!= undefined) {i.style.display = "none";}
+        const span = item.parentElement as HTMLDivElement
+        if(span) span.style.color = "black"
+        item.style.border = "1px solid black"
+      }else {
+        const i = item.parentElement?.parentElement?.getElementsByClassName(
+          ClassNameOf.erreur
+        )[0] as HTMLDivElement | undefined;
+        console.log(i)
+        if (i != undefined) {i.style.display = "initial";}
+        const span = item.parentElement as HTMLDivElement
+        if(span) span.style.color = "red"
+        item.style.border = "1px solid red"
+        err = true
+      }
+    });
+
+    if(photo[0].checked == true || photo[1].checked == true){
+      const i = photo[0].parentElement?.parentElement?.getElementsByClassName(
+        ClassNameOf.erreur
+      )[0] as HTMLDivElement | undefined;
+      console.log(i)
+      if (i != undefined) {i.style.display = "none";}
+      const span = photo[0].parentElement as HTMLDivElement
+      if(span) span.style.color = "black"
+      const spann = photo[1].parentElement as HTMLDivElement
+      if(spann) spann.style.color = "black"
+      photo[0].style.border = "1px solid black"
+      photo[1].style.border = "1px solid black"
+    }else{
+      const i = photo[0].parentElement?.parentElement?.getElementsByClassName(
+        ClassNameOf.erreur
+      )[0] as HTMLDivElement | undefined;
+      console.log(i)
+      if (i != undefined) {i.style.display = "initial";}
+      const span = photo[0].parentElement as HTMLDivElement
+      if(span) span.style.color = "red"
+      const spann = photo[1].parentElement as HTMLDivElement
+      if(spann) spann.style.color = "red"
+      photo[0].style.border = "1px solid red"
+      photo[1].style.border = "1px solid red"
+      err = true
+    }
+
+    return !err
   }
-  const verifPhoto = () =>{
-    if(conditons.photo == false){
-      if(name == undefined)return true
-      else return false
-    }else return false
-  }
-  return(
-    <ButtonValiderFormCours AuthIsOK={AuthIsOK} acidentIsOK={acidentIsOK} payIsOK={payIsOK}/>
-  )
+  return (
+    <ButtonValiderFormCours
+      AuthIsOK={AuthIsOK}
+      acidentIsOK={acidentIsOK}
+      payIsOK={payIsOK}
+    />
+  );
 }

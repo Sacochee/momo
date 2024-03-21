@@ -119,17 +119,17 @@ function Part({part } : {part : participant | undefined}) {
           <input
             type="text"
             name="name"
-            placeholder="Morgan LeMoniteur"
+            placeholder="Dupont Léo"
             className={style.input}
             defaultValue={part ? part.name : undefined}
           />
         </div>
         <div className={style.case}>
-          Taille Poid
+          Taille et Poids
           <input
             type="text"
             name="details"
-            placeholder="120kg / 166cm"
+            placeholder="175 cm / 70 kg"
             className={style.input}
             defaultValue={part ? part.details : undefined}
           />

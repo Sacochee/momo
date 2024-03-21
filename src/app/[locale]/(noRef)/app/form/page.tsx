@@ -21,7 +21,7 @@ export default function page() {
             >
               Oui
             </Links>
-            <Links href={"/telephoneUniquement"} className={style.btn}>
+            <Links href={"/app/telephoneUniquement"} className={style.btn}>
               Non
             </Links>
           </div>

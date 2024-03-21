@@ -164,7 +164,7 @@ export default function Page() {
   
 }
 
-export function Palmier() {
+export function Palmier({bool} : {bool ?: Boolean}) {
   const t = useTranslations("presentation")
   return (
     <div className={style.palm}>
@@ -184,7 +184,7 @@ export function Palmier() {
           height={96}
           alt="logo palmier stylisé coco surf"
         />
-        <Btn txt={t("call2")} to="/plage" />
+        <Btn txt={bool ? t("call3"): t("call2")} to={bool ? "/presentationDesCours" : "plageEtEquipe"} />
       </div>
     </div>
   );

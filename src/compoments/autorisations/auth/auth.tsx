@@ -1,12 +1,6 @@
-import { useAtom } from "jotai";
+import { MutableRefObject, useState } from "react";
 import style from "./style.module.css";
-import {
-  _NameNoPhoto,
-  _conditions,
-  _errorCondtions,
-  _surfers,
-} from "@/app/[locale]/(compl)/states";
-import { useState } from "react";
+import { _surfers } from "@/app/[locale]/(compl)/states";
 import { tree } from "next/dist/build/templates/app-page";
 
 export default function Auth({
@@ -16,122 +10,83 @@ export default function Auth({
   majeur: Function;
   mineur: Function;
 }) {
-  const [err, setErr] = useAtom(_errorCondtions);
-  const [conditions, setConditions] = useAtom(_conditions);
-  const [name, setName] = useAtom(_NameNoPhoto);
-  const [image, setImage] = useState<boolean | null>(null);
-  const [an, setAn] = useState(false);
+  const [photo, setPhoto] = useState<undefined | boolean>()
+  const setCheck = (e: HTMLDivElement | HTMLInputElement) => {
+    if (!(e instanceof HTMLDivElement)) {
+      e.checked = !e.checked;
+    } else {
+      const input = e.querySelector("input") as HTMLInputElement;
+      if (input.checked == false) input.checked = true;
+      else input.checked = false;
+    }
+  };
+
+  const clear = (e: HTMLDivElement | HTMLInputElement) =>{
+    if(e instanceof HTMLInputElement){
+      const box = e.parentElement?.parentElement?.getElementsByClassName(style.checkContainer) as HTMLCollectionOf<HTMLDivElement>
+      if(box){
+        for(let i =0; i < box.length; i++){
+          box[i].style.color  = "black";
+          const input = box[i].querySelector("input") as HTMLInputElement
+          if(input) input.style.borderColor = "black" 
+        }
+      }
+      const b = e.parentElement?.parentElement?.getElementsByClassName(style.erreur)[0] as HTMLDivElement
+      if(b) b.style.display = "none"
+    }else{
+      const box = e.parentElement?.getElementsByClassName(style.checkContainer) as HTMLCollectionOf<HTMLDivElement>
+      if(box){
+        for(let i =0; i < box.length; i++){
+          box[i].style.color  = "black";
+          const input = box[i].querySelector("input") as HTMLInputElement
+          if(input) input.style.borderColor = "black" 
+        }
+      }
+      const b = e.parentElement?.parentElement?.getElementsByClassName(style.erreur)[0] as HTMLDivElement
+      if(b) b.style.display = "none"
+    }
+  }
 
   return (
-    <section className={style.section}>
+    <section className={style.section} id="conditions">
       <h2 className={style.h2}>Autorisations</h2>
       <div className={style.underline}></div>
       <ul className={style.ul}>
-        <li className={style.li}>
-          <h3>CGV</h3>
+        <li className={style.li} style={{ position: "relative" }}>
+          <h3>Conditions d'annulation</h3>
+
           <div>
             <p>
-              Je déclare avoir pris connaisance{" "}
-              <a href="/">Des conditions générals de ventes</a>
+              Conditions d'annulation En cas d’annulation suite à de mauvaises
+              conditions météorologiques $ (absence de vagues, conditions
+              impraticables), les cours qui ne pourront pas être effectués
+              seront, en accord avec les stagiaires : remplacés par une activité
+              de substitution (technique surf, bodyboard, jeux aquatiques, etc)
+              OU reportés à une date ultérieure OU annulés et feront l’objet
+              d’un avoir ou remboursement
+              <br />
+              <br />
+              En cas d'annulation ou absence du fait du client : plus de 10
+              jours avant le début du stage : remboursement complet // entre 10
+              et 5 jours précédent la date de début de stage : encaissement des
+              arrhes éventuels // 5 jours avant le début du stage ou durant
+              celui-ci : l’intégralité de la prestation sera facturée, pas de
+              remboursement (sauf présentation d’un certificat médical)
             </p>
-            {err.cgv ? (
-              <div id="erreur" className={style.erreur}>
-                Attention ceci est obligatoire
-              </div>
-            ) : undefined}
-            <div className={`${style.checkContainer} ${err.cgv ? style.inputError : undefined}`}>
-              <input
-                type="checkbox"
-                checked={conditions.cgv ? true : false}
-                onChange={(e) => {
-                  setConditions({
-                    ...conditions,
-                    cgv: e.target.checked,
-                  });
-                  if(e.target.checked = true)
-                    setErr({...err, cgv : false})
-                }}
-                className={style.checkbox}
-              />
-              <span>J'accepte les CGV</span>
-            </div>
           </div>
-        </li>
-        <li className={style.li}style={{position:"relative"}}>
-          <h3>Conditions d'annulation</h3>
-          
-          <div className={`${an ? style.absolute : undefined}`}>
-            {an ? (
-              <div >
-                <p>
-                Conditions d'annulation En cas d’annulation suite à de mauvaises conditions météorologiques $
-                (absence de vagues, drapeau rouge), les cours qui ne pourront pas être effectués seront, en 
-                accord avec les stagiaires : remplacés par une activité de substitution (technique surf, bodyboard, 
-                jeux aquatiques, etc) OU reportés à une date ultérieure OU annulés et feront l’objet d’un avoir ou 
-                remboursement
-                <br/>
-                En cas d'annulation ou absence du fait du client : plus de 10 jours avant le début du stage : 
-                remboursement complet // entre 10 et 5 jours précédent la date de début de stage : encaissement 
-                des arrhes éventuels // 5 jours avant le début du stage ou durant celui-ci : l’intégralité de la 
-                prestation sera facturée, pas de remboursement (sauf présentation d’un certificat médical)
-                </p>
-                <div style={{ display: "flex", justifyContent: "center" }}>
-                  <button
-                    onClick={() => {
-                      setAn(an ? false : true);
-                    }}
-                    className={style.btnLire}
-                  >
-                    <div style={{ paddingRight: "10px" }}>Lire Moins</div>
-
-                    <Fleche css={{ transform: "translateY(-4px)" }} />
-                  </button>
-                </div>
-              </div>
-            ) : (
-              <div>
-                <p>
-                  [...] remboursement complet // entre 10 et 5 jours précédant
-                  la date de début de stage : encaissement des arrhes éventuels
-                  // 5 jours avant le début du stage ou durant celui-ci :
-                  l’intégralité de la prestation sera facturée, pas de
-                  remboursement [...]
-                </p>
-                <div style={{ display: "flex", justifyContent: "center" }}>
-                  <button
-                    onClick={() => setAn(an ? false : true)}
-                    className={style.btnLire}
-                  >
-                    <div style={{ paddingRight: "10px" }}>Lire Tout</div>
-                    <Fleche css={{ transform: "rotate(90deg)" }} />
-                  </button>
-                </div>
-              </div>
-            )}
-
-            {err.anul ? (
-              <div id="erreur" className={style.erreur}>
-                Attention ceci est obligatoire
-              </div>
-            ) : undefined}
-            <div  className={`${err.anul ? style.inputError : undefined} ${style.checkContainer}`}>
-              <input
+          <div id="erreur" className={style.erreur} style={{ display: "none" }}>
+            Attention ceci est obligatoire
+          </div>
+          <div
+            className={style.checkContainer}
+            onClick={(e) => {setCheck(e.currentTarget);clear(e.currentTarget)}}
+          >
+            <input
               type="checkbox"
-              checked={conditions.anul ? true : false}
-              onChange={(e) =>{
-                setConditions({
-                  ...conditions,
-                  anul: e.target.checked,
-                })
-                if(e.target.checked == true)
-                  setErr({...err, anul : false})
-              }
-              }
               className={style.checkbox}
+              onClick={(e) => {setCheck(e.currentTarget);clear(e.currentTarget)}}
             />
             <span>J'accepte les C.A.</span>
-            </div>
-            
           </div>
         </li>
         <li className={style.li}>
@@ -143,41 +98,19 @@ export default function Auth({
               de votre image réalisés pendant votre stage, pour la production de
               tout document publicitaire et ce sans contre partie financière.
             </p>
-            {err.photo ? (
-              <div id="erreur" className={style.erreur}>
-                Attention ceci est obligatoire
-              </div>
-            ) : undefined}
-            <div className={style.checkContainer}>
-              <input
-                type="checkbox"
-                checked={image ? true : image == null ? false : false}
-                onChange={() => {
-                  setConditions({
-                    ...conditions,
-                    photo: true,
-                  });
-                  setImage(true);
-                  setName(undefined)
-                  setErr({...err, photo : false})
-                }}
-                className={style.checkbox}
-              />
+            <div
+              id="erreur"
+              className={style.erreur}
+              style={{ display: "none" }}
+            >
+              Attention ceci est obligatoire
+            </div>
+            <div className={style.checkContainer} onClick={(e)=>{setPhoto(true);clear(e.currentTarget)}}>
+              <input type="checkbox" className={style.checkbox} name="image" value={"true"} checked={photo == true ? photo : false} onChange={()=>setPhoto(true)}/>
               <span>J'accpète le droit à l'image</span>
             </div>
-            <div className={style.checkContainer}>
-              <input
-                type="checkbox"
-                checked={image ? false : image == null ? false : true}
-                onChange={(e) => {
-                  setConditions({
-                    ...conditions,
-                    photo: false,
-                  });
-                  setImage(false);
-                }}
-                className={style.checkbox}
-              />
+            <div className={style.checkContainer} onClick={(e)=>{setPhoto(false);clear(e.currentTarget)}}>
+              <input type="checkbox" className={style.checkbox} name="image" value={"false"} checked={photo == false ? !photo : false} onChange={()=>setPhoto(false)}/>
               <span>Je refuse le droit à l'image </span>
             </div>
           </div>
@@ -196,24 +129,27 @@ export default function Auth({
                 suite de son inaptitude médicale ou non respect des consignes du
                 moniteur.
               </p>
-              {err.min ? (
-                <div id="erreur" className={style.erreur}>
-                  Attention ceci est obligatoire
-                </div>
-              ) : undefined}
-              <div className={`${err.min ? style.inputError : undefined} ${style.checkContainer}`}>
-                <input
-                type="checkbox"
-                checked={conditions.min ? true : false}
-                onChange={(e) =>{
-                  setConditions({ ...conditions, min: e.target.checked })
-                  if(e.target.checked == true)setErr({...err, min : false})}
-                }
-                className={style.checkbox}
-              />
-              <span>J autorise mon enfant a participé a ce cours</span>
+
+              <div
+                id="erreur"
+                className={style.erreur}
+                style={{ display: "none" }}
+              >
+                Attention ceci est obligatoire
               </div>
-              
+
+              <div
+                className={style.checkContainer}
+                onClick={(e) => {setCheck(e.currentTarget);clear(e.currentTarget)}}
+              >
+                <input
+                  type="checkbox"
+                  className={style.checkbox}
+                  onClick={(e) => {setCheck(e.currentTarget);clear(e.currentTarget)}}
+                  style={{width:"30px"}}
+                />
+                <span style={{wordWrap:"break-word"}}>Je certifie avoir pris connaissance de ces informations</span>
+              </div>
             </div>
           </li>
         ) : undefined}
@@ -229,48 +165,31 @@ export default function Auth({
                 inaptitude physique ou médicale ou non respect des consignes du
                 moniteur.{" "}
               </p>
-              {err.maj ? (
-                <div id="erreur" className={style.erreur}>
-                  Attention ceci est obligatoire
-                </div>
-              ) : undefined}
+
               <div
-                className={`${err.maj ? style.inputError : undefined} ${
-                  style.checkContainer
-                }`}
+                id="erreur"
+                className={style.erreur}
+                style={{ display: "none" }}
+              >
+                Attention ceci est obligatoire
+              </div>
+
+              <div
+                className={style.checkContainer}
+                onClick={(e) => {setCheck(e.currentTarget);clear(e.currentTarget)}}
               >
                 <input
                   type="checkbox"
-                  checked={conditions.maj ? true : false}
-                  onChange={(e) => {
-                    setConditions({
-                      ...conditions,
-                      maj: e.target.checked,
-                    });
-                    if (e.target.checked == true)
-                      setErr({
-                        ...err,
-                        maj: false,
-                      });
-                  }}
                   className={style.checkbox}
-                  //mettre un trucs in checbox
+                  onClick={(e) => {setCheck(e.currentTarget);clear(e.currentTarget)}}
+                  style={{width:"30px"}}
                 />
-                <span>J'accepte la décharge +18</span>
+                <span>Je certifie avoir pris connaissance de ces informations</span>
               </div>
             </div>
           </li>
         ) : undefined}
       </ul>
     </section>
-  );
-}
-
-function Fleche({ css }: { css?: Object }) {
-  return (
-    <div className={style.fleche} style={css as any}>
-      <span className={style.line}></span>
-      <span className={style.line}></span>
-    </div>
   );
 }

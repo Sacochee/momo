@@ -4,35 +4,16 @@ import HeaderForm from "@/compoments/inscription/header/header";
 import style from "./style.module.css";
 import { useAtom } from "jotai";
 import { _date, _time, _surfers } from "@/app/[locale]/(compl)/states";
-import dynamic from "next/dynamic";
-import SkulAcident from "@/compoments/autorisations/acc/skulAcident";
-import SkullPay from "@/compoments/autorisations/pay/skull";
-import SkullAuth from "@/compoments/autorisations/auth/skull";
 import Bar from "@/compoments/utilities/barProgress/bar";
 import { redirect } from "@/navigation";
+import { useRef } from "react";
+import AuthProvided from "@/compoments/autorisations/auth/authProvided";
+import BtnValiderProvider from "@/compoments/autorisations/valider/btnValdierProvided";
+import Accident from "@/compoments/autorisations/acc/accident";
+import Pay from "@/compoments/autorisations/pay/pay";
 
-const Accident = dynamic(
-  () => import("@/compoments/autorisations/acc/accident")
-);
-
-const Pay = dynamic(() => import("@/compoments/autorisations/pay/pay"), {
-  loading: () => <SkullPay />,
-});
-
-const Auth = dynamic(
-  () => import("@/compoments/autorisations/auth/authProvided"),
-  {
-    loading: () => <SkullAuth />,
-  }
-);
-
-const Btn = dynamic(
-  () => import("@/compoments/autorisations/valider/btnValdierProvided"),
-  {
-    loading: () => <div>Loading...</div>,
-  }
-);
 export default function page() {
+  const conditions = useRef<HTMLDivElement>()
   const [date] = useAtom(_date);
   const [time] = useAtom(_time);
   const [surfers] = useAtom(_surfers);
@@ -48,8 +29,8 @@ export default function page() {
             <Accident />
             <Pay />
           </div>
-          <Auth />
-          <Btn />
+          <AuthProvided />
+          <BtnValiderProvider />
         </main>
         <Footer />
       </>

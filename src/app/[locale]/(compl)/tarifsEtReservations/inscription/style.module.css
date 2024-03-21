@@ -2,7 +2,6 @@
 .box { width: 300px }
 .ul { padding: 0; list-style: none }
 .hover { z-index: 5; background-color: blue; position: absolute }
-.overlay { position: absolute; z-index: 6 }
 .flou { filter: blur(2px) }
 .top { display: flex; flex-direction: column; align-items: center }
 .topDate, .topHours { display: flex; flex-direction: column; align-items: center; gap: 5px; margin: 5px }

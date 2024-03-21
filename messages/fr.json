@@ -1,13 +1,13 @@
 {
     "metadata" : {
-        "home" : "Ecole de Surf Coco Surf Sur la Cote Sauvage",
+        "home" : "Ecole de Surf Coco Surf Sur la Cote-Sauvage",
         "homeDesc": "Page d'accueil de l'école Coco Surf en Charente Maritime ",
         "contact" : "Contact & Accès – Coco Surf – Charente Maritime",
         "contactDesc" : "Page de contact et accès de l'école Coco Surf. Retrouvez-nous sur la parking de la pointe espagnole. Vous ne pourrez pas louper notre camion jaune."
     },
     "main" : {
-        "t1" :"~ Envie de vous détendre et",
-        "t2": "de découvrir les plaisirs du surf ? ~" ,
+        "t1" :"Envie de vous détendre et",
+        "t2": "de découvrir les plaisirs du surf ?" ,
         "p1" : "Rejoignez Louise et Morgan pour une expérience surf",
         "s1" : " fun",
         "p2" : " et ",
@@ -17,7 +17,7 @@
         "p4" : " vous accueille, de avril à novembre, sur la plus belle et la plus",
         "p5" : "préservée des plages de ",
         "s4" : "Charente-maritime",
-        "s5" : "La côte sauvage",
+        "s5" : "La Côte-sauvage",
         "p6" : "En famille, seul ou en groupe, venez profiter des cours, locations et conseils de l’équipe !"
     },
     "nav" : {
@@ -59,7 +59,49 @@
     },
     "cgv" : {
         "title" : "Conditions Générales de Vente et règlement de l’école de surf COCO SURF",
-        "desc" : "Page contenant les conditions générales de vente de l'école de surf Coco Surf."
+        "desc" : "Page contenant les conditions générales de vente de l'école de surf Coco Surf.",
+        "article1" : {
+            "t" : "ARTICLE 1 – INSCRIPTION",
+            "1" : "• contre-indication médicale à la pratique du surf et avoir pris connaissance des conditions générales de vente et de règlement.",
+            "2" : "• L’inscription aux activités organisées par COCO SURF entraîne l’acceptation du présent règlement.",
+            "3" : "• L’inscription définitive à COCO SURF se fera sur place avec le renseignement d’une fiche complète reprenant les éléments de pré-inscription ainsi qu’une autorisation parentale pour les mineurs."
+        },
+        "article2" : {
+            "t" : "ARTICLE 2 – PAIEMENT",
+            "1" : "• Le solde des cours devra s‘effectuer lors de la réservation ou au plus tard le jour du premier cours.",
+            "2" : "• L’école de surf COCO SURF se réserve le droit de demander des arrhes.",
+            "3" : "• Le paiement peut se faire par chèque bancaire, chèque vacances, espèces ou paiement PayPal."
+        },
+        "article3" : {
+            "t" : "ARTICLE 3 – ANNULATION DES COURS",
+            "1" : "• Annulation ou absence du fait du client ",
+            "2" : "⁤  ⤷ Plus de 10 jours avant le début du stage : remboursement complet",
+            "3" : "⁤  ⤷ Entre 10 et 5 jours précédant la date de début de stage : encaissement des arrhes éventuels",
+            "4" : "⁤  ⤷ 5 jours avant le début du stage ou durant celui-ci: l’intégralité de la prestation sera facturée, pas de remboursement (sauf sur présentation d’un certificat médical)",
+            "5" : "• En cas d’annulation suite à de mauvaises conditions météorologiques (absence de vagues, drapeau rouge) Les cours qui ne pourront pas être effectués seront, en accord avec les stagiaires :",
+            "6" : "⁤  ⤷ Remplacés par une activité de substitution (technique surf, bodyboard, jeux aquatiques, etc).",
+            "7" : "⁤  ⤷ Reportés à une date ultérieure.",
+            "8" : "⁤  ⤷ Annulés et feront l’objet d’un avoir."
+        },
+        "article4" : {
+            "t" : "ARTICLE 4 – RESPONSABILITÉ DE LA STRUCTURE",
+            "1" : "• Les stagiaires seront pris en charge par COCO SURF et donc sous sa responsabilité à l’heure prévue du cours. Ils restent sous sa responsabilité jusqu’au moment du rangement de leur combinaison. La responsabilité civile de la structure concernant ses stagiaires cesse en dehors de ces heures.",
+            "2" : "• Les parents ou responsables des stagiaires devront s’assurer avant de confier les participants dans la structure que la prestation prévue a bien lieu."
+        },
+        "article5" : {
+            "t" : "ARTICLE 5 – ASSURANCE",
+            "1" : "• Les participants attestent avoir pris connaissance des garanties d’assurance en responsabilité civile souscrite par COCO SURF (dont les modalités sont décrites dans le contrat mis à disposition par la structure) et avoir été informés quant à leur intérêt à souscrire des garanties d’assurances complémentaires en cas de dommages corporels survenant au cours des activités organisées par COCO SURF (Loi de 1984 modifiée)."
+        },
+        "article6" : {
+            "t" : "ARTICLE 6 – PERTE, VOL ET DÉTÉRIORATION",
+            "1" : "• L’École de surf COCO SURF décline toute responsabilité en cas de pertes, vols ou détériorations des objets qui pourraient lui être confiés."
+        },
+        "article7" : {
+            "t" : "ARTICLE 7 – DROIT À L’IMAGE",
+            "1" : "• En souscrivant aux prestations organisées par l’école de surf COCO SURF, vous autorisez cette dernière à utiliser les photos et films de votre image réalisés pendant votre stage, pour la production de tout document publicitaire et ce sans contre partie financière.",
+            "2" : "• En cas de refus du droit à l’image, merci d’envoyer votre requête à cocosurf.charentemaritime@gmail.com"
+        }
+        
     },
     "photos" : {
         "h1" : "Souvenirs de vacances...",
@@ -71,7 +113,7 @@
         "h2" : "~ Nous rejoindre ~",
         "s1" : "Contacter l’école ",
         "p1" : "pour réserver vos cours ou locations",
-        "p2" : "Cocosurf est mobile sur toute la côte Sauvage. ",
+        "p2" : "Cocosurf est mobile sur toute la Côte-Sauvage. ",
         "s2" : "Les lieux de rendez-vous varient au cours de l’année afin de vous proposer les meilleurs bancs de sable loin de la foule. ",
         "p3" : "L’équipe vous informera du lieu de rdv lors de la réservation.",
         "attention" : "(⚠️ lieu de RDV parfois modifié)",
@@ -109,7 +151,7 @@
         "g" : "Durée ",
         "t" : ": 6 jours",
         "g1" :"Participants ",
-        "t1" :": 5 surfeurs + Morgan",
+        "t1" :": 6 surfeurs + Morgan",
         "g2" :"Niveau requis ",
         "t2" :": savoir ramer et surfer une mousse",
         "g3" :"Matériel fourni ",
@@ -117,7 +159,7 @@
         "g4" :"Matériel à prévoir ",
         "t4" :": chaussons de surf et auto-dérision",
         "g5" : "Tarif ",
-        "t5" :": 450€/personne (séjour complet) ou 500€/personne (séjour complet + transport A/R jusqu’en Bretagne)",
+        "t5" :": 500€/personne (séjour complet) ou 550€/personne (séjour complet + transport A/R jusqu’en Bretagne)",
         "call" : "Être rappelé"
     },
     "cadeau" : {
@@ -133,19 +175,16 @@
     "logement" : {
         "h1" : "~ Séjours surf & hébergement ~",
         "p1" : "Le camping DOMAINE DE MONTCALM, situé à la Palmyre,",
-        "p2" : "et COCO SURF sont heureux de vous accueillir pour un ",
-        "s1" : "séjour surf et nature sur la côte sauvage. ",
+        "p2" : "à seulement 5 minutes des vagues, et COCOSURF, sont heureux de vous accueillir pour une semaine de surf",
+        "s1" : " personnalisée et à tarif avantageux !",
         "p3" : "Hébergement de ",
-        "s2" : "6 jours et 5 nuits en mobile-home  ",
+        "s2" : "7 jours et 6 nuits en mobile-home  ",
         "p4" : "tout confort, et ",
         "s3" : "formule surf de 2 ou 4 cours ",
         "p5" : "à organiser avec Morgan.",
-        "p6" : "Dispo en mai, juin et septembre.",
-        "h2" : "~ Logements ~",
-        "p7" : "Le village vacances AZUREVA de Ronce-Les-Bains vous accueille de avril à octobre.",
-        "p8" : "Vous logerez en appartement et profiterez de la demie pension et des nombreux équipements sportifs.",
-        "btn1" : "Infos & réservations",
-        "btn2" : "Visiter leur site"
+        "p6" : "Dispo en avril, mai, juin et septembre.",
+        "p7" : "Possibilité de louer le matériel de surf en dehors des cours à prix mini !",
+        "btn1" : "Infos & réservations"
     },
     "presentation" : {
         "h1" : "2 types de cours chez COCO SURF",
@@ -157,13 +196,13 @@
         "oll2": ": augmenter rapidement son niveau de surf",
         "box1H2" : "L’essentiel",
         "li1s1" : "SPOTS ",
-        "li1p1" : ": En été et hors saison, spots variables sur la côte sauvage",
+        "li1p1" : ": En été et hors saison, spots variables sur la Côte-sauvage",
         "li1s2" : "NIVEAUX ",
         "li1p2" : ": de débutants à confirmés",
         "li1s3" : "ÂGE ",
         "li1p3" : ": de 7 à 77 ans",
         "li1s4" : "DURÉE DES COURS ",
-        "li1p4" : ": 2h effectives (2h3O de prise en charge)",
+        "li1p4" : ": 2h30 effectives (3h de prise en charge)",
         "li1s5" : "NOMBRE D’ÉLÈVES ",
         "li1p5" : ": 8 maximum par cours",
         "li1s6" : "MATÉRIEL ",
@@ -204,30 +243,32 @@
         "li4s4" : "ASSURANCE ",
         "li4p4" : "responsabilité civile Coco Surf",
         "call"  : "Tarifs & Réservations",
-        "call2" : "L'équipe et la plage"
+        "call2" : "L'équipe et la plage",
+        "call3" : "Présentation des cours"
     },
     "plage"  :{
         "h1" : "~ L’équipe ~",
         "s1" : "La team Cocosurf ",
         "p1"  : "prendra le temps de vous accueillir et de vous proposer la formule optimale selon votre niveau et vos souhaits. Passionnés de surf, vos moniteurs se dépenseront sans compter afin que tout le monde passe un excellent moment.",
-        "s2" : "Surfeuse émérite et souriante, Louise ",
-        "p2" : "vous fera progresser à votre rythme grâce à son énergie et sa bienveillance.",
-        "p3"  : "Surftrips : Indonésie, Costa Rica, Guadeloupe, Philippines, Pérou, Canaries, Pays-basque, Gironde, Bretagne Boisson favorite : l’eau de coco bien-sûr !",
+        "s2" : "Surfeuse gracieuse et pétillante, Louise",
+        "p2" : "vous fera progresser à votre rythme grâce à son empathie et sa bienveillance",
+        "p3"  : "Surftrips : Indonésie, Costa Rica, Guadeloupe, Philippines, Pérou, Canaries, Pays-basque, Gironde, Bretagne. ",
+        "p3bis" : "Boisson favorite : l’eau de coco bien-sûr !",
         "s3" : "Moniteur de surf diplômé d’état, secouriste",
         "p4" : ", avec plus de 20 ans de pratique et plus de 10 ans d’enseignement auprès de débutants et de compétiteurs, ",
         "s4" : "Morgan ",
         "p5" : "vous transmettra ses techniques dans une ambiance fun et pédagogique.",
         "p6" : "Surftrips : Costa Rica, Guadeloupe, Mexique, Maroc, Canaries, Sri Lanka, Philippines, Pérou, Nicaragua, Sénégal, Indonésie, Méditerranée, France en long et en large.",
         "p7" : "Vague favorite : Une vague vierge de monde !",
-        "h2" : "~ La plage de la Côte sauvage ~",
+        "h2" : "~ La plage de la Côte-sauvage ~",
         "pp1" : "Retrouvez-nous sur le parking de ",
         "ss1" : "la plus belle et la plus préservée des plages ",
         "pp2" : "du Pays Royannais : ",
-        "ss2" : "la Côte sauvage.",
+        "ss2" : "la Côte-sauvage.",
         "pp3" : "Accessible à vélo et en voiture, à quelques kilomètres de ",
         "ss3" : "Ronce-Les-Bains ",
         "pp4" : "et de ",
-        "ss4" : "La Palmyre",
+        "ss4" : "La Palmyre, ",
         "pp5" : "cette plage offre des vagues adaptées à chacun : petites à marée basse, plus puissantes à marée haute.",
         "pp6" : "Une fois votre combinaison enfilée, entre 7 et 20 minutes de marche (selon le spot) en compagnie de vos moniteurs et leur chariot de planches permettront de faire connaissance et de rejoindre la plage.",
         "pp7" : "Vous êtes arrivés et prêt à surfer !"
@@ -235,12 +276,12 @@
     "tarifs" : {
         "h1": "Réservez vos cours de surf dès maintant",
         "h2" : "Dans un cours de Surf vous avez :",
-        "p1":"La bonne Humeur, l’encadrement par un moniteur Diplômé d’Etat, ainsi que l’ensemble du matériel sont inclus dans la prestation.",
+        "p1":"La bonne Humeur, l’encadrement par un moniteur Diplômé d’Etat, l’assurance responsabilité civile, ainsi que l’ensemble du matériel sont inclus dans la prestation",
         "h22" : "Pour Réserver :",
-        "li1underline" : "Contacter l’école ",
-        "li1" : "afin de choisir au mieux les horaires de cours et de vérifier les disponibilités",
-        "l2underline" : "Puis Remplir le bulletin d’inscription",
-        "li2" : " en ligne, en cliquant ci-dessous",
+        "li1underline" : "Contacter l’école",
+        "li1" : " afin de choisir au mieux les horaires de cours et de vérifier les disponibilités",
+        "l2underline" : "Finaliser l’inscription",
+        "li2" : " en cliquant sur le bouton ci-dessous",
         "btn" : "Inscription",
         "p2" : "Pour les autres moyens de paiement ou pour une réservation de dernière minute, en discuter avec l’équipe.",
         "tabl1_h2" : "COURS COLLECTIFS :",
@@ -282,15 +323,11 @@
             "when" : "Week-ends hors juillet et août"
         },
         "tabl_li8" : {
-            "name" : "Week-ends de mai à octobre",
+            "name" : "Club enfant 10 cours",
             "time" : "20h",
             "when" : "Week-ends de mai à octobre"
         },
-        "tabl_li9" : {
-            "name" : "Acompte",
-            "time" : "",
-            "when" : "Sur demande de l’école"
-        },
+       
         "tabl2_h2" : "COURS PARTICULIER :",
         "tabl2_p" : "Augmenter rapidement son niveau de surf",
         "tabl2_li1" : {
@@ -299,7 +336,7 @@
             "when" : ""
         },
         "tabl2_li2" : {
-            "name" : "2 personne",
+            "name" : "2 personnes",
             "time" : "2h",
             "when" : ""
         }

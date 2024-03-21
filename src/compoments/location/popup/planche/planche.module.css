@@ -99,8 +99,10 @@
 .href{
     cursor: pointer;
     text-decoration: underline;
-    font-size: small;
+    font-size: 1.2em;
     margin: 20px 0;
+    
+    text-align: center;
 }
 
 .delete{

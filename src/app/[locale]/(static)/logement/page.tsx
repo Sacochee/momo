@@ -39,19 +39,12 @@ export default function Page() {
           {t("p5")}
         </li>
         <li className={style.li}>{t("p6")}</li>
-        <li className={style.li}>
-        <Btn to="https://vacances-andretrigano.com/camping/charente-maritime/domaine-de-montcalm-les-mathes" txt={t("btn1")} outside={true}/>
-        </li>
-      </ul>
-      <h2 className={style.h2}>{t("h2")}</h2>
-      <div className={style.color}></div>
-      <ul className={style.ul}>
         <li className={style.li}>{t("p7")}</li>
-        <li className={style.li}>{t("p8")}</li>
         <li className={style.li}>
-            <Btn to="https://www.azureva-vacances.com/fr/village-club-hebergement-restauration/ronce-les-bains" txt={t("btn2")} outside={true}/>
+        <Btn to="/static/sejours-surf.pdf" txt={t("btn1")} outside={true}/>
         </li>
       </ul>
+      
     </main>
     <Footer/>
     </>

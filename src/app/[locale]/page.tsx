@@ -39,7 +39,7 @@ export default function Home() {
             </p>
             <p className={styles.p}>
               {t("p5")}
-              <strong>{t("s4")}</strong> :<strong>{t("s5")}</strong>.
+              <strong>{t("s4")}</strong> : <strong>{t("s5")}</strong>.
             </p>
           </div>
           <div className={styles.part}>
@@ -63,7 +63,7 @@ export default function Home() {
           </div>
         </section>
         <div style={{ marginBottom: "80px", marginTop: "50px" }}>
-          <Btn to="/tarifs" txt="Tarifs & Réservation" />
+          <Btn to="/tarifsEtReservations" txt="Tarifs & Réservation" />
         </div>
 
         <section style={{ marginBottom: "30px" }}>

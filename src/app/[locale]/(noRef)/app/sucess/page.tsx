@@ -12,7 +12,7 @@ export default function page() {
 
   return (
     <main className={style.main}>
-      <h1 style={{textAlign : "center"}}>Merci votre inscription a bien été validée</h1>
+      <h1 style={{textAlign : "center"}}>Inscription validée</h1>
       {
         isPay == false ? <MessageInfo/> : <p>Nous avons hâte de vous accueillir !</p>
       }

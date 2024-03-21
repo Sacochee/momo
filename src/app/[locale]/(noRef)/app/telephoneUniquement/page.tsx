@@ -41,7 +41,7 @@ export default function page() {
           </ul>
           <ButtonLink
             txt={value == "loc" ? "Location" : "Tarifs et Réservations"}
-            to={value == "loc" ? "/location" : "/tarifEtReservation"}
+            to={value == "loc" ? "/location" : "/tarifsEtReservations"}
           />
         </div>
       </section>

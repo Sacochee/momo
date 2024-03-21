@@ -27,10 +27,6 @@ export default function Footer() {
             </Links>
           </div>
           <div className={style.item}>2024 © Copyright Coco Surf</div>
-
-          <a href="/" className={style.item}>
-            Réalisation Lost Graphic Design // Julie Lostanlen
-          </a>
         </div>
       </div>
       <div className={style.part}>

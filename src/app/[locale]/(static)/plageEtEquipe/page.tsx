@@ -31,6 +31,9 @@ export default function page() {
           </p>
           <p>{t("p3")}</p>
           <p>
+            {t("p3bis")}
+          </p>
+          <p>
             <strong>{t("s3")}</strong>
             {t("p4")}
             <strong>{t("s4")}</strong>
@@ -60,7 +63,7 @@ export default function page() {
           <p>{t("pp6")}</p>
           <p>{t("pp7")}</p>
         </section>
-        <Palmier />
+        <Palmier bool={true}/>
       </div>
     </main>
     <Footer/>

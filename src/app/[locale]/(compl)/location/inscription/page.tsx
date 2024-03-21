@@ -204,7 +204,7 @@ export default function page() {
                     activePopUp();
                   }}
                 >
-                  Ajouter des participants
+                  Suivant
                 </button>
               </div>
             </div>
@@ -228,9 +228,9 @@ export default function page() {
             />
             <div ref={pay} className={style.pay}>
               <Recap />
-              <Paie />
+              <Paie err={error}/>
               {error && (
-                <div style={{ color: "red" }}>Erreur Vérifier vos saisies</div>
+                <div style={{ color: "red" }}>Erreur, vérifier vos saisies</div>
               )}
               <button className={style.btn} onClick={valider}>
                 {loading && <LoadingScreen />}
@@ -286,7 +286,7 @@ function Matos({
         <div className={style.txt}>
           Planche de surf + leash
           <div className={style.desc}>
-            <span style={{ marginRight: "15px" }}>Tout niveaux</span>
+            
             <span>quantité: {countPlanche}</span>
           </div>
         </div>
@@ -308,7 +308,6 @@ function Matos({
           <br />
           ou shorty
           <div className={style.desc}>
-            <span style={{ marginRight: "15px" }}>Toutes tailles</span>
             <span>quantité: {countWet}</span>
           </div>
         </div>
@@ -329,7 +328,6 @@ function Matos({
         <div className={style.txt}>
           Bodyboard + leash
           <div className={style.desc}>
-            <span style={{ marginRight: "15px" }}>Tout niveaux</span>
             <span>quantité: {countBody} </span>
           </div>
         </div>
