@@ -1,4 +1,5 @@
 "use client";
+import { formule } from "@/app/[locale]/(compl)/states";
 import style from "./surfer.module.css";
 import { Data } from "@/app/[locale]/(compl)/tarifsEtReservations/inscription/page";
 import Image from "next/image";
@@ -44,7 +45,7 @@ export default function Surfer({
           </ul>
         </div>
         <div className={style.formule}>
-          <span className={style.info}>{data.formule}</span>&nbsp;cours
+          <span className={style.info}>{getNameOfFOrmule(data.formule)}</span>
         </div>
         <div className={style.btn}>
           <button className={style.el} onClick={()=>edit(data.id)}><Image
@@ -63,4 +64,32 @@ export default function Surfer({
       </div>
     </li>
   );
+}
+
+
+function getNameOfFOrmule(formule : formule) : string {
+  switch(formule){
+    case "1":
+      return "Découverte"
+    case "2" : 
+      return "Découverte 2 cours"
+    case "3" : 
+      return "Mini stage 3 cours"
+    case "4" : 
+      return "Stage semaine 4 cours"
+    case "5" :
+      return "Stage semaine 5 cours"
+    case "10carte":
+      return "À la carte 10 cours"
+    case "10HS" : 
+      return  "Hors saison 10 cours";
+    case "enfant":
+        return "Club enfant 10 cours";
+    case "part1" : 
+      return "cours particulier 1 personne"
+    case "part2":
+      return "cours particulier 2 personne"
+    default : 
+      return "Acompte"
+  }
 }

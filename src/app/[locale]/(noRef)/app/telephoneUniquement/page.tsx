@@ -16,7 +16,7 @@ export default function page() {
       <h1>La réservation par téléphone est obligatoire</h1>
       <section>
         <div className={style.part}> 
-          <a href="tel:+3362851411">
+          <a href="tel:+33628051411">
             <Image
               src={png}
               alt="Image d un téléphone"
@@ -24,9 +24,9 @@ export default function page() {
               height={100}
               loading="lazy"
             />
-            <span>Tel : +33 (0)6 28 05 14 11</span>
+            <span>Tel : 06 28 05 14 11</span>
           </a>
-          <a href="tel:+3362851411"><button>Appelez maintenant</button></a>
+          <a href="tel:+33628051411"><button>Appelez maintenant</button></a>
           
         </div>
         <div className={style.part}>
@@ -35,12 +35,12 @@ export default function page() {
             <li>Vérifier les disponibilités de l'école</li>
             <li>
               Obtenir toutes les informations nécessaires pour le bon
-              déroulement d'un cours de surf
+              déroulement {value == "loc" ? "d'une location":"d'un cours de surf" }
             </li>
             <li>Bénéficier de réductions dans certains cas</li>
           </ul>
           <ButtonLink
-            txt={value == "loc" ? "Location" : "Tarifs et Réservations"}
+            txt={value == "loc" ? "retour à la page location" : "Tarifs et Réservations"}
             to={value == "loc" ? "/location" : "/tarifsEtReservations"}
           />
         </div>

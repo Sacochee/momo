@@ -16,6 +16,7 @@ export default function Footer() {
           <a href="tel:+33628051411" className={style.item}>
             Tél : +33 (0)6 28 05 14 11
           </a>
+          
           <div className={style.item}>
             <Links href={"/mentionsLegales"}>
               Mentions légales
@@ -25,6 +26,9 @@ export default function Footer() {
             <Links href={"/CGV"}>
               CGV
             </Links>
+          </div>
+          <div className={style.item}>
+            Réalisation Duprat Sacha
           </div>
           <div className={style.item}>2024 © Copyright Coco Surf</div>
         </div>

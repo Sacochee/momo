@@ -81,7 +81,7 @@ export default function page() {
             <input
               type="text"
               className={style.input}
-              placeholder="Morgan LeMoniteur"
+              placeholder="Morgan Le Moniteur"
               required
               value={name ? name : ""}
               onChange={(e) => setName(named(e.target.value))}
@@ -105,7 +105,7 @@ export default function page() {
             <input
               type="email"
               className={style.input}
-              placeholder="Ex : MorganMoniteur@cocosurf.com"
+              placeholder="votre email"
               required
             />
           </div>

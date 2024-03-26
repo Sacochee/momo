@@ -69,7 +69,7 @@ export default function page() {
               <p className={style.P}>{t("p13")}</p>
             </li>
           </ul>
-          <Btn to="/" txt={t("call")} />
+          
         </section>
         <Image
           src={"/Icons/palmier.png"}
@@ -107,7 +107,7 @@ export default function page() {
             <strong>{t("g5")}</strong>
             {t("t5")}
           </p>
-          <Btn to="/" txt={t("call")} />
+          
         </section>
       </main>
       <Footer />

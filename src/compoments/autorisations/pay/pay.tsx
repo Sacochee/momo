@@ -12,7 +12,7 @@ export default function Pay() {
   
   return (
     <section className={style.pay}>
-            <h2 className={style.pay_h2}>Moyen de Paiment</h2>
+            <h2 className={style.pay_h2}>Moyen de paiement</h2>
 
             <select
               className={`${style.pay_select} ${errorPay ? style.inputError : undefined}`}

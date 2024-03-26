@@ -16,7 +16,12 @@
     display: flex;
     align-items: center;
     max-width: 150px;
+    overflow-y: hidden;
+    overflow-x:visible;
     flex-wrap: wrap;
+}
+.name::-webkit-scrollbar {
+    display: none;
 }
 .pre:first-child{
     margin-right: 10px;
@@ -38,6 +43,10 @@
 .formule{
     display: flex;
     justify-content: center;
+    max-width: 130px;
+    min-width: 110px;
+    text-wrap: wrap;
+
 }
 .primaire{
     width: 50%;

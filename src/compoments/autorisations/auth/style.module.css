@@ -5,8 +5,8 @@
     align-items: center;
     justify-content: space-between;
     font-family: Arial, Helvetica, sans-serif;
-    text-align: justify;
-    text-justify:distribute-all-lines;
+    text-align:justify;
+    text-justify:inter-ideograph;
     
 }
 .skull{
@@ -69,7 +69,9 @@
 .li{
     margin: 10px;
 }
-
+.li p{
+    font-size: 0.9em;
+}
 .btnLire{
     border: none;
     background-color: #ededed;

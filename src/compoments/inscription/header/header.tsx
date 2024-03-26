@@ -1,17 +1,43 @@
 "use client"
 import Links from "@/compoments/utilities/links/links";
-import { Link, usePathname, useRouter } from "@/navigation";
+import { usePathname, useRouter } from "@/navigation";
+import { useSearchParams } from "next/navigation";
 import Style from "./header.module.css";
 import Image from "next/image";
+
 
 export default function HeaderForm() {
   const router = useRouter();
   const path = usePathname();
+  const searchParams = useSearchParams();
+  const type = searchParams.get("type");
+  let pathTOBack ;
+
+  if(path.startsWith("/location")){
+    if(path == "/location/inscription")
+      pathTOBack = "/location"
+    else 
+      pathTOBack = "/location/inscription"
+  }
+  else if (path.startsWith("/tarifsEtReservations")){
+    if(path === "/tarifsEtReservations/inscription")
+      pathTOBack  = "/tarifsEtReservations"
+    else 
+      pathTOBack  = "/tarifsEtReservations/inscription"
+  }
+  else {
+    if(type == "loc" || type == "false")
+      pathTOBack = "/location"
+    else 
+      pathTOBack = "/tarifsEtReservations"
+  }
+
+
   const change = (route: string) => router.replace(path, { locale: route });
   return (
     <header className={Style.header}>
       <nav className={Style.nav}>
-        <Links href={"/"} className={Style.btn}>
+        <Links href={pathTOBack} className={Style.btn}>
           <Fleche />
           <span>
             Revenir au site

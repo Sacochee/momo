@@ -18,9 +18,6 @@ export const pathnames = {
   "/logement": "/logement",
 
   "/tarifsEtReservations": "/tarifsEtReservations",
-  "/tarifsEtReservation/inscription": "/tarifsEtReservation/inscription",
-  "/tarifsEtReservation/inscription/autorisations":
-    "/tarifsEtReservation/inscription/autorisations",
 
   "/plageEtEquipe": "/plageEtEquipe",
   "/presentationDesCours": "/presentationDesCours",
@@ -33,7 +30,7 @@ export const pathnames = {
   "/location": "/location",
   "/location/inscription": "/location/inscription",
   "/location/inscription/autorisation": "/location/inscription/autorisation",
-
+  "/tarifsEtReservations/inscription" : "/tarifsEtReservations/inscription",
   "/reservationObligatoireParTelephone": "/reservationObligatoireParTelephone",
   "/tarifsEtReservations/form/inscription/autorisations":
     "/tarifsEtReservations/form/inscription/autorisations",

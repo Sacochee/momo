@@ -143,11 +143,11 @@ function Nav() {
           <LiLinks className={style.subItem} href={"/carteCadeaux"}>
             {t("p1")}
           </LiLinks>
-          <LiLinks className={style.subItem} href={"/bretagne"}>
-            {t("p2")}
-          </LiLinks>
           <LiLinks className={style.subItem} href={"/logement"}>
             {t("p3")}
+          </LiLinks>
+          <LiLinks className={style.subItem} href={"/bretagne"}>
+            {t("p2")}
           </LiLinks>
         </ul>
       ) : undefined}
@@ -217,11 +217,11 @@ function Laptop() {
               <LiLinks className={style.li_l_sub} href={"/carteCadeaux"}> 
                 {t("p1")}
               </LiLinks>
-              <LiLinks className={style.li_l_sub} href={"/bretagne"}>
-                {t("p2")}
-              </LiLinks>
               <LiLinks className={style.li_l_sub} href={"/logement"}>
                 {t("p3")}
+              </LiLinks>
+              <LiLinks className={style.li_l_sub} href={"/bretagne"}>
+                {t("p2")}
               </LiLinks>
             </ul>
           </div>

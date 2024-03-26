@@ -30,7 +30,7 @@
         "petit" : "Les petits +",
         "p1" : "Carte Cadeau",
         "p2" : "Surf Camp Bretagne",
-        "p3" : "Logements & Partenaires",
+        "p3" : "Séjour surf hors saison",
         "photo" : "Photos & vidéos",
         "contact" : "Contact & Accès"
     },
@@ -126,12 +126,12 @@
         "line4" : "de planche de surf depuis Ronce-les-bains, la Tremblade, les Mathes ou la Palmyre !"
     },
     "bretagne" : {
-        "h1" : "~ Envie d’un tripsurf unique ? ~",
+        "h1" : "Envie d’un tripsurf unique ?",
         "h2" : "Participez au Coco Surf trip en Bretagne",
         "p1" : "Breton d’origine, Morgan a le plaisir d’organiser depuis maintenant 7 ans un surf trip en",
         "p2" : "Bretagne aux ",
         "s1" : "vacances de la Toussaint.",
-        "s2" : "Ce surftrip de 6 jours pour seulement 5 personnes ",
+        "s2" : "Ce surftrip de 6 jours pour seulement 6 personnes ",
         "p3" : "vous donnera l’occasion ",
         "s3" : "d’améliorer votre niveau de surf ",
         "p4" : "tout en",
@@ -202,7 +202,7 @@
         "li1s3" : "ÂGE ",
         "li1p3" : ": de 7 à 77 ans",
         "li1s4" : "DURÉE DES COURS ",
-        "li1p4" : ": 2h30 effectives (3h de prise en charge)",
+        "li1p4" : ": 2h effectives (entre 2h30 et 3h de prise en charge selon le lieu)",
         "li1s5" : "NOMBRE D’ÉLÈVES ",
         "li1p5" : ": 8 maximum par cours",
         "li1s6" : "MATÉRIEL ",
@@ -250,8 +250,8 @@
         "h1" : "~ L’équipe ~",
         "s1" : "La team Cocosurf ",
         "p1"  : "prendra le temps de vous accueillir et de vous proposer la formule optimale selon votre niveau et vos souhaits. Passionnés de surf, vos moniteurs se dépenseront sans compter afin que tout le monde passe un excellent moment.",
-        "s2" : "Surfeuse gracieuse et pétillante, Louise",
-        "p2" : "vous fera progresser à votre rythme grâce à son empathie et sa bienveillance",
+        "s2" : "Surfeuse gracieuse et pétillante, Louise ",
+        "p2" : "vous fera progresser à votre rythme grâce à son empathie et sa bienveillance.",
         "p3"  : "Surftrips : Indonésie, Costa Rica, Guadeloupe, Philippines, Pérou, Canaries, Pays-basque, Gironde, Bretagne. ",
         "p3bis" : "Boisson favorite : l’eau de coco bien-sûr !",
         "s3" : "Moniteur de surf diplômé d’état, secouriste",
@@ -276,7 +276,7 @@
     "tarifs" : {
         "h1": "Réservez vos cours de surf dès maintant",
         "h2" : "Dans un cours de Surf vous avez :",
-        "p1":"La bonne Humeur, l’encadrement par un moniteur Diplômé d’Etat, l’assurance responsabilité civile, ainsi que l’ensemble du matériel sont inclus dans la prestation",
+        "p1":"La bonne humeur, l’encadrement par un moniteur Diplômé d’Etat, l’assurance responsabilité civile, ainsi que l’ensemble du matériel sont inclus dans la prestation",
         "h22" : "Pour Réserver :",
         "li1underline" : "Contacter l’école",
         "li1" : " afin de choisir au mieux les horaires de cours et de vérifier les disponibilités",
@@ -333,12 +333,12 @@
         "tabl2_li1" : {
             "name" : "1 personne",
             "time" : "2h",
-            "when" : ""
+            "when" : "Tous les jours"
         },
         "tabl2_li2" : {
             "name" : "2 personnes",
             "time" : "2h",
-            "when" : ""
+            "when" : "Tous les jours"
         }
 
 

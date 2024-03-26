@@ -6,7 +6,7 @@ import { Mat, mat } from "@/app/[locale]/(compl)/locationAtoms";
 
 export default function Planche({ off }: { off: () => void }) {
   const main = useRef(null);
-  const [supp, setSupp] = useState({ case: false, kase: false });
+  const [supp, setSupp] = useState({ case: false, kase: false, default : true });
   const [mat, setMat] = useAtom(Mat);
   const [error, setError] = useState(false);
 
@@ -28,12 +28,15 @@ export default function Planche({ off }: { off: () => void }) {
 
   useEffect(() => {
     if (mat.planche?.length == 3) {
-      setSupp({ kase: true, case: true });
+      setSupp({ kase: true, case: true, default : true });
     } else if (mat.planche?.length == 2) {
       setSupp((s) => ({ ...s, case: true }));
+    } else if(supp.case == false && supp.kase == false && supp.default == false){
+      setMat({...mat, planche : undefined})
+      off()
     }
     console.log(mat.planche);
-  }, []);
+  }, [supp]);
 
   const valider = () => {
     setError(false);
@@ -93,14 +96,18 @@ export default function Planche({ off }: { off: () => void }) {
           </div>
         </div>
         <div>
-          <Layout
+          {
+            supp.default && (
+              <Layout
             rmcount={() => {
-              off();
-              setMat({ ...mat, planche: undefined });
+              setSupp({ ...supp, default: false })
             }}
           >
             <Content s={state1.a} c={state1.b} />
           </Layout>
+            )
+          }
+          
           {supp.case && (
             <Layout rmcount={() => setSupp({ ...supp, case: false })}>
               <Content s={state2.a} c={state2.b} />

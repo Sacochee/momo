@@ -1,4 +1,5 @@
 .btn{
+    position: relative;
     text-decoration: none;
     background-color: black;
     color: white;
@@ -6,7 +7,7 @@
     padding: 10px 20px;
     width: 200px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     border: 1px solid transparent;
     text-align: center;
@@ -25,7 +26,10 @@
     width: 10px;
     height: 3px;
 }
-
+.fl{
+    position: absolute;
+    right: 10px;
+}
 .span:first-child{
     height: 2px;
     transform: rotate(-40deg) translateY(4px) ;

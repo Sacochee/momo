@@ -21,7 +21,7 @@ export default function page() {
             >
               Oui
             </Links>
-            <Links href={"/app/telephoneUniquement"} className={style.btn}>
+            <Links href={{pathname:"/app/telephoneUniquement", query : {type : isLesson == "true" ? "cours" : "loc"}}} className={style.btn}>
               Non
             </Links>
           </div>

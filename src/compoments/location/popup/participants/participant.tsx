@@ -4,7 +4,7 @@ import {
   participant,
   participants,
 } from "@/app/[locale]/(compl)/locationAtoms";
-import { Dispatch, MouseEvent, useRef, useState } from "react";
+import { Dispatch, MouseEvent, useEffect, useRef, useState } from "react";
 import { SetStateAction } from "jotai/vanilla";
 import Image from "next/image";
 
@@ -21,39 +21,32 @@ export default function Participant({
   const [error, setError] = useState(false);
   const times = Array.from({ length: nb });
   const [part, setPart] = useAtom(participants);
+
   const valider = (e: MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
+    const lst: participant[] = [];
     let err = false;
     const li: NodeListOf<HTMLLIElement> | undefined =
       refName.current?.querySelectorAll("li");
+
     li?.forEach((item) => {
-      item.querySelectorAll("input").forEach((input) => {
-        if (input.value == "") {
-          err = true;
-          input.classList.add(style.err);
-          if (input.parentElement) input.parentElement.style.color = "red";
-        } else {
-          input.classList.remove(style.err);
-          if (input.parentElement)
-            input.parentElement.style.color = "rgb(10,10,10)";
-        }
-      });
-    });
-    if (!err) {
-      const lst: participant[] = [];
-      setError(false);
-      li?.forEach((item) => {
-        let name = item.querySelector("input[name='name']") as HTMLInputElement;
-        let details = item.querySelector(
-          "input[name='details']"
-        ) as HTMLInputElement;
+      let name = item.querySelector("input[name='name']") as HTMLInputElement;
+      let details = item.querySelector(
+        "input[name='details']"
+      ) as HTMLInputElement;
+      if (name.value != "" && details.value != "")
         lst.push({ name: name.value, details: details.value });
-      });
-      setPart(lst);
+      else 
+        err = true;
+    });
+    setPart(lst);
+
+    if (!err) {
+      setError(false);
       setState(false);
       setA(true);
     } else setError(true);
   };
+
   return (
     <div ref={refName} className={style.main}>
       <div
@@ -78,32 +71,42 @@ export default function Participant({
         <span className={style.line}></span>
         <span className={style.line}></span>
       </div>
-      <div className={style.center}>
-        <ul className={style.ul}>
+      <form className={style.center} style={{flexDirection:"column"}} onSubmit={(e)=>e.preventDefault()}>
+        <ul className={style.ul} style={{marginBottom:"50px"}}>
           {times.map((_, index) => (
-            <Part key={crypto.randomUUID()} part={part ? part[index] : undefined}/>
+            <Part
+              key={crypto.randomUUID()}
+              part={part ? part[index] : undefined}
+            />
           ))}
         </ul>
-      </div>
-
-      {error && <div className={style.error}>Informations invalides</div>}
-      <button
-        onClick={(e) => {
-          valider(e);
-        }}
-        type="button"
-        className={style.btn}
-        ref={(el) => el?.addEventListener("click", (e) => e.preventDefault())}
-      >
-        Valider
-      </button>
+        {error && <div className={style.error}>Informations invalides</div>}
+        <button
+          onClick={(e) => {
+            valider(e);
+          }}
+          
+          className={style.btn}
+        >
+          Valider
+        </button>
+      </form>
     </div>
   );
 }
 
-function Part({part } : {part : participant | undefined}) {
-  const [name, setName] = useState(part ? part.name : "");
-  const [detail, setDetails] = useState(part ? part.details : "");
+function Part({ part }: { part: participant | undefined }) {
+
+  const styleInput = (input: HTMLInputElement) => {
+    if (input.value == "") {
+      input.classList.add(style.err);
+      if (input.parentElement) input.parentElement.style.color = "red";
+    } else {
+      input.classList.remove(style.err);
+      if (input.parentElement)
+        input.parentElement.style.color = "rgb(10,10,10)";
+    }
+  };
   return (
     <li key={crypto.randomUUID()} className={style.li}>
       <Image
@@ -121,7 +124,12 @@ function Part({part } : {part : participant | undefined}) {
             name="name"
             placeholder="Dupont Léo"
             className={style.input}
-            defaultValue={part ? part.name : undefined}
+            defaultValue={part ? part.name : ""}
+            required
+            onInvalid={(e)=>styleInput(e.target as HTMLInputElement)}
+            onChange={(e)=>styleInput(e.target as HTMLInputElement)}
+            key={crypto.randomUUID()}
+            onSubmitCapture={(e) =>{e.preventDefault(); console.log("rigth here")}}
           />
         </div>
         <div className={style.case}>
@@ -131,7 +139,11 @@ function Part({part } : {part : participant | undefined}) {
             name="details"
             placeholder="175 cm / 70 kg"
             className={style.input}
-            defaultValue={part ? part.details : undefined}
+            defaultValue={part ? part.details : ""}
+            key={crypto.randomUUID()}
+            required
+            onInvalid={(e)=>styleInput(e.target as HTMLInputElement)}
+            onChange={(e)=>styleInput(e.target as HTMLInputElement)}
           />
         </div>
       </div>

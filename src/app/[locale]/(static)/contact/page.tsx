@@ -25,7 +25,7 @@ export default function Page() {
     
     <div className={style.all}>
       <main className={style.content}>
-        <h1>{t("h1")}</h1>
+        <h2>{t("h1")}</h2>
         <section className={style.contact}>
           <ul className={style.ul}>
             <li className={style.li}>

@@ -37,6 +37,11 @@
     width: 100%;
     height: 2px;
 }
+.paie{
+    text-align: start;
+    padding-left: 40px;
+    margin: 20px 0;
+}
 .tabl_top_p, .tabl_top_pp{
     margin:5px  0;
 }
@@ -102,6 +107,9 @@
     }
     .pay{
         gap: 140px;
+    }
+    .paie{
+        padding-left: 60px;
     }
 }
 

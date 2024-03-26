@@ -23,9 +23,7 @@ export default function page() {
         <li className={style.li}>
           <Btn to="/contact"  txt="Contact & Accès"/>
         </li>
-        <li className={style.li}>
-          <Btn to="/presentationDesCours"  txt="Présentation des cours"/>
-        </li>
+        
       </ul>
       <div>
       <iframe width={useMediaQuery(749) ? 560 : 280} height={useMediaQuery(749) ? 315 : 157} src="https://www.youtube.com/embed/LdYPlNzNEaA?si=ogZvSRSNtbJwepjM" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>      

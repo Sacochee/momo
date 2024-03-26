@@ -46,7 +46,9 @@ export default function Page() {
           >
             <Btn txt="Finaliser ma réservation" to="/app/form?type=true" />
           </div>
-
+          <div className={style.paie}>
+            Moyens de paiement acceptés :
+            </div>
           <div className={style.pay}>
             <Image
               src={"/payMethode/cb.png"}

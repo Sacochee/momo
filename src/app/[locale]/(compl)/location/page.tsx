@@ -62,11 +62,11 @@ export default function page() {
           <strong className={style.t}>Pour réserver :</strong>
           <ol>
             <li>
-              <strong>Contacter l’école par téléphone</strong>
+              <strong>Contacter l’école par téléphone </strong>
               (idéalement 24 ou 48h avant)
             </li>
             <li>
-              <strong>Finaliser la réservation</strong>
+              <strong>Finaliser la réservation </strong>
               en cliquant sur le bouton ci-dessous
             </li>
           </ol>

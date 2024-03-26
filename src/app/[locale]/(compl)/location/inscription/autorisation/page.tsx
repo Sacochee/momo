@@ -12,6 +12,7 @@ export default function Page() {
   const [mat, sm] = useAtom(Mat);
   const [pay, sp] = useAtom(PaieMethode);
   const [date,sd] = useAtom(Date);
+  
 
   if (
     particip == undefined ||
@@ -25,31 +26,46 @@ export default function Page() {
     const [error, setError] = useState(false);
     const router = useRouter()
     const [loading, setLoading] = useState(false)
+    const [min, setMin] = useState<null | boolean>(null);
+    const [errMin, setErrMin] = useState(false)
 
     const valider = () => {
       setError(false);
       let err = false;
       let elem: HTMLInputElement | undefined = undefined;
+      let tabl = [];
       const div = main.current!;
       div.querySelectorAll("input").forEach((item) => {
-        if (item.checked == false) {
-          err = true;
-          item.focus();
-          const style = item.parentElement?.style!;
-          style.color = "red";
-          item.style.borderColor = "red";
-          elem = item;
-        } else {
-          const style = item.parentElement?.style!;
-          style.color = "rgb(10,10,10)";
-          item.style.borderColor = "rgb(10,10,10)";
+        if(item.name == "min"){
+          if(item.checked == true)
+            tabl.push(item)
+        }else{
+          if (item.checked == false) {
+            item.focus();
+            const style = item.parentElement?.style!;
+            style.color = "red";
+            item.style.borderColor = "red";
+            elem = item;
+          } else {
+            const style = item.parentElement?.style!;
+            style.color = "rgb(10,10,10)";
+            item.style.borderColor = "rgb(10,10,10)";
+          }
         }
+        
       });
 
       if (elem != undefined) {
         const e = elem as HTMLInputElement;
         e.focus();
       }
+      if(tabl.length < 1){
+        err = true;
+        setErrMin(true)
+      }else{
+        setErrMin(false)
+      }
+        
 
       if (err) {
         setError(true);
@@ -129,13 +145,26 @@ export default function Page() {
                   sur le site web : www.cocosurf-charentemaritime.com
                 </p>
               </div>
-              <div className={style.box} onClick={(e)=>setCheck(e.currentTarget)}>
-                <input type="checkbox" onClick={(e)=>setCheck(e.currentTarget)}/>
+              <div className={`${style.box} ${errMin && style.error}`} onClick={(e)=>{setMin(true);setErrMin(false)}}>
+                <input type="checkbox" name="min" onClick={(e)=>{setMin(true);setErrMin(false)}} checked={min == true ? true : false}/>
                 <span>
                   Si des enfants sont compris dans le bulletin j'autorise mon
                   enfant / mes enfants à louer du matériel
                 </span>
               </div>
+              <div className={`${style.box} ${errMin && style.error}`} onClick={(e)=>{setMin(false);setErrMin(false)}}>
+                <input type="checkbox" name="min" onClick={(e)=>{setMin(false);setErrMin(false)}} checked={min == false ? true : false}/>
+                <span>
+                Aucun mineur ne participe à la location
+                </span>
+              </div>
+              {
+                errMin && (
+                  <div className={style.error}>
+                    Cochez une case 
+                  </div>
+                )
+              }
             </article>
           </section>
           <h2>Consignes de sécurités</h2>

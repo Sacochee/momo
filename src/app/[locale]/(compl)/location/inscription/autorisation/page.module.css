@@ -60,6 +60,13 @@
       margin: 40px 0;
       cursor: pointer;
 }
+.error{
+    color: red;
+}
+.error input{
+    border-color: red;
+}
+
 @media (hover : hover) {
     .main button:hover{
         background: none;

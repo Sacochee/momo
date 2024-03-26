@@ -10,7 +10,7 @@ export default function Auth({
   majeur: Function;
   mineur: Function;
 }) {
-  const [photo, setPhoto] = useState<undefined | boolean>()
+  const [photo, setPhoto] = useState<undefined | boolean>();
   const setCheck = (e: HTMLDivElement | HTMLInputElement) => {
     if (!(e instanceof HTMLDivElement)) {
       e.checked = !e.checked;
@@ -21,31 +21,39 @@ export default function Auth({
     }
   };
 
-  const clear = (e: HTMLDivElement | HTMLInputElement) =>{
-    if(e instanceof HTMLInputElement){
-      const box = e.parentElement?.parentElement?.getElementsByClassName(style.checkContainer) as HTMLCollectionOf<HTMLDivElement>
-      if(box){
-        for(let i =0; i < box.length; i++){
-          box[i].style.color  = "black";
-          const input = box[i].querySelector("input") as HTMLInputElement
-          if(input) input.style.borderColor = "black" 
+  const clear = (e: HTMLDivElement | HTMLInputElement) => {
+    if (e instanceof HTMLInputElement) {
+      const box = e.parentElement?.parentElement?.getElementsByClassName(
+        style.checkContainer
+      ) as HTMLCollectionOf<HTMLDivElement>;
+      if (box) {
+        for (let i = 0; i < box.length; i++) {
+          box[i].style.color = "black";
+          const input = box[i].querySelector("input") as HTMLInputElement;
+          if (input) input.style.borderColor = "black";
         }
       }
-      const b = e.parentElement?.parentElement?.getElementsByClassName(style.erreur)[0] as HTMLDivElement
-      if(b) b.style.display = "none"
-    }else{
-      const box = e.parentElement?.getElementsByClassName(style.checkContainer) as HTMLCollectionOf<HTMLDivElement>
-      if(box){
-        for(let i =0; i < box.length; i++){
-          box[i].style.color  = "black";
-          const input = box[i].querySelector("input") as HTMLInputElement
-          if(input) input.style.borderColor = "black" 
+      const b = e.parentElement?.parentElement?.getElementsByClassName(
+        style.erreur
+      )[0] as HTMLDivElement;
+      if (b) b.style.display = "none";
+    } else {
+      const box = e.parentElement?.getElementsByClassName(
+        style.checkContainer
+      ) as HTMLCollectionOf<HTMLDivElement>;
+      if (box) {
+        for (let i = 0; i < box.length; i++) {
+          box[i].style.color = "black";
+          const input = box[i].querySelector("input") as HTMLInputElement;
+          if (input) input.style.borderColor = "black";
         }
       }
-      const b = e.parentElement?.parentElement?.getElementsByClassName(style.erreur)[0] as HTMLDivElement
-      if(b) b.style.display = "none"
+      const b = e.parentElement?.parentElement?.getElementsByClassName(
+        style.erreur
+      )[0] as HTMLDivElement;
+      if (b) b.style.display = "none";
     }
-  }
+  };
 
   return (
     <section className={style.section} id="conditions">
@@ -57,13 +65,13 @@ export default function Auth({
 
           <div>
             <p>
-              Conditions d'annulation En cas d’annulation suite à de mauvaises
-              conditions météorologiques $ (absence de vagues, conditions
+              En cas d’annulation causé par de mauvaises
+              conditions de surf (absence de vagues, conditions
               impraticables), les cours qui ne pourront pas être effectués
               seront, en accord avec les stagiaires : remplacés par une activité
               de substitution (technique surf, bodyboard, jeux aquatiques, etc)
               OU reportés à une date ultérieure OU annulés et feront l’objet
-              d’un avoir ou remboursement
+              d’un avoir ou remboursement.
               <br />
               <br />
               En cas d'annulation ou absence du fait du client : plus de 10
@@ -79,12 +87,18 @@ export default function Auth({
           </div>
           <div
             className={style.checkContainer}
-            onClick={(e) => {setCheck(e.currentTarget);clear(e.currentTarget)}}
+            onClick={(e) => {
+              setCheck(e.currentTarget);
+              clear(e.currentTarget);
+            }}
           >
             <input
               type="checkbox"
               className={style.checkbox}
-              onClick={(e) => {setCheck(e.currentTarget);clear(e.currentTarget)}}
+              onClick={(e) => {
+                setCheck(e.currentTarget);
+                clear(e.currentTarget);
+              }}
             />
             <span>J'accepte les C.A.</span>
           </div>
@@ -105,12 +119,38 @@ export default function Auth({
             >
               Attention ceci est obligatoire
             </div>
-            <div className={style.checkContainer} onClick={(e)=>{setPhoto(true);clear(e.currentTarget)}}>
-              <input type="checkbox" className={style.checkbox} name="image" value={"true"} checked={photo == true ? photo : false} onChange={()=>setPhoto(true)}/>
-              <span>J'accpète le droit à l'image</span>
+            <div
+              className={style.checkContainer}
+              onClick={(e) => {
+                setPhoto(true);
+                clear(e.currentTarget);
+              }}
+            >
+              <input
+                type="checkbox"
+                className={style.checkbox}
+                name="image"
+                value={"true"}
+                checked={photo == true ? photo : false}
+                onChange={() => setPhoto(true)}
+              />
+              <span>J’accepte le droit à l’image</span>
             </div>
-            <div className={style.checkContainer} onClick={(e)=>{setPhoto(false);clear(e.currentTarget)}}>
-              <input type="checkbox" className={style.checkbox} name="image" value={"false"} checked={photo == false ? !photo : false} onChange={()=>setPhoto(false)}/>
+            <div
+              className={style.checkContainer}
+              onClick={(e) => {
+                setPhoto(false);
+                clear(e.currentTarget);
+              }}
+            >
+              <input
+                type="checkbox"
+                className={style.checkbox}
+                name="image"
+                value={"false"}
+                checked={photo == false ? !photo : false}
+                onChange={() => setPhoto(false)}
+              />
               <span>Je refuse le droit à l'image </span>
             </div>
           </div>
@@ -122,12 +162,12 @@ export default function Auth({
             <div>
               <p>
                 J'autorise mon enfant / mes enfants à suivre les activités
-                décrites sur ce bulletin. Je certifie qu’il/elle est
-                médicalement apte à la pratique sportive et qu’il/elle sait
-                nager. En conséquence, je dégage COCO SURF de toute
-                responsabilité en cas d’accident lui survenant, ou provoqué par
-                suite de son inaptitude médicale ou non respect des consignes du
-                moniteur.
+                décrites sur ce bulletin. Je certifie qu’il(s) est / sont
+                médicalement apte à la pratique sportive et qu’il(s) sait /
+                savent nager. En conséquence, je dégage COCO SURF de toute
+                responsabilité en cas d’accident survenant, ou provoqué par
+                suite de leur(s) inaptitudes médicale ou non respect des
+                consignes du moniteur.
               </p>
 
               <div
@@ -140,15 +180,23 @@ export default function Auth({
 
               <div
                 className={style.checkContainer}
-                onClick={(e) => {setCheck(e.currentTarget);clear(e.currentTarget)}}
+                onClick={(e) => {
+                  setCheck(e.currentTarget);
+                  clear(e.currentTarget);
+                }}
               >
                 <input
                   type="checkbox"
                   className={style.checkbox}
-                  onClick={(e) => {setCheck(e.currentTarget);clear(e.currentTarget)}}
-                  style={{width:"30px"}}
+                  onClick={(e) => {
+                    setCheck(e.currentTarget);
+                    clear(e.currentTarget);
+                  }}
+                  style={{ width: "30px" }}
                 />
-                <span style={{wordWrap:"break-word"}}>Je certifie avoir pris connaissance de ces informations</span>
+                <span style={{ wordWrap: "break-word" }}>
+                  Je certifie avoir pris connaissance de ces informations
+                </span>
               </div>
             </div>
           </li>
@@ -176,15 +224,23 @@ export default function Auth({
 
               <div
                 className={style.checkContainer}
-                onClick={(e) => {setCheck(e.currentTarget);clear(e.currentTarget)}}
+                onClick={(e) => {
+                  setCheck(e.currentTarget);
+                  clear(e.currentTarget);
+                }}
               >
                 <input
                   type="checkbox"
                   className={style.checkbox}
-                  onClick={(e) => {setCheck(e.currentTarget);clear(e.currentTarget)}}
-                  style={{width:"30px"}}
+                  onClick={(e) => {
+                    setCheck(e.currentTarget);
+                    clear(e.currentTarget);
+                  }}
+                  style={{ width: "30px" }}
                 />
-                <span>Je certifie avoir pris connaissance de ces informations</span>
+                <span>
+                  Je certifie avoir pris connaissance de ces informations
+                </span>
               </div>
             </div>
           </li>
