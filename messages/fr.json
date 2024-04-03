@@ -62,26 +62,28 @@
         "desc" : "Page contenant les conditions générales de vente de l'école de surf Coco Surf.",
         "article1" : {
             "t" : "ARTICLE 1 – INSCRIPTION",
-            "1" : "• contre-indication médicale à la pratique du surf et avoir pris connaissance des conditions générales de vente et de règlement.",
+            "1" : "• Le participant aux activités organisées par l’école de surf COCO SURF atteste savoir nager, ne pas avoir de contre-indication médicale à la pratique du surf et avoir pris connaissance des conditions générales de vente et de règlement.",
             "2" : "• L’inscription aux activités organisées par COCO SURF entraîne l’acceptation du présent règlement.",
-            "3" : "• L’inscription définitive à COCO SURF se fera sur place avec le renseignement d’une fiche complète reprenant les éléments de pré-inscription ainsi qu’une autorisation parentale pour les mineurs."
+            "3" : "• L'inscription à COCO SURF est validée et définitive lors du renseignements des données d’inscription, des autorisations légales (autorisation parentale pour les mineurs, décharge de responsabilité pour les majeurs, droit à l’image et conditions d’annulation) et du paiement sur le site internet de l’école.",
+            "4" : "• En cas d’impossibilité de le réaliser via le site internet, et avec l’accord de l’école, il sera parfois possible de réaliser ces démarches par courrier ou sur place."
         },
         "article2" : {
             "t" : "ARTICLE 2 – PAIEMENT",
             "1" : "• Le solde des cours devra s‘effectuer lors de la réservation ou au plus tard le jour du premier cours.",
             "2" : "• L’école de surf COCO SURF se réserve le droit de demander des arrhes.",
-            "3" : "• Le paiement peut se faire par chèque bancaire, chèque vacances, espèces ou paiement PayPal."
+            "3" : "• Le paiement peut se faire par chèque bancaire, chèque vacances, espèces ou carte bancaire."
         },
         "article3" : {
             "t" : "ARTICLE 3 – ANNULATION DES COURS",
             "1" : "• Annulation ou absence du fait du client ",
             "2" : "⁤  ⤷ Plus de 10 jours avant le début du stage : remboursement complet",
             "3" : "⁤  ⤷ Entre 10 et 5 jours précédant la date de début de stage : encaissement des arrhes éventuels",
-            "4" : "⁤  ⤷ 5 jours avant le début du stage ou durant celui-ci: l’intégralité de la prestation sera facturée, pas de remboursement (sauf sur présentation d’un certificat médical)",
-            "5" : "• En cas d’annulation suite à de mauvaises conditions météorologiques (absence de vagues, drapeau rouge) Les cours qui ne pourront pas être effectués seront, en accord avec les stagiaires :",
+            "4" : "⁤  ⤷ - 5 jours avant le début du stage ou durant celui-ci: l’intégralité de la prestation sera facturée, pas de remboursement (sauf sur présentation d’un certificat médical)",
+            "5" : "• En cas d’annulation suite à de mauvaises conditions météorologiques (absence de vagues, tempête) Les cours qui ne pourront pas être effectués seront, en accord avec les stagiaires:",
             "6" : "⁤  ⤷ Remplacés par une activité de substitution (technique surf, bodyboard, jeux aquatiques, etc).",
             "7" : "⁤  ⤷ Reportés à une date ultérieure.",
-            "8" : "⁤  ⤷ Annulés et feront l’objet d’un avoir."
+            "8" : "⁤  ⤷ Annulés et feront l’objet d’un avoir.",
+            "9" : "⁤  ⤷ Remboursés"
         },
         "article4" : {
             "t" : "ARTICLE 4 – RESPONSABILITÉ DE LA STRUCTURE",
@@ -90,7 +92,7 @@
         },
         "article5" : {
             "t" : "ARTICLE 5 – ASSURANCE",
-            "1" : "• Les participants attestent avoir pris connaissance des garanties d’assurance en responsabilité civile souscrite par COCO SURF (dont les modalités sont décrites dans le contrat mis à disposition par la structure) et avoir été informés quant à leur intérêt à souscrire des garanties d’assurances complémentaires en cas de dommages corporels survenant au cours des activités organisées par COCO SURF (Loi de 1984 modifiée)."
+            "1" : "• Les participants attestent avoir pris connaissance des garanties d’assurance en responsabilité civile souscrite par COCO SURF (dont les modalités sont décrites dans le contrat mis à disposition par la structure dans le camion) et avoir été informés quant à leur intérêt à souscrire des garanties d’assurances complémentaires en cas de dommages corporels survenant au cours des activités organisées par COCO SURF (Loi de 1984 modifiée)."
         },
         "article6" : {
             "t" : "ARTICLE 6 – PERTE, VOL ET DÉTÉRIORATION",
@@ -99,7 +101,7 @@
         "article7" : {
             "t" : "ARTICLE 7 – DROIT À L’IMAGE",
             "1" : "• En souscrivant aux prestations organisées par l’école de surf COCO SURF, vous autorisez cette dernière à utiliser les photos et films de votre image réalisés pendant votre stage, pour la production de tout document publicitaire et ce sans contre partie financière.",
-            "2" : "• En cas de refus du droit à l’image, merci d’envoyer votre requête à cocosurf.charentemaritime@gmail.com"
+            "2" : "• En cas de refus du droit à l’image, merci d’envoyer votre requête à cocosurf.charentemaritime@gmail.com et/ou de le signaler aux moniteurs en cas de prise d’image lors du cours."
         }
         
     },

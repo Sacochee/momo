@@ -5,12 +5,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    line-height: 25px;
     
 }
 .main section{
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
 }
 .main h1{
     font-size: 1.4em;
@@ -21,6 +22,12 @@
     text-align: start;
     max-width: 275px;
     padding: 0;
+}
+.main li{
+    margin-bottom: 5px;
+}
+.main li:nth-child(5){
+    margin-top: 20px;
 }
 
 

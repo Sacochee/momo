@@ -16,7 +16,7 @@ export default function Pages() {
     {
       st : t("article1.t"),
       content : [
-        t("article1.1"),t("article1.2"),t("article1.3"),
+        t("article1.1"),t("article1.2"),t("article1.3"),t("article1.4"),
       ]
     },
     {
@@ -28,7 +28,7 @@ export default function Pages() {
     {
       st : t("article3.t"),
       content : [
-        t("article3.1"),t("article3.2"),t("article3.3"),t("article3.4"),t("article3.5"),t("article3.6"),t("article3.7"),t("article3.8"),
+        t("article3.1"),t("article3.2"),t("article3.3"),t("article3.4"),t("article3.5"),t("article3.6"),t("article3.7"),t("article3.8"),t("article3.9"),
       ]
     },
     {
@@ -81,7 +81,7 @@ function Article({subTitle, content} : { subTitle : string, content: string[]}){
     <>
       <h3>{subTitle}</h3>
       <ul>
-        {content.map(item => <li>{item}</li>)}
+        {content.map(item => <li key={crypto.randomUUID()}>{item}</li>)}
       </ul>
     </>
   )
