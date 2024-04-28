@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import HeaderForm from "../../../../../compoments/inscription/header/header";
 import Footer from "@/compoments/footer/footer";
 import AddBtn from "@/compoments/inscription/comps/addBtn";

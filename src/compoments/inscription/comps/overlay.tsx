@@ -54,7 +54,7 @@ export default function Overlay({
               <input
                 type="text"
                 value={prenom ? prenom : ""}
-                onChange={(e) => setPrenom(regexName(e.target.value, prenom!))}
+                onChange={(e) => setPrenom(e.target.value)}
                 placeholder="ex : Léo"
                 className={form.input}
                 required
@@ -65,7 +65,7 @@ export default function Overlay({
               <input
                 type="text"
                 value={nom ? nom : ""}
-                onChange={(e) => setNom(regexName(e.target.value, nom!))}
+                onChange={(e) => setNom(e.target.value)}
                 placeholder="ex : Dubois"
                 className={form.input}
                 required={true}
@@ -124,8 +124,8 @@ export default function Overlay({
               required={true}
             >
               <option value=""> - </option>
-              <option value={"1"}>Découverte</option>
-              <option value={"2"}>Découverte 2 cours</option>
+              <option value={"1"}>1 cours</option>
+              <option value={"2"}>2 cours</option>
               <option value={"3"}>Mini stage 3 cours</option>
               <option value={"4"}>Stage semaine 4 cours</option>
               <option value={"5"}>Stage semaine 5 cours</option>
@@ -134,7 +134,6 @@ export default function Overlay({
               <option value={"enfant"}>Club enfant 10 cours</option>
               <option value={"part1"}>Cours particulier 1 personne</option>
               <option value={"part2"}> Cours particulier 2 personnes</option>
-              <option value={"accompte"}>Acompte</option>
             </select>
           </div>
 

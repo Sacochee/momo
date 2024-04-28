@@ -5,13 +5,19 @@ import { useSearchParams } from "next/navigation";
 import Style from "./header.module.css";
 import Image from "next/image";
 
+type bacPath  = 
+"/location" |
+"/location/inscription" |
+"/tarifsEtReservations" |
+"/tarifsEtReservations/inscription"
+
 
 export default function HeaderForm() {
   const router = useRouter();
   const path = usePathname();
   const searchParams = useSearchParams();
   const type = searchParams.get("type");
-  let pathTOBack ;
+  let pathTOBack  : bacPath;
 
   if(path.startsWith("/location")){
     if(path == "/location/inscription")
@@ -32,6 +38,10 @@ export default function HeaderForm() {
       pathTOBack = "/tarifsEtReservations"
   }
 
+  const getTxt = () =>{
+    if(pathTOBack === "/location" || pathTOBack === "/tarifsEtReservations")  return "Revenir au site"
+    else return "Etape Précédante"
+  }
 
   const change = (route: string) => router.replace(path, { locale: route });
   return (
@@ -40,7 +50,7 @@ export default function HeaderForm() {
         <Links href={pathTOBack} className={Style.btn}>
           <Fleche />
           <span>
-            Revenir au site
+            {getTxt()}
           </span>
           
         </Links>

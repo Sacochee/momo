@@ -40,7 +40,7 @@ export default function Page() {
               </Link>
             </li>
             <li className={style.li}>
-              <Link href={""} target={"_blank"} className={style.link}>
+              <Link href={"https://www.facebook.com/COCOSURF.ecoledesurf"} target={"_blank"} className={style.link}>
                 <Img
                   src="/contact/facebook.png"
                   alt="logo Facebook"
@@ -67,7 +67,7 @@ export default function Page() {
               </Link>
             </li>
             <li className={style.li}>
-              <Link href={""} target={"_blank"} className={style.link}>
+              <Link href={"https://www.instagram.com/cocosurf_ecoledesurf/"} target={"_blank"} className={style.link}>
                 <Img
                   src="/contact/instagram.png"
                   alt="logo Instagram"
@@ -78,7 +78,7 @@ export default function Page() {
               </Link>
             </li>
             <li className={style.li}>
-              <Link href={""} target={"_blank"} className={style.link}>
+              <Link href={"https://www.youtube.com/channel/UCpHW4IR4nAFnul7Ux1q1yOA"} target={"_blank"} className={style.link}>
                 <Img
                   src="/contact/youtube.png"
                   alt="logo youtube"

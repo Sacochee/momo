@@ -1,44 +1,17 @@
 .btn{
-    position: relative;
     text-decoration: none;
     background-color: black;
     color: white;
     font-size: 1.3em;
-    padding: 10px 20px;
+    padding: 12px 20px;
     width: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid transparent;
     text-align: center;
+    border-radius: 20px;
 }
-
-.fleche{
-    position: relative;
-    margin-left: 10px;
-    margin-right: 20px;
-}
-.span{
-    top: 0;
-    left: 0;
-    position: absolute;
-    background-color: white;
-    width: 10px;
-    height: 3px;
-}
-.fl{
-    position: absolute;
-    right: 10px;
-}
-.span:first-child{
-    height: 2px;
-    transform: rotate(-40deg) translateY(4px) ;
-}
-.span:last-child{
-    height: 2px;
-    transform: rotate(40deg) translateY(-4px) ;
-}
-
 
 @media (hover : hover) {
     .btn:hover{
@@ -46,11 +19,7 @@
         color: black;
         border: 1px solid black;
     }
-    .btn:hover .span{
-        background-color: black;
-    }
 }
-
 
 
 @media (min-width : 450px){

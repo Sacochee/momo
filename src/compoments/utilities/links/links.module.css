@@ -1,6 +1,6 @@
 .div{
     position: fixed;
-    z-index: 6;
+    z-index: 35 !important;
     top: 0;
     left: 0;
     height: 100vh;

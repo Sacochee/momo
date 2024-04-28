@@ -43,10 +43,10 @@
         "p4" : "cocosurf.charentemaritime@gmail.com",
         "p5" : "Siret : 844 971 044 00012",
         "t3" : "REALISATION",
-        "p6" : "Création et développement : Julie Lostanlen – www.julie-graphiste.com.",
+        "p6" : "Création et développement : Sacha Duprat",
         "p7" : "Photographies : Mathieu Reveillas",
         "t4" : "HEBERGEMENT",
-        "p8" : "OVH",
+        "p8" : "Hostinger",
         "t5" : "PROTECTION DES DONNEES PERSONNELLES",
         "p9" : "Les données personnelles recueillies sur le site résultent de la communication volontaire d’une adresse de courrier électronique lors du dépôt d’un message électronique.",
         "p10" : "Les données ainsi recueillies ne servent qu’à transmettre les éléments d’informations demandés et n’ont pour seul destinataire que l’école Coco Surf auprès de laquelle peuvent s’exercer les droits d’accès et de rectification, conformément à l’article 27 de la loi N° 78-17 du 6 janvier 1978 relative à l’informatique, aux fichiers et aux libertés. Pour l’exercer, adresser votre demande écrite auprès de Coco Surf à l’adresse email indiquée ci-dessus. Les données recueillies dans ce cadre ne pourront être cédées à des tiers ou communiquées à des fins non prévues.",
@@ -290,12 +290,12 @@
         "tabl1_p" : "Surfer à plusieurs pour découvrir, partager et progresser",
         "tabl_reduc" : "-10 % à partir de 3 inscrits",
         "tabl_li1" : {
-            "name" : "Découverte",
+            "name" : "1 cours",
             "time" : "2h",
             "when" : "Tous les jours"
         },
         "tabl_li2" : {
-            "name" : "Découverte 2 cours",
+            "name" : "2 cours",
             "time" : "4h",
             "when" : "Tous les jours"
         },
@@ -342,8 +342,398 @@
             "time" : "2h",
             "when" : "Tous les jours"
         }
-
-
-
+    },
+    "Faq" : {
+        "title" : "Questions fréquentes",
+        "alt" : "Image d'une bulle intérogative",
+        "1" : {
+            "q" : "Le surf, ça consiste en quoi ?",
+            "p1" : "Le surf consiste à attraper une vague, glisser allongé puis debout, sur différents types de vagues comme les mousses qui déferlent dans les 20-50 premiers mètres du bord  ou bien les vagues lisses non déferlées du large.",
+            "p2" : "Les mousses seront le terrain de jeu idéal des débutants et des enfants car elles sont nombreuses, proches du bord et déferlent sur peu d’eau. C’est le top pour très vite s’amuser et acquérir les bases !",
+            "p3" : "Les vagues lisses du large, plus dures à atteindre et à attraper, permettent d’ avoir de grandes sensations en cour de stage,  et particulièrement à partir de quelques semaines de pratique.",
+            "p4" : "Les surfeurs débutants ou occasionnels chercheront à faire les plus longues vagues possibles, les surfeurs expérimentés chercherons un maximum de vitesse pour effectuer les meilleurs virages sur la vague (figures)."
+        },
+        "2" : {
+            "q" : "Quelle est l’histoire du surf ?",
+            "p1" : "Le surf est une pratique ancestrale dans les îles hawaïennes et polynésiennes depuis le 15ème siècle. Il a permis aux chefs de tribus qui défiaient la mer de prouver leur puissance et leur supériorité. Cette pratique avait également un aspect religieux car elle permettait d’honorer la déesse de la fertilité.",
+            "p2" : "Les chefs surfaient de grandes planches en bois très lourdes, appelées « Papa-he-nalu ». Elles étaient coupées dans un tronc d'arbre selon un ancien rituel. Le peuple surfait majoritairement allongé sur des « Paipo », l’ancêtre du bodyboard actuel.",
+            "p3" : "Le surf s’est ensuite démocratisé en Californie puis dans les autres pays anglo-saxons au début du 20ème siècle, grâce à de grands noms tels le champion olympique de natation Duke Kahanamoku, l’écrivain Jack London et le surfeur Tom Blake, et grâce aux inventions le rendant plus accessible et facile (ailerons en 1930, résine et pain de mousse permettant d’alléger les planches à partir des années 50).",
+            "p4" : "En France, le surf est apparu en 1957 à Biarritz et n’a cessé depuis de faire des adeptes. Les premiers surfeurs français ont aujourd’hui 80 ans et sont appelés les Tontons surfeurs, Certains surfent toujours ! "
+        },
+        "3": {
+            "q" : "Pourquoi le surf est-il un sport si populaire ?",
+            "p1" : "Parce-que c’est un sport magique qui fait du bien au corps et à l’esprit !",
+            "p2" : "A la fois physique (mais pas traumatisant), technique, faisant appel à notre équilibre et notre capacité d’adaptation (conditions extrêmement changeantes chaque jour), il nous permet également un moment hors du temps, loin des tracas et des sollicitations de la vie moderne. ",
+            "p3" :"Il symbolise également les notions de liberté et de connexion avec la nature dont nous avons souvent besoin.",
+            "p4" : "Enfin, sa popularité a explosé depuis les années 2000 grâce à l’arrivée des planches en mousse adaptées aux débutants et à l’aspect familial et très accessible de sa pratique en école de surf."    
+        },
+        "4" : {
+            "q" : "Le Surf est-il un sport accessible à tous ?",
+            "p1" :"Contrairement aux croyance populaire, le surf est accessible à (presque) tout le monde !",
+            "p2" : "Nuançons toutefois : s’amuser et progresser dans la mousse est possible pour tout un chacun, sans conditions d’âge, de sexe et de condition physique.  Le plaisir de la glisse arrive dès les premiers instants, d’abord allongé, puis debout !",
+            "p3" : "Pour atteindre un niveau intermédiaire et être à l’aise au large dans les vagues lisses, la condition physique et les années de pratique régulière deviennent primordiales. "
+        }, 
+        "5" : {
+            "q" : "Le surf est-il un sport dangereux ?",
+            "p1" : "Comme tous les sports en milieu naturel, il comporte des risques : planche de surf dans la figure, coupures à cause du fond marin parfois rocheux, courants, et parfois aqua-stress, Un pratiquant libre doit toujours évaluer son niveau d’aisance par rapport aux conditions, et savoir rester sur la plage ou changer de lieu en cas de doute. ",
+            "p2" : "Mais rassurons les plus anxieux : dans notre école de surf, nous avons en général entre aucun et 2 blessés (entorse de cheville, réveil d’une ancienne blessure …) par an, pour des milliers de pratiquants ! ",
+            "p3" : "Nous mettons tout en œuvre pour votre sécurité : pratique sur les plages sableuses, planches en mousse non dangereuses, choix adéquat des spots par rapport à votre niveau, règles de sécurité, combinaisons de surf pour protéger, surveillance constante de nos élèves …",
+            "p4" : "De plus, excepté en cas de très petites vagues, nos débutants et enfants n’ont de l’eau que jusqu’à la taille, de façon à s’amuser en toute sécurité."
+        },
+        "6": {
+            "q": "Comment fait-on pour tenir debout sur une planche ?",
+            "p1" : "La plupart des gens pensent qu’ils manquent d’équilibre lorsqu’ils montent sur une planche pour la première fois. FAUX ! Nous sommes tous des bipèdes et avons un bon équilibre de base.",
+            "p2" : "Mais le surf est un mélange de plusieurs choses : bon choix de vagues, bon positionnement, vitesse suffisante et équilibre allongé. Puis précision dans l’emplacement des pieds, posture semi-fléchie et détente musculaire.",
+            "p3" : "Il faut en général entre 2h et 6h pour maîtriser cela et glisser comme un chef jusqu’à la plage !"
+        }, 
+        "7": {
+            "q" : "Est-ce qu’on progresse vite en surf ?",
+            "p1" : "Les apprentis surfeurs sont souvent surpris par leur vitesse de progression lors des premiers cours. Il faut en général entre 2h et 10h de pratique pour surfer de longues mousses debout jusqu’au bord. ",
+            "p2" : "Le surf au large est plus physique, technique et l’apprentissage plus difficile (mais c’est le challenge du surf!). Comptez entre 6h et 12h pour attraper de petites vagues lisses, 1 ou 2 ans pour les longer de côté et des années avant de réaliser vos premières figures sur la vague !"    
+        },
+        "8": {
+            "q" : "A partir de quel âge peut-on surfer ?",
+            "p1" : "Un baby surfeur pourra pratiquer dans de mini vagues avec son papa ou sa maman dès qu’il sait marcher.",
+            "p2" : "Chez Cocosurf, nous acceptons les enfants à partir de 7 ans, car il faut pouvoir comprendre et respecter des règles de sécurité, ainsi que savoir être à l’écoute dans un groupe de 8 surfeurs."    
+        },
+        "9":{
+            "q" : "Et jusqu’à quel âge peut on surfer ?",
+            "p1" : "Si vous avez appris jeune et que vous savez déjà surfer correctement, vous pourrez pratiquer jusqu’à la maison de retraite. Pour les novices, il n’y a pas de limite d’âge, tout dépend de vos éventuels problèmes de santé ! N’hésitez pas à nous demander conseil.",
+            "p2" : "En général, les hommes perdent leur souplesse à partir de 50 ans et les femmes perdent plutôt de la force. Vous ne ferez donc pas de carrière professionnelle passé un certain âge. Mais si vous avez gardé votre âme d’enfant, vous êtes malgré tout apte au surf dans les petites vagues !"    
+        },
+        "10" : {
+            "q": "Est-ce que je dois être un excellent nageur pour apprendre le surf ?",
+            "p1" : "Non. Pour les cours de surf, il vous suffit de savoir flotter, mettre la tête sous l’eau et de savoir un peu nager. Si vous n’êtes pas à l’aise avec l’océan, vous pourrez pratiquer dans les petites vagues de bord sans soucis.",
+            "p2" : "Par contre, un pratiquant libre qui souhaite progresser doit bien-sur avoir un niveau correct en crawl."
+        },
+        "11" : {
+            "q" : "Puis-je surfer avec un problème de santé ?",
+            "p1" : "Tout dépend du problème. Il peut y avoir des contre-indications majeures (fracture ou entorse récente, hémophilie, etc …) mais beaucoup de problèmes sont surmontables avec des adaptations. N’hésitez pas en discuter avec l’équipe avant de réserver !"
+        },
+        "12" : {
+            "q" : "Où sont les spots de surf en Charente-Maritime ?",
+            "p1" : "Les spots de surf, c’est comme les coins à champignons, ça ne se dévoile pas ! Le surf est un parcours, et chaque pratiquant doit faire ses propres recherches. C’est une chasse au trésor et cette quête personnelle fait partie de sa magie !",
+            "p2" :"Mais certains sont toutefois déjà connus, et peuvent être cités : les 17 kms de Côte-Sauvage bien-sûr, hyper exposés aux vagues, c’est le terrain de jeu idéal par petite ou moyenne houle. Au sud, les plages du Pays Royannais sont top pour faire ses armes lors de houles  moyennes à fortes (marée haute) ! Enfin au nord, les spots de Vert-bois, Grand Village et Saint Trojan sont de bons spots pour tous niveaux, qui captent relativement bien la houle, mais attention à la sur-fréquentation et aux dangers que cela induit."    
+        },
+        "13" : {
+            "q" : "Je fais du skate, du roller, du snowboard ou de la planche à voile, est-ce que ça peut m’aider à progresser ?",
+            "p1" :"Bien-sur ! Tous les sports de glisse vous font acquérir un meilleur sens de l’équilibre et une meilleure proprioception pour gérer votre planche. Toutefois, cet avantage ne marche qu’une fois debout, et ne vous aidera pas pour la lecture de l’océan et la prise de vague ! Mais c’est déjà ça de pris."    
+        },
+        "14" : {
+            "q" : "Est-ce qu’il y a des règles en surf ?",
+            "p1" : "Bien-sur ! Pour tous les surfeurs, il faut respecter des règles de sécurité : ne pas heurter les autres, faire attention à la chute, rester dans une zone de surf, ne pas aller trop loin si on a pas le niveau, etc. Ce sont les règles primordiales que nous vous enseignons lors de nos cours.",
+            "p2" :"Pour le surf au large, en plus des règles de sécurité des débutants, il faut également respecter :",
+            "li1" :"La règle de priorité : le surfeur le plus proche du point du déferlement est prioritaire sur les surfeurs plus éloignés de ce point",
+            "li2" : "La règle de contournement : un surfeur qui remonte au large doit tout mettre en œuvre pour contourner celui qui surfe la vague (le surfeur est prioritaire sur le rameur)",
+            "li3" : "Les règles de savoir vivre : dire bonjour, laisser des vagues aux autres surfeurs (coucou les longboards), etc"    
+        }
+    }, 
+    "FaqPresentation" : {
+        "1" : {
+            "q": "Comment se passe un cours de surf ?",
+            "p1" : "Le fonctionnement en été et hors saison est un peu différent. Au printemps et à l’automne, les lieux de rendez-vous peuvent varier, au gré des conditions très changeantes durant ces périodes. Les lieux et horaires de cours sont fixés quelques jours avant.",
+            "p2" : "En été, le spot d’enseignement reste fixe et les horaires de cours sont fixés plusieurs mois en avance, car les conditions estivales plus clémentes permettent un enseignement de qualité à toutes les marées et dans la plupart des conditions de la météo.",
+            "p3" : "Rendez-vous au camion jaune Cocosurf. Une fois arrivé, il est temps de choisir sa combinaison puis de se changer. Départ vers le spot.",
+            "p4" : "Hors saison, il faut porter sa planche seul ou en binôme jusqu’à la plage (5-10min de marche). Si c’est lourd, pas de panique, les costauds du groupe sont mis à contribution !",
+            "p5" : "En été, 20 min de marche jusqu’au spot (mais pas de planches à porter grâce au chariot de l’école) permettent de faire connaissance et de commencer l’échauffement. La récompense est au bout : un spot vierge de monde pour choisir les meilleures vagues et avoir une sécurité optimale !",
+            "p6" :"Le cours s’organise ensuite de la façon suivante : temps convivial pour se présenter, analyse des conditions du jour et explication des règles de sécurité, échauffement, puis c’est parti pour le surf.",
+            "p7" : "Par des exercices progressifs et des conseils individualisés, les objectifs et les progressions seront propres à chacun. Exemples : découvrir la glisse et faire ses premiers redressements debout pour les débutants, perfectionner sa posture et effectuer des virages dans de petites vagues pour les « faux débutants », ou encore découvrir ou perfectionner la prise de vague du large pour les intermédiaires … Le moniteur vous accompagne au maximum durant la séance.",
+            "p8" :"Enfin, une fois le surf fini (environ 1h30) retour sur le sable et débriefing de la séance tous ensemble, puis retour jusqu’au parking avec le matériel (hors saison) ou sans matériel (en été). C’est l’heure de se changer et de se dire au revoir !"
+        },
+        "2":{
+            "q" : "Combien de temps dure un cours de surf ?",
+            "p1" : "La prise en charge totale est comprise entre 2h30 et 3h selon le lieu où a lieu le cours (plus ou moins de marche entre le parking et le spot). Le cours dure 2h et le temps de surf total environ 1h30. Ce qui est largement suffisant, car votre énergie déclinera déjà au bout de 1h15."
+        },
+        "3" : {
+            "q" : "Où ont lieu les cours de surf ?",
+            "p1" : "En été, les cours ont lieu exclusivement sur la Côte-Sauvage de la Tremblade et le lieu est fixe.",
+            "p2" : "Au printemps et à l’automne, les lieux sont variables et peuvent  avoir lieu sur une plage de Royan ou sur la Côte-Sauvage. Le spot est choisi quelques jours avant car la météo est très changeante durant ces périodes."
+        },
+        "4": {
+            "q" : "Le matériel est-il fourni ?",
+            "p1"  :"Oui bien-sûr ! Planche en mousse adaptée à chacun, et combinaison d’hiver ou d’été selon la période."
+        },
+        "5" : {
+            "q" : "Combien y a-t-il d’élèves par cours ?",
+            "p1" : "8 élèves par moniteur maximum, soit 16 élèves maxi en été car nous sommes 2 moniteurs. Dans ces cas là, nous séparons toujours le groupe en deux (selon les niveaux et affinités) et chaque moniteur gère son groupe."
+        },
+        "6" : {
+            "q" : "Que comprend le prix d’un cours ? Et l’assurance ?",
+            "p1" : "Tout ! Le cours, le prêt du matériel, les conseils avisés et la bonne humeur.",
+            "p2" : "L’assurance Responsabilité Civile Professionnelle est également incluse (en cas de blessure d’un élève causé à la suite d’une erreur du moniteur).",
+            "p3" : "En cas de dommage ne relevant pas de la responsabilité du moniteur, c’est votre RC personnelle (qu’on a normalement tous dans nos assurances scolaires ou habitation) qui devra être activée",
+            "p4" : "Pour info, aucun élève ni moi-même n’avons eu besoin de faire marcher notre RC au cours des 5 dernières années."
+        },
+        "7" : {
+            "q" : "Qu’apprend-t-on lors du premier cours de surf ? Et au cours d’un stage ?",
+            "p1" : "1er cours : la sécurité élémentaire, choisir la bonne « mousse », l’attraper en ramant allongé, et les débuts du redressement debout (variable selon les performances de chacun)",
+            "p2" : "2ème et 3ème cours : amélioration des points précédents, mais aussi postures et techniques pour tenir la vague le plus longtemps possible",
+            "p3" : "4ème et 5ème cours : savoir analyser les conditions du jour, connaître la sécurité liée au surf au large, savoir passer la barre, prendre une petite vague lisse, puis tourner dans la mousse."
+        },
+        "8" : {
+            "q" : "Pourquoi est-ce recommandé d’apprendre avec des cours ?",
+            "p1" : "D’abord pour votre sécurité : l’océan peut-être dangereux pour un novice sans connaissances et sans surveillance. Les cours vous permettrons de comprendre les dangers de l’océan (baïnes, courants) et les conduites à tenir pour pratiquer en sécurité.",
+            "p2" : "Puis pour vite progresser : le surf est un sport parfois difficile, alors autant mettre toutes les chances de votre côté !"
+        },
+        "9" : {
+            "q" : "Est-ce que je dois porter ma planche sur le trajet du parking au spot ?",
+            "p1" : "Hors saison, il faut porter sa planche seul ou en binôme jusqu’à la plage (5-10min de marche). Si c’est lourd, pas de panique, les costauds du groupe sont mis à contribution !",
+            "p2" : "En été, 20 min de marche jusqu’au spot (mais pas de planches à porter grâce au chariot de l’école) permettent de faire connaissance et de commencer l’échauffement. La récompense est au bout : un spot vierge de monde pour choisir les meilleures vagues et avoir une sécurité optimale !"
+        },
+        "10" : {
+            "q" : "Et la sécurité dans tout ça ?",
+            "p1" : "C’est notre soucis numéro un dans tous nos cours. Voici une liste non exhaustive qui permettra de rassurer les plus anxieux des parents :",
+            "li1" : "Vos moniteurs sont des surfeurs aguerris et ont un diplôme de secouriste",
+            "li2" : "il y a entre 0 et 2 blessés légers(traumatologie) par an chez Cocosurf sur des milliers de pratiquants",
+            "li3" : "il y a entre 0 et 2 blessés légers(traumatologie) par an chez Cocosurf sur des milliers de pratiquants",
+            "li4" : "nous avons toujours un téléphone et un sac de secours durant nos cours",
+            "li5" : "La plupart des élèves vont pratiquer avec de l’eau à la taille et des planches en mousse non dangereuses (aucun risque de se blesser avec).",
+            "li6" : "Pour les passages au large, notre expérience nous permet de bien évaluer les dangers potentiels et de ne pas prendre de risques inutiles.",
+            "li7" : "Le risque de noyade est très faible en surf : nous avons une combinaison qui évite l’hypothermie, et nous sommes reliés par le leash à une grosse planche qui flotte et peut nous servir de bouée de sauvetage !"
+        },
+        "11" : {
+            "q" : "Quel matériel est utilisé pour les cours ?",
+            "p1" : "Nous utilisons l’une des 3 meilleures marques de planches en mousse au monde : SOFTECH.",
+            "p2" : "Il y a toutes les tailles disponibles, de la 6’0 enfant à la 8’0 « extra large » pour les adultes débutants.",
+            "p3" : "Les surfeurs ayant leur matériel peuvent également le ramener en cours s’ils le souhaitent. Enfin nous avons différentes marques de combinaisons (quiksilver, o’neill, c-skins)"
+        },
+        "12" : {
+            "q" : "Dans quelles conditions les cours peuvent-ils être annulés ou remboursés ?",
+            "p1" :"Annulation ou absence du fait du client",
+            "li1" : "Plus de 10 jours avant le début du stage : remboursement complet",
+            "li2" : "Entre 10 et 5 jours précédant la date de début de stage : encaissement des arrhes éventuels",
+            "li3":  "5 jours avant le début du stage ou durant celui-ci: l’intégralité de la prestation sera facturée, pas de remboursement (sauf sur présentation d’un certificat médical)",
+            "p2" : "En cas  d’annulation suite à de mauvaises conditions météorologiques (absence de vagues, tempête), les cours qui ne pourront pas être effectués seront, en accord avec les stagiaires: ",
+            "li4" : "Remplacés par une activité de substitution (technique surf, bodyboard, jeux aquatiques, etc).",
+            "li5" : "Reportés à une date ultérieure.",
+            "li6" :"Annulés et feront alorsl’objet d’un avoir.",
+            "li7" : "Remboursés"
+        },
+        "13" : {
+            "q" :"Puis-je surfer avec mes enfants ? Puis-je prendre des cours en famille ?",
+            "p1" : "Bien-sûr, c’est même l’un des gros avantages du surf. Le surf est un super moment de partage et de rires en famille !",
+            "p2" : "Tous les pratiquants surfent dans la même zone de plage (les enfants plus proche du bord, les adultes un peu plus loin), ainsi nous pouvons faire des cours avec des âges et niveaux différents. Nous adaptons nos consignes à chacun mais la zone de pratique est la même pour tous."
+        },
+        "14" : {
+            "q" : "Quel horaire de cours choisir ?",
+            "p1" : "En été, vous avez le choix entre 3 horaires :",
+            "li1": "9h : pas de grasse matinée mais en général les meilleurs vagues, pas de trop fortes chaleurs, et le reste de la journée pour faire d’autres activités",
+            "li2" : "11h : plus de sommeil, des vagues toujours de très bonne qualité, mais un trajet retour éventuellement sous la chaleur. Vous mangerez plutôt vers 14h, et vous aurez la fin d’après-midi pour vous.",
+            "li3" : "13h : le vent commence à se lever, les vagues du large (niveau intermédiaire) peuvent parfois se dégrader. Mais vous aurez tout le loisir de faire la fête le soir et de dormir à volonté !"
+        },
+        "15" : {
+            "q" : "Quel matériel dois-je apporter le jour du cours ?",
+            "p1" : "De simple affaires de plage dans un sac à dos : tongs, maillot, crème solaire, casquette ou chapeau, et gourde d’eau"
+        },
+        "16" : {
+            "q" : "Comment réserver mes cours de surf ?",
+            "li1" : "Appeler l’école (c’est mieux) ou écrivez-nous par email (c’est plus long) pour connaître les jours et horaires disponibles, et poser vos questions.",
+            "li2" :  "Une fois les horaires choisis, remplissez le bulletin d’inscription et procéder au paiement en ligne sur le site internet de l’école.",
+            "li3" : "Le cours est réservé lorsque le paiement est effectué."
+        },
+        "17" : {
+            "q" : "Fait-on cours quand il pleut ?",
+            "p1" : "Ouiiii ! Comme on dit, mouillé pour mouillé, autant aller à l’eau ! La pluie n’est pas un motif d’annulation. Et rassurez-vous, vous serez au chaud dans vos combinaisons."
+        },
+        "18" : {
+            "q" :"Y a-t- il des groupes d’âge ou de niveaux ?",
+            "p1" : "En cas de petit groupe (inférieur ou égal à 7 ou 8), il y a un seul cours et les niveaux et âges seront mélangés. Mais votre moniteur ou monitrice individualisera sa pédagogie et ses exercices à chacun !",
+            "p2" : "A partir de 9 élèves par cours, nous sommes 2 moniteurs et scindons le groupe en deux teams de niveaux et/ou âges différents."
+        },
+        "19" : {
+            "q" : "Faut-il un certificat de non-contre indication pour s’inscrire aux leçons ?",
+            "p1" : "Non, pas besoin. Mais en cas de problème de santé, merci d’en discuter avec l’équipe au préalable."
+        },
+        "20" : {
+            "q" : "Obtient on un diplôme à la fin du stage de surf ?",
+            "p1" :"A partir du mini stage 3 cours, vos moniteurs vous remettront un diplôme Cocosurf personnalisé. Vous y retrouverez tous vos acquis et ce qu’il vous reste à apprendre pour devenir un vrai Jedi de l’océan."
+        }
+    },
+    "FaqTarif" : {
+        "1" : {
+            "q": "Comment est née Cocosurf ?",
+            "p1" : "Cocosurf, c’est l’histoire d’un couple et d’un amour commun pour le surf ! En 2019, après 7 ans d’enseignement et/ou de secrétariat dans différentes structures (club, écoles privées), Louise et moi-même souhaitions créer une école qui nous ressemble, sans les problèmes et dérives parfois observées dans d’autres écoles.",
+            "p2" : "Quant au nom de l’école, il vient de notre amour inconditionnel pour les Cocotiers ! Cet arbre symbolise beaucoup de choses que nous recherchons dans le surf : chaleur, voyage, évasion et bord de mer …",
+            "p3" : "Il n’y a pas de palmiers en Charente-Maritime me diriez-vous ? Pour le coup, c’est notre petite touche d’humour, parce qu’apprendre à surfer, c’est aussi avoir de l’auto-dérision !"
+        },
+        "2" : {
+            "q" : "Quelles sont les valeurs de l’école ?",
+            "li1" : "des moniteurs toujours à l’eau pour assurer votre sécurité",
+            "li2" : " personne n’est laissé de côté : surdoués ou en difficulté, tout le monde aura un max de conseils personnalisés",
+            "li3" : "de l’humour dans tous les cours, parce qu’on est surtout là pour le fun",
+            "li4" : "pédagogie et empathie, chacun doit progresser à son rythme"
+        },
+        "3" : {
+            "q" : "Quelle est la pédagogie chez Cocosurf ?",
+            "p1" : "Nous adaptons autant que faire se peut nos cours à notre public, et il n’y a pas de cours type.",
+            "p2" : "Au début du cours, après une analyse des conditions, un échauffement et l’explication des règles de sécurité du jour, nous définissons un ou plusieurs objectifs pour la session.",
+            "p3" : "En cas de niveaux différents dans un même cours, chacun partira avec des objectifs et exercices qui lui sont propres.",
+            "p4" : "Durant chaque exercice, les apprentis surfeurs reçoivent des conseils individualisés afin d’améliorer leur surf.",
+            "p5" : "2 à 3 fois par cours, nous faisons un retour vers le sable afin d’évaluer la réussite de chacun et de faire un partage d’expérience qui puisse améliorer la compréhension de la pratique.",
+            "p6" : "Enfin, afin de finir en beauté, nous finissons régulièrement nos cours par des jeux de surf en groupe. Le surf en cours, c’est du fun et du partage !"
+        },
+        "4" : {
+            "q" : "où ont lieu les cours de surf ?",
+            "p1" : "La majorité des cours ont lieu sur la Côte-Sauvage de la Tremblade, et parfois vers Royan en cas de forte houle.",
+            "p2" : "Hors juillet et août, nous surfons en général entre le phare de la Coubre et la Bouverie. En été, nous choisissons un spot plus au nord avec plus de marche, mais pas de planche à porter et surtout un spot vierge de monde. A vous les meilleures vagues !"
+        },
+        "5" : {
+            "q": "La plage est-elle facilement accessible ?",
+            "p1" : "La plage est accessible pour les enfants à partir de 5 ans et pour les grands-parents, en fonction de leur état de forme. Attention toutefois, il faut marcher entre 5 et 20 min selon le lieu, et il y a une dune de sable à monter !",
+            "p2" :"Pour les grands-parents, nos élèves sont sous notre responsabilité jusqu’à la fin du cours. Vous pouvez donc si vous le souhaitez nous les laisser et venir les récupérer au parking après le cours.",
+            "p3" : "Enfin, nous déconseillons de prendre trop d’affaires entre le parking et la plage. Voyagez léger !"
+        },
+        "6" : {
+            "q" :"A partir de quel mois de l’année peut-on surfer en Charente-Maritime ?",
+            "p1" :"Un passionné peut surfer toute l’année en Charente-maritime. Il aura besoin de chaussons et d’une cagoule de surf de décembre à mars (eau entre 10 et 13°).",
+            "p2" : "Si vous n’êtes pas encore un viking assumé, nous conseillons de venir surfer entre avril et octobre, où une simple combinaison intégrale suffit (eau entre 14 et 20°). L’école est ouverte durant ces 7 mois."
+        },
+        "7" : {
+            "q" :"De quels diplômes et compétences disposent les moniteurs de l’école ?",
+            "p1" : "Nous sommes tous titulaires du BP JEPS activité surf qui nous permet d’enseigner le surf, le bodyboard, et le paddle. Ce diplôme d’un an s’obtient après une sélection drastique nécessitant au minimum un très bon niveau de surf et des années d’expérience  et de pratique.",
+            "p2" : "Pour l’aspect sécurité, nous sommes titulaires du diplôme de secourisme Premiers Secours en Équipe (PSE 1) que nous mettons à jour chaque année au printemps."
+        },
+        "8" : {
+            "q" :"Quand dois-je réserver mon stage ?",
+            "p1" : "En été, nous conseillons de réserver au printemps (entre avril et juin) pour avoir un maximum de choix dans les jours et horaires. Nous aurons probablement de la place en cours si vous appelez quelques jours avant mais vous devrez vous adapter aux places restant disponibles.",
+            "p2" : "Hors saison, il vous suffit d’appeler une semaine avant."
+        },
+        "9" :{
+            "q" : "Puis-je prendre des cours si je n’ai jamais surfé ?",
+            "p1" :"C’est même fortement conseillé ! La Côte-Sauvage peut-être dangereuse pour un novice sans surveillance. Les cours vous permettrons de progresser beaucoup plus vite, en toute sécurité, et d’acquérir une compréhension et une autonomie vous permettant de pratiquer seul par la suite."
+        },
+        "10" : {
+            "q" :"Y a-t-il des tarifs réduits ou des promos ?",
+            "p1" :"Pour les particuliers, vous avez 10 % de remise si vous êtes venus les années précédentes et/ou si vous êtes 3  ou plus.",
+            "p2" :"Pour les groupes à partir de 8, des remises supplémentaires s’appliquent aussi, demandez-nous un devis."
+        },
+        "11" : {
+            "q" :"Que choisir entre cours collectifs et cours particuliers ?",
+            "p1" : "Les cours collectifs s’adressent au plus grand nombre : du débutant au niveau intermédiaire, venez partager et vous éclater à plusieurs ! Le cours collectif (8 élèves par moniteur maximum) sera un très bon mix entre une progression sérieuse et individualisée, et le fun et le partage avec le groupe.",
+            "p2" : "Les cours individuels s’adressent d’avantage aux pratiquants du niveau intermédiaire au bon surfeur : le surfeur repartira avec une évaluation plus globale de son niveau (physique, mental, matériel, technique) et des conseils à mettre en pratique durant ses futures sessions."
+        },
+        "12" : {
+            "q" : "Avez-vous un local avec douches et vestiaires ?",
+            "p1" : "Non. Comme son nom l’indique, la Côte-Sauvage est un lieu extrêmement nature et doit le rester !",
+            "p2" : "Cette côte étant protégée et sa forêt domaniale gérée par l’ONF, il n’y a ni boutique, ni club, ni restaurants. Nous nous changeons donc en extérieur, et nous rentrons chez nous la peau toute salée. C’est ça le charme du surf  !"
+        },
+        "13" : {
+            "q" :"Assurez-vous le transport des élèves en minibus ?",
+            "p1" : "Le transport n’est pas proposé, les élèves doivent nous rejoindre au point de rendez-vous sur la côte.",
+            "p2" :"Les familles et amis sont bien-sur libres de venir également profiter de la plage, et pourquoi pas d’encourager leurs champions"
+        },
+        "14"  :{
+            "q" : "Y a-t-il des WC, magasins et restaurants sur le lieu des cours ?",
+            "p1" :"Comme c’est expliqué plus haut, la dune et la forêt de la Coubre (forêt de la Côte-Sauvage) sont des espaces protégés et quasiment viergse de constructions. Par contre, il y a 3 postes de secours en juillet et août.",
+            "p2" : "Pas de WC sur la côte (mais une forêt…), à vous de prendre vos précautions.",
+            "p3" :"Enfin les magasins et restaurants les plus proches sont à la Palmyre ou Ronce-les-bains, à 10 minutes de voiture au nord ou au sud. Ces stations balnéaires sont par contre parfaites pour les after-surf !"
+        },
+        "15" :{
+            "q" : "Quels sont les moyens de paiement acceptés ?",
+            "p1" :"Nous recommandons un paiement sur le site par Carte Bancaire. En cas de paiement par chèque, chèques vacances ou espèces, prière de nous en parler au préalable."
+        }
+    },
+    "FaqLoc" :{
+        "1" : {
+            "q" : "Quel matériel puis-je louer chez Cocosurf ? Comment choisir ma planche ?",
+            "p1" : "Vous pouvez louer des planches en mousse de la marque Softech, qui est l’une des 3 meilleures du marché. Toutes les tailles et largeurs sont disponibles, il y aura forcément chaussure à votre pied ! ",
+            "p2" : "Soit vous avez une petite expérience et le souvenir de votre taille de planche favorite, soit le moniteur vous conseillera lors de la réservation. Cela dépendra de votre niveau et de votre gabarit.",
+            "p3" : "Pour avoir un ordre d’idée, voici les tailles de planches souvent recommandées en fonction des âges et/ou gabarits. Elles s’expriment en pieds et en pouces. Sortez les calculettes !",
+            "tabl" : {
+                "c1" : "6’0 « roller »",
+                "c2" : "6’6 « roller »",
+                "c3" : "7’0 « roller »",
+                "c4" : "7’0 large « zeppelin » ou 7’6 « roller »",
+                "c5" : "7’6 large « zeppelin »",
+                "c6" : "8’0 « roller »",
+                "c7" : "8’0 large « zeppelin »",
+                "c8" : "9’0 « zeppelin »",
+                "l1" : "enfants de 5 à 7 ans ou bons surfeurs",
+                "l2" : "enfants de 7 à 11 ans ou bons surfeurs",
+                "l3" :"pré-ados de 10 à 13 ans",
+                "l4" : "adolescents, les femmes « poids plume »s ou les surfeurs intermédiaires",
+                "l5" : "ados, adultes, entre 55 et 75 kg (c’est une estimation!)",
+                "l6" : "grands fins ou les surfeurs de niveau intermédiaire souhaitant de la longueur",
+                "l7" : "Surfeurs débutants entre 75 et 100 kg",
+                "l8" : "surfeurs débutants au dessus de 100 kg"
+            },
+            "p4" :"Nous louons également quelques planches en résine (évolutive, shortboard) et des combinaisons (Quiksilver, O’neill et c-skins) de toutes les épaisseurs, du 4 ans au XXL."
+        },
+        "2" : {
+            "q" :"Comment réserver une location ?",
+            "li1" : "Appeler l’école pour organiser la location (choix du spot, de l’horaire, du matériel) et poser vos questions. Si vous êtes flexibles, nous pourrons vous conseiller les meilleures marées et  les meilleurs accès de plage.",
+            "li2" : "Puis remplissez le bulletin d’inscription et le paiement en ligne par Carte Bancaire sur le site internet de l’école.",
+            "li3" : "La location est réservée lorsque l’inscription et le paiement sont effectués.",
+            "li4" : "prévoir une carte d’identité en guise de caution, ou plusieurs à partir de 3 surfeurs"
+        },
+        "3"  :{
+            "q": "Combien de temps dure une location ?",
+            "li1" : "Soit 2h30 (pour une session de 1h45 dans l’eau, comme un cours)",
+            "li2" :"soit à la journée ou demi journée (même tarif)",
+            "li3" :"soit pour plusieurs jours voire semaines (remise importante dans ces cas de figure)"
+        },
+        "4" : {
+            "q" : "Est-ce que je peux louer le jour même ? ou combien de temps dois-je louer à l’avance ?",
+            "p1" : "Il est recommandé d’appeler 24 ou 48h en avance pour programmer votre location, afin d’être sur d’avoir le matériel disponible, et d’avoir des conseils au sujet des spots, des conditions, etc.",
+            "p2" :"Le jour même, il se peut que les moniteurs ne soient pas disponibles ou que nous ne puissions pas vous conseiller sur le lieu et l’horaire. Mais vous pouvez tout de même appeler et demander !"
+        },
+        "5" : {
+            "q" :"Le matériel est-il fourni directement à la plage ou sur le parking ? Dois-je porter ma planche jusqu’au spot ?",
+            "p1" :"Cela dépend de plusieurs facteurs. En été, il est fort probable que vous n’ayez pas à porter votre planche car le matériel est déjà disponible sur la plage. Au printemps et à l’automne, comme nos élèves, il faudra porter le matériel seul ou à deux du parking jusqu’au spot (5-10min). Pas de panique, on peut porter sa planche seul ou en binôme dès 12 ans !"
+        },
+        "6" : {
+            "q": "Puis-je louer du matériel si je n’ai jamais surfé de ma vie ?",
+            "p1" :"Il est préférable de prendre un ou plusieurs cours avant de louer du matériel.",
+            "p2" :"Deux cas de figure sont malgré tout possibles : vous louez avec d’autres personnes expérimentées, et elles vous conseillent, savent reconnaître et éviter les dangers, ou vous pratiquez à côté d’un cours Cocosurf, auquel cas le moniteur gardera un œil sur vous pour votre sécurité.",
+            "p3" : "La deuxième solution reste la meilleure car attention aux conseils de vos amis dits « experts ». Connaître son niveau est une chose mais lire parfaitement une plage, ses dangers, et les mettre en relation avec le niveau de son ami débutant en est une autre. C’est une analyse de moniteur de surf !"
+        },
+        "7" :{
+            "q" :"Est-ce que je bénéficie d’explications (lieu, danger, recommandations etc) avant d’aller surfer ?",
+            "p1" :"Hors saison, si vous êtes flexible, Cocosurf pourra vous conseiller un jour, un lieu et un horaire propice aux vagues correspondant au mieux à votre niveau.",
+            "p2" :"En été, vous louerez là où Cocosurf donne ses cours. Cela a beaucoup d’avantages : le moniteur vous indiquera la bonne zone de surf et les règles essentielles de sécurité. Pour la partie technique, ne s’agissant pas d’un cours, ce seraà vous de vous débrouiller !"
+        },
+        "8" :{
+            "q" : "Louer vous des combinaisons d’hiver et / ou des combinaisons d’été ?",
+            "p1" : "Nous louons des 4mm d’hiver pour les mois d’avril, mai, et octobre, et des intégrales 3mm ou shorty 2mm en juin, juillet, août et septembre, selon votre envie et la température du jour."
+        },
+        "9" :{
+            "q" :"Pourquoi louer une planche en mousse plutôt qu’une planche en résine ?",
+            "p1" :"C’est un débat qui divise et fait couler beaucoup d’encre ! D’un côté les puristes, le tonton surfeur de la famille, qui ne jurent que par les planches faites main et en résine, et de l’autre les moniteurs de surf, soucieux de votre sécurité et de votre progression."
+            ,"p2" : "Nous allons tenter de résumer la chose et de vous éclairer par un petit tableau sur les avantages et inconvénients de chaque type de planche. Première info, il n’y a pas de planche miracle !",
+            "tabl" : {
+                "a1" :"Points technique ou sécurité",
+                "m1" :"Planche en mousse",
+                "r1" :"Planche en résine",
+                "a2" :"wax",
+                "m2" :"Pas ou peu besoin",
+                "r2" :"Besoin tout le temps",
+                "a3" :"blessure",
+                "m3" : "vous ne pouvez pas vous blesser avec la mousse, ni avec les ailerons souples",
+                "r3" : "Bleus, coupures et points de sutures vous attendent",
+                "a4" :"Solidité au choc", 
+                "m4" : "La planche prendra des enfoncements sans casser",
+                "r4" : "La résine est « cassante », elle ira souvent chez le réparateur",
+                "a5" : "réparabilité",
+                "m5" : "Votre planche va prendre l’eau, non réparable",
+                "r5" :"réparable",
+                "a6" : "flottaison",
+                "m6" :"Au top, vous pouvez surfer des mousses ou des mini vagues",
+                "r6" :"Plus dur, vous êtes obligé de surfer des vagues du large",
+                "a7" : "Maniabilité / figures",
+                "m7" :"Virages plus lent dû à l’épaisseur",
+                "r7" : "Virages rapides et nerveux (pour quelqu’un qui sait surfer )",
+                "a8" :"fun",
+                "m8" : "Poirier, surf assis, sur le dos, tout est permis !",
+                "r8" : "Se limite au surf « sérieux »",
+                "a9"  :"Surf jusqu’à la plage",
+                "m9" :"Vous pouvez vous échouer sur la plage sans casser les ailerons souples",
+                "r9" : "Si vous allez trop loin, vos ailerons risquent de casser",
+                "a10" :"Résultat du match",
+                "r" : "Victoire de la planche en mousse 6 à 2 !"
+            },
+            "p3" : "Pour résumer, tant que vous n’êtes pas à même de réaliser des virages sur la face lisse d’une vague, la facilité et la sécurité d’une planche en mousse l’emporte haut la main.",
+            "p4" :"Si vous êtes un surfeur régulier avec le niveau suffisant, sur des spots non bondés sur lesquelles vous estimez que la sécurité est ok, alors la réactivité de la planche en résine sera un bonheur.",
+            "p5" :"Mais avec les copains, dans les mousses, sur les spots sur-fréquentés, ou encore pour faire le pitre, la planche en mousse s’impose quelque soit le niveau du surfeur !"
+        }
     }
-}
+} 

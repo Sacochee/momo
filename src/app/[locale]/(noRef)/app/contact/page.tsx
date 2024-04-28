@@ -18,27 +18,6 @@ export default function page() {
   const params = useSearchParams();
   const type = params.get("type");
 
-  const named = (n: string) => {
-    const regex = /[^a-zA-Z ]/;
-    if (n.search(regex) != -1) return name;
-    else if (n == " ") return name;
-    else return n;
-  };
-
-  const indset = (n: string) => {
-    const regex = /[^0-9+]/;
-    if (n.search(regex) != -1) return ind;
-    else if (n == " ") return ind;
-    else return n;
-  };
-
-  const settel = (n: string) => {
-    const regex = /[^0-9]/;
-    if (n.search(regex) != -1) return tel;
-    else if (n == " ") return tel;
-    else return n;
-  };
-
   const fetchData = () => {
     setFetch(true);
     if(type == "cour"){
@@ -84,7 +63,7 @@ export default function page() {
               placeholder="Morgan Le Moniteur"
               required
               value={name ? name : ""}
-              onChange={(e) => setName(named(e.target.value))}
+              onChange={(e) => setName(e.target.value)}
             />
           </div>
           <div className={style.case}>
@@ -96,7 +75,7 @@ export default function page() {
                 className={style.input}
                 placeholder="Ex :06 20 36 20 36"
                 value={tel ? tel : ""}
-                onChange={(e) => setTel(settel(e.target.value))}
+                onChange={(e) => setTel(e.target.value)}
               />
             </div>
           </div>

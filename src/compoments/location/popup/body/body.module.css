@@ -51,7 +51,7 @@
 .label{
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     margin: 20px 0;
    
 }
@@ -108,7 +108,7 @@
 .delete{
     cursor: pointer;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 @media (hover : hover) {

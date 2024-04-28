@@ -3,11 +3,13 @@ import Btn from "@/compoments/utilities/button/btn";
 import Footer from "@/compoments/footer/footer";
 import Header from "@/compoments/header/header";
 import style from "./style.module.css";
-import Image from "next/image";
 import { Li } from "./Li";
 import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
 import data from "@/../public/cours/siderTarif/data.json";
+import Faq from "@/compoments/Question/Faq";
+import Question from "@/compoments/Question/question";
+import { PayAccept } from "../location/PayAccept";
 
 const Slider = dynamic(
   () => import("@/compoments/utilities/slider/SliderImage")
@@ -35,59 +37,26 @@ export default function Page() {
               <span className={style.underline}>{t("l2underline")}</span>
               {t("li2")}
             </li>
+            <li style={{listStyle : "none", fontSize : "0.8em"}}>
+              <Btn txt="Finaliser ma réservation" to="/app/form?type=true" />
+            </li>
           </ol>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              fontSize: "0.8em",
-            }}
-          >
-            <Btn txt="Finaliser ma réservation" to="/app/form?type=true" />
-          </div>
-          <div className={style.paie}>
-            Moyens de paiement acceptés :
+          <div className={style.center}>
+            <div className={style.flex}>
+              <div className={style.paie}>Moyens de paiement acceptés :</div>
+              <a href="">Paiement d un montant personnalisé</a>
             </div>
-          <div className={style.pay}>
-            <Image
-              src={"/payMethode/cb.png"}
-              width={59}
-              height={33}
-              alt="Logo d une carte bancaire"
-              quality={100}
-            />
-            <Image
-              src={"/payMethode/espece.png"}
-              width={59}
-              height={34}
-              alt="Logo d un billet"
-              quality={100}
-            />
-            <Image
-              src={"/payMethode/CQ.png"}
-              width={58}
-              height={46}
-              alt="Logo d un chèque"
-              quality={100}
-            />
-            <Image
-              src={"/payMethode/ancv.png"}
-              width={57}
-              height={43}
-              alt="Logo d un chèque vacance"
-              quality={100}
-            />
           </div>
+
+          <PayAccept />
         </div>
-        <div style={{ margin: "10px 20px"}} className={style.center}>
-          <div style={{maxWidth:"1000px"}}>
+        <div style={{ margin: "10px 20px" }} className={style.center}>
+          <div style={{ maxWidth: "1000px" }}>
             <div className={style.tabl_top}>
               <h2 className={style.tabl_top_h2}>
                 {t("tabl1_h2")}
                 <div className={style.tabl_top_line}>{/*line */}</div>
               </h2>
-
               <p className={style.tabl_top_p}>{t("tabl1_p")} </p>
               <p className={style.tabl_top_p}>{t("tabl_reduc")}</p>
             </div>
@@ -148,10 +117,9 @@ export default function Page() {
                 price={200}
                 params="enfant"
               />
-              
             </ul>
           </div>
-          <div style={{maxWidth:"1000px"}}>
+          <div style={{ maxWidth: "1000px" }}>
             <div className={style.tabl_top}>
               <h2 className={style.tabl_top_h2}>
                 {t("tabl2_h2")}
@@ -178,8 +146,87 @@ export default function Page() {
             </ul>
           </div>
         </div>
+        <FAQ />
       </main>
       <Footer />
     </>
+  );
+}
+
+function FAQ() {
+  const t = useTranslations("FaqTarif");
+
+  return (
+    <Faq>
+      <Question question={t("1.q")}>
+        <div>{t("1.p1")}</div>
+        <div>{t("1.p2")}</div>
+        <div>{t("1.p3")}</div>
+      </Question>
+      <Question question={t("2.q")}>
+        <ol>
+          <li>{t("2.li1")}</li>
+          <li>{t("2.li2")}</li>
+          <li>{t("2.li3")}</li>
+          <li>{t("2.li4")}</li>
+        </ol>
+      </Question>
+      <Question question={t("3.q")}>
+        <div>{t("3.p1")}</div>
+        <div>{t("3.p2")}</div>
+        <div>{t("3.p3")}</div>
+        <div>{t("3.p4")}</div>
+        <div>{t("3.p5")}</div>
+        <div>{t("3.p6")}</div>
+      </Question>
+      <Question question={t("4.q")}>
+        <div>{t("4.p1")}</div>
+        <div>{t("4.p2")}</div>
+      </Question>
+      <Question question={t("5.q")}>
+        <div>{t("5.p1")}</div>
+        <div>{t("5.p2")}</div>
+        <div>{t("5.p3")}</div>
+      </Question>
+      <Question question={t("6.q")}>
+        <div>{t("6.p1")}</div>
+        <div>{t("6.p2")}</div>
+      </Question>
+      <Question question={t("7.q")}>
+        <div>{t("7.p1")}</div>
+        <div>{t("7.p2")}</div>
+      </Question>
+      <Question question={t("8.q")}>
+        <div>{t("8.p1")}</div>
+        <div>{t("8.p2")}</div>
+      </Question>
+      <Question question={t("9.q")}>
+        <div>{t("9.p1")}</div>
+      </Question>
+      <Question question={t("10.q")}>
+        <div>{t("10.p1")}</div>
+        <div>{t("10.p2")}</div>
+      </Question>
+      <Question question={t("11.q")}>
+        <div>{t("11.p1")}</div>
+        <div>{t("11.p2")}</div>
+      </Question>
+      <Question question={t("12.q")}>
+        <div>{t("12.p1")}</div>
+        <div>{t("12.p2")}</div>
+      </Question>
+      <Question question={t("13.q")}>
+        <div>{t("13.p1")}</div>
+        <div>{t("13.p2")}</div>
+      </Question>
+      <Question question={t("14.q")}>
+        <div>{t("14.p1")}</div>
+        <div>{t("14.p2")}</div>
+        <div>{t("14.p3")}</div>
+      </Question>
+      <Question question={t("15.q")}>
+        <div>{t("15.p1")}</div>
+      </Question>
+    </Faq>
   );
 }

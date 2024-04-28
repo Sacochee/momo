@@ -70,9 +70,9 @@ export default function Surfer({
 function getNameOfFOrmule(formule : formule) : string {
   switch(formule){
     case "1":
-      return "Découverte"
+      return "1 cours"
     case "2" : 
-      return "Découverte 2 cours"
+      return "2 cours"
     case "3" : 
       return "Mini stage 3 cours"
     case "4" : 

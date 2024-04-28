@@ -71,6 +71,7 @@
   justify-content: space-between;
   margin-bottom: 50px;
   text-align: center;
+  width: 275px;
 }
 .txt {
   margin: 0 20px;
@@ -143,6 +144,18 @@
     background: none;
     background-color: rgb(10, 10, 10);
     color: white;
+  }
+}
+
+@media (min-width: 300px){
+  .chose{
+    width: 300px;
+  }
+}
+
+@media (min-width: 320px){
+  .chose{
+    width: 320px;
   }
 }
 

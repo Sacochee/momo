@@ -28,7 +28,7 @@
     color: white;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     text-align: start;
     padding: 10px;
 }
@@ -38,9 +38,19 @@
     height: 2px;
 }
 .paie{
-    text-align: start;
-    padding-left: 40px;
+    text-align: center;
+    
+    
+}
+.flex{
+    gap: 30px;
     margin: 20px 0;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 .tabl_top_p, .tabl_top_pp{
     margin:5px  0;
@@ -90,6 +100,12 @@
 }
 
 @media (min-width: 768px) {
+    .flex{
+        flex-direction: row;
+        gap: 0;
+        justify-content: space-between;
+        width: 80vw;
+    }
     .main{margin: 0 30px;}
     .tabl_li{
         display: flex;
@@ -108,12 +124,13 @@
     .pay{
         gap: 140px;
     }
-    .paie{
-        padding-left: 60px;
-    }
+
 }
 
 @media(min-width: 1024px){
+    .flex{
+        width: 65vw;
+    }
     .main{
         margin: 0 60px;
     }

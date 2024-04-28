@@ -41,7 +41,7 @@
 }
 .pay{
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     justify-content: space-between;
     gap: 25px;
     margin-bottom: 20px;
@@ -75,6 +75,49 @@
 .str{
     font-weight: 600;
 }
+
+
+.tabl{
+    border-collapse: collapse;
+    border: 2px solid #0a0a0a;
+}
+.tabl td{
+    padding: 10px 20px;
+    border : 2px solid #0a0a0a;
+    align-items: center;
+}
+
+.tbody{
+    text-align: center;
+    position: relative;
+    right: 35px;
+    width: 60%;
+    font-size: 0.8em;
+}
+.tabl thead, .tabl tfoot{
+   text-align: center;
+}
+
+
+.tabl tfoot{
+    justify-content: center;
+}
+
+.tabl tfoot th{
+    margin-top: 7px;
+    width: 200%;
+    text-align: center;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+.win{
+    background-color: rgb(97, 253, 97);
+}
+.loose{
+    background-color: rgb(246, 91, 91);
+}
+
 @media (hover : hover) {
     .bulletin button:hover{
         background-color: white;
@@ -83,6 +126,10 @@
 }
 
 @media (min-width : 750px) {
+    .tbody{
+        width: initial;
+        position: initial;
+    }
     .main{
         margin: 0 30px;
     }

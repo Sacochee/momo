@@ -55,7 +55,7 @@ export default function Footer() {
         <div
           className={style.logo}
         >
-          <a href="https://www.instagram.com/cocosurf_ecoledesurf/" className={style.a}>
+          <a href="https://www.instagram.com/cocosurf_ecoledesurf/" target="_blank" className={style.a}>
             <Image
             src={"/Icons/insta.png"}
             width={30}
@@ -64,7 +64,7 @@ export default function Footer() {
             className={style.img}
           />
           </a>
-          <a href="https://www.instagram.com/cocosurf_ecoledesurf/" className={style.a}> 
+          <a href="https://www.instagram.com/cocosurf_ecoledesurf/" target="_blank" className={style.a}> 
             <div>Instagram</div>
           </a>
           

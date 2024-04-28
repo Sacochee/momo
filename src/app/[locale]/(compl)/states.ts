@@ -1,5 +1,5 @@
 "use client";
-import { atom, useAtom } from "jotai";
+import { atom } from "jotai";
 
 // types //
 

@@ -1,5 +1,4 @@
 "use client";
-import Footer from "@/compoments/footer/footer";
 import HeaderForm from "@/compoments/inscription/header/header";
 import Bar from "@/compoments/utilities/barProgress/bar";
 import Image from "next/image";
@@ -16,7 +15,7 @@ import Paie from "@/compoments/location/paie/Paie";
 import { useRouter } from "@/navigation";
 import LoadingScreen from "@/compoments/utilities/links/LoadingScreen";
 
-export default function page() {
+export default function Page() {
   const router = useRouter();
   //qaund ?
   const [date, setDate] = useAtom(Date);
@@ -30,8 +29,8 @@ export default function page() {
   const [planche, setPlanche] = useState(false);
   const [wet, setWet] = useState(false);
   const [body, setBody] = useState(false);
-  const [mat] = useAtom(Mat);
-  const [paie] = useAtom(PaieMethode);
+  const [mat, setMat] = useAtom(Mat);
+  const [paie, setPaie] = useAtom(PaieMethode);
   const pay = useRef(null);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -193,8 +192,8 @@ export default function page() {
                   disabled={
                     nb == undefined ||
                     nb == 0 ||
-                    Number.isNaN(nb) ||
-                    partici?.length == nb
+                    Number.isNaN(nb)
+                   
                       ? true
                       : false
                   }
@@ -204,7 +203,7 @@ export default function page() {
                     activePopUp();
                   }}
                 >
-                  Suivant
+                  { partici?.length == nb ? "Modifier" : "Suivant"}
                 </button>
               </div>
             </div>
@@ -298,8 +297,8 @@ function Matos({
         <div className={style.imageContainer}>
           <Image
             src={"/loc/combie.png"}
-            width={28}
-            height={49}
+            width={24}
+            height={50}
             alt="déssin de Combinaison"
           />
         </div>

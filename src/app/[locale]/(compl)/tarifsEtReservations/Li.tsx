@@ -1,5 +1,4 @@
 "use client";
-import Links from "@/compoments/utilities/links/links";
 import style from "./style.module.css";
 import { useAtom } from "jotai";
 import { _context } from "../states";

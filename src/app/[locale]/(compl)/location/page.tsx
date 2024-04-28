@@ -1,51 +1,24 @@
 "use client";
 import Footer from "@/compoments/footer/footer";
 import Header from "@/compoments/header/header";
-import Image from "next/image";
 import style from "./page.module.css";
 import Links from "@/compoments/utilities/links/links";
 import data from "@/../public/loc/slider/data.json";
 import dynamic from "next/dynamic";
+import { PayAccept, Case, FAQ } from "./PayAccept";
+import { planche, wet, body } from "./PayAccept";
 
 const Slide = dynamic(
   () => import("@/compoments/utilities/slider/SliderImage"),
   { ssr: false }
 );
 
-type DataImage = {
-  src: string;
-  w: number;
-  h: number;
-  alt: string;
-};
-
-const planche: DataImage = {
-  src: "/loc/planche-de-surf.png",
-  w: 22,
-  h: 59,
-  alt: "Logo d une planche de surf",
-};
-
-const body: DataImage = {
-  src: "/loc/body.png",
-  w: 33,
-  h: 55,
-  alt: "Logo d une planche de surf",
-};
-
-const wet: DataImage = {
-  src: "/loc/combie.png",
-  w: 28,
-  h: 49,
-  alt: "Logo d une planche de surf",
-};
-
-export default function page() {
+export default function Page() {
   return (
     <div>
       <Header />
       <main className={style.main}>
-        <Slide data={data} />
+        <Slide data={data as any} />
         <article>
           <p>
             Chez COCO SURF, vous pouvez{" "}
@@ -72,43 +45,12 @@ export default function page() {
           </ol>
           <div className={style.center}>
             <Links href={{ pathname: "/app/form", query: { type: false } }}>
-              <button style={{ padding: "" }}>finaliser ma réservation</button>
+              <button style={{ borderRadius : "20px" }}>finaliser ma réservation</button>
             </Links>
           </div>
           <p>Moyens de paiement acceptés :</p>
         </section>
-        <div className={style.center}>
-          <div className={style.pay}>
-            <Image
-              src={"/payMethode/cb.png"}
-              width={59}
-              height={33}
-              alt="Logo d une carte bancaire"
-              quality={100}
-            />
-            <Image
-              src={"/payMethode/espece.png"}
-              width={59}
-              height={34}
-              alt="Logo d un billet"
-              quality={100}
-            />
-            <Image
-              src={"/payMethode/CQ.png"}
-              width={58}
-              height={46}
-              alt="Logo d un chèque"
-              quality={100}
-            />
-            <Image
-              src={"/payMethode/ancv.png"}
-              width={57}
-              height={43}
-              alt="Logo d un chèque vacance"
-              quality={100}
-            />
-          </div>
-        </div>
+        <PayAccept />
         <section>
           <div className={style.titleTab}>MATERIEL :</div>
           <ul className={style.ul}>
@@ -164,38 +106,9 @@ export default function page() {
           </ul>
         </section>
       </main>
+      <FAQ />
       <Footer />
     </div>
   );
 }
 
-function Case({
-  name,
-  temps,
-  prix,
-  img,
-}: {
-  name: string;
-  temps: string;
-  prix: string;
-  img: DataImage;
-}) {
-  return (
-    <li>
-      <div className={style.center}>
-        <Image
-          src={img.src}
-          width={img.w}
-          height={img.h}
-          alt={img.alt}
-          loading="lazy"
-        />
-      </div>
-      <div className={style.li}>
-        <div className={style.str}>{name}</div>
-        <div>{temps}</div>
-        <div className={style.str}>{prix}</div>
-      </div>
-    </li>
-  );
-}

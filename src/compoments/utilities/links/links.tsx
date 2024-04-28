@@ -1,12 +1,15 @@
 "use client"
-import { ReactNode, useState } from "react"
+import { ReactNode, use, useState } from "react"
 import { useRouter, usePathname } from "@/navigation"
 import LoadingScreen from "./LoadingScreen"
+import { routing } from "@/app/[locale]/(routing)/state"
+import { useAtom } from "jotai"
 
 export default function Links({href, children, className, onClick} : {href : any, children : ReactNode, className?:any, onClick?:any}) {
   const [load, setLoad] = useState(false)
   const router = useRouter()
   const path = usePathname()
+  const [,setAtom] = useAtom(routing)
   const click = ()=>{
     if(onClick){
       onClick()
@@ -14,9 +17,10 @@ export default function Links({href, children, className, onClick} : {href : any
     if(href == path){
 
     }else{
+      setAtom(true)
       router.push(href)
-    setLoad(true)
-    window.scrollTo(0, 0)
+      setLoad(true)
+      window.scrollTo(0, 0)
     }
   }
   return (

@@ -83,8 +83,8 @@ export default function Wet({ off }: { off: () => void }) {
         <div className={style.title}>
           <Image
             src={"/loc/combie.png"}
-            width={28}
-            height={49}
+            width={24}
+            height={50}
             alt="déssin de Combinaison"
             style={{ marginRight: "40px" }}
             className={style.image}

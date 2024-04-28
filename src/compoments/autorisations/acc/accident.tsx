@@ -2,7 +2,6 @@
 import { useAtom } from "jotai";
 import style from "./style.module.css";
 import { _accidentError, _accidentFiche } from "@/app/[locale]/(compl)/states";
-import PhoneNumberInput from "@/compoments/utilities/phone/phone";
 import { useState } from "react";
 
 export default function Accident() {

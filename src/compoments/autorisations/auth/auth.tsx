@@ -65,7 +65,7 @@ export default function Auth({
 
           <div>
             <p>
-              En cas d’annulation causé par de mauvaises
+              En cas d’annulation causée par de mauvaises
               conditions de surf (absence de vagues, conditions
               impraticables), les cours qui ne pourront pas être effectués
               seront, en accord avec les stagiaires : remplacés par une activité
@@ -166,7 +166,7 @@ export default function Auth({
                 médicalement apte à la pratique sportive et qu’il(s) sait /
                 savent nager. En conséquence, je dégage COCO SURF de toute
                 responsabilité en cas d’accident survenant, ou provoqué par
-                suite de leur(s) inaptitudes médicale ou non respect des
+                suite de leur(s) inaptitude(s) médicale ou non respect des
                 consignes du moniteur.
               </p>
 
