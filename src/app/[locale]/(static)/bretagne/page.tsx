@@ -1,13 +1,17 @@
 import Image from "next/image";
 import style from "./brt.module.css";
-import Btn from "@/compoments/utilities/button/btn";
 import { useTranslations } from "next-intl";
 import Footer from "@/compoments/footer/footer";
 import Header from "@/compoments/header/header";
 import dynamic from "next/dynamic";
 import data from "@/../public/bretagne/data.json"
+import { Metadata } from "next";
 
 const Slider  = dynamic(()=> import("@/compoments/utilities/slider/SliderImage"),{ssr:false})
+
+export const metadata : Metadata = {
+  title : "test"
+}
 
 export default function page() {
   const t = useTranslations("bretagne");
